@@ -1,0 +1,147 @@
+$main-color: #1c1c1c
+
+
+@font-face
+  font-family: "SegoeUILight"
+  src: url("../fonts/SegoeUI-Light.eot")
+  src: url("../fonts/SegoeUI-Light.eot?#iefix")format("embedded-opentype"),url("../fonts/SegoeUI-Light.woff") format("woff"),url("../fonts/SegoeUI-Light.ttf") format("truetype")
+  font-style: normal
+  font-weight: normal
+
+@font-face
+  font-family: "SegoeUI"
+  src: url("../fonts/SegoeUI.eot")
+  src: url("../fonts/SegoeUI.eot?#iefix")format("embedded-opentype"),url("../fonts/SegoeUI.woff") format("woff"),url("../fonts/SegoeUI.ttf") format("truetype")
+  font-style: normal
+  font-weight: normal
+
+
+
+
+
+body
+  font-family: "SegoeUILight", sans-serif
+  padding: 0
+  margin: 0
+
+img
+   max-width: 100%
+
+header
+  background:  #1c1c1c
+  padding-top: 50px
+  padding-bottom: 60px
+  .wrap
+    width: 940px
+    margin: auto
+
+    .logo
+      display: inline-block
+      vertical-align: middle
+      width: 200px
+
+      margin-right: 125px
+
+    .social
+      display: inline-block
+      vertical-align: middle
+      margin-right: 110px
+      li
+        display: inline-block
+        width: 24px
+        height: 23px
+        background: url("../img/icons/social.png") no-repeat
+        margin-right: 45px
+        &.facebook
+          background-position: -51px 0
+        &.twitter
+          background-position: top right
+          width: 23px
+          a
+            width: 23px
+        &:last-child
+          margin-right: 0
+        a
+          display: block
+          width: 24px
+          height: 23px
+
+    .lang
+      display: inline-block
+      vertical-align: middle
+
+      li
+        display: inline-block
+        vertical-align: middle
+        margin-right: 50px
+        &:last-child
+          margin-right: 0
+        &.active
+          a
+            background: #ffe400
+            color: #000000
+
+
+
+        a
+          line-height: 20px
+          color: #FFFFFF
+          font-size: 14px
+          font-family: "SegoeUILight", sans-serif
+          width: 25px
+          text-transform: uppercase
+          text-align: center
+          display: block
+
+
+
+
+    .cart
+      display: inline-block
+      vertical-align: middle
+      float: right
+      margin-top: 20px
+      a
+        display: block
+        background: url("../img/icons/cart.png") no-repeat
+        width: 25px
+        height: 28px
+        color: #030303
+        font-size: 20px
+        font-family: "SegoeUI", sans-serif
+        text-align: center
+        line-height: 32px
+        &:hover
+          text-decoration: none
+
+
+
+    .menu
+      margin-top: 50px
+      ul
+
+
+      li
+        list-style: none
+        text-align: center
+        display: inline-block
+        margin-right: 78px
+        &:last-child
+          margin-right: 0px
+          text-align: left
+        &.active
+          a
+            color: #ffe400
+            text-decoration: none
+        a
+          color: #fff
+          font-size: 18px
+          line-height: 1em
+          font-family: "SegoeUILight", sans-serif
+
+
+          &:hover
+            color: #ffe400
+            text-decoration: none
+
+
