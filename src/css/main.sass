@@ -18,31 +18,41 @@ $main-color: #1c1c1c
 
 
 
+=box-sizing($params)
+  -webkit-box-sizing: $params
+  -moz-box-sizing: $params
+  box-sizing: $params
+
+
+
+
 
 body
-  font-family: "SegoeUILight", sans-serif
+  font-family: "SegoeUI", sans-serif
   padding: 0
   margin: 0
+  line-height: 1em
+  font-size: 14px
 
 img
    max-width: 100%
-
+.wrap
+  width: 940px
+  margin: auto
 header
-  background:  #1c1c1c
+  background:  #1a1a1a
   padding-top: 50px
   padding-bottom: 60px
-  .wrap
-    width: 940px
-    margin: auto
 
-    .logo
+
+  .logo
       display: inline-block
       vertical-align: middle
       width: 200px
 
       margin-right: 125px
 
-    .social
+  .social
       display: inline-block
       vertical-align: middle
       margin-right: 110px
@@ -66,7 +76,7 @@ header
           width: 24px
           height: 23px
 
-    .lang
+  .lang
       display: inline-block
       vertical-align: middle
 
@@ -96,7 +106,7 @@ header
 
 
 
-    .cart
+  .cart
       display: inline-block
       vertical-align: middle
       float: right
@@ -116,7 +126,7 @@ header
 
 
 
-    .menu
+  .menu
       margin-top: 50px
       ul
 
@@ -145,3 +155,119 @@ header
             text-decoration: none
 
 
+
+
+
+footer
+  background: #1a1a1a
+  padding-top: 65px
+  padding-bottom: 20px
+  color: #fff
+  .wrap
+    > div
+      display: inline-block
+      vertical-align: top
+      h3
+        color: #ffe400
+        font-size: 18px
+        line-height: 1em
+        font-family: "SegoeUI", sans-serif
+        margin-bottom: 15px
+        font-weight: normal
+
+
+      ul
+        li
+          font-size: 16px
+          line-height: 1.3em
+
+
+      .call_us
+        ul
+          li
+            margin-bottom: 15px
+
+
+      .social
+        display: inline-block
+        vertical-align: middle
+        margin-bottom: 30px
+
+        li
+          display: inline-block
+          width: 24px
+          height: 23px
+          background: url("../img/icons/social.png") no-repeat
+          margin-right: 20px
+          &.facebook
+            background-position: -51px 0
+          &.twitter
+            background-position: top right
+            width: 23px
+            a
+              width: 23px
+          &:last-child
+            margin-right: 0
+          a
+            display: block
+            width: 24px
+            height: 23px
+    .adress
+        width: 235px
+        margin: auto 165px
+
+
+        ul
+          li
+            margin-bottom: 30px
+
+            &:last-child
+              margin-bottom: 0
+
+
+    .subscription
+      margin-bottom: 20px
+      h3
+        margin-bottom: 20px
+
+      input
+        background: none
+        border: 1px solid #fff
+        width: 220px
+        height: 35px
+        +box-sizing(border-box)
+        padding: 0 10px
+        color: #FFF
+        &::-webkit-input-placeholder, &:-moz-placeholder, &::-moz-placeholder, &:-ms-input-placeholder
+              color: #fff
+
+
+    .payment
+      ul
+        li
+          height: 17px
+          width: 28px
+          display: inline-block
+          vertical-align: middle
+          background: url("../img/icons/master_card.png") no-repeat
+          margin-right: 24px
+
+
+          &.privat
+            background-position: -55px 0
+            width: 15px
+
+          &.visa
+            background-position: -100px 0
+            width: 35px
+
+          &.paypal
+            background-position: top right
+            width: 58px
+            margin-right: 0
+
+
+  .copyright
+    font-family: "SegoeUILight", sans-serif
+    color:  #fefefe
+    font-size: 14px
