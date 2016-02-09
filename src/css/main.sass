@@ -367,7 +367,8 @@ footer
 body
   &.home
     header
-      padding-bottom: 410px
+      padding-bottom: 415px
+
 
     .container
       margin-top: -355px
@@ -375,7 +376,12 @@ body
 
     footer
       padding-top: 210px
+  &.shop
+    header
+      padding-bottom: 415px
 
+    .container
+      margin-top: -350px
 
 
 
@@ -393,6 +399,8 @@ body
         .images
           position: relative
           margin-bottom: 10px
+          width: 300px
+          height: 350px
           &:before
             background:  rgba(255, 228, 0, 0.71)
             position: absolute
@@ -442,3 +450,28 @@ body
               opacity: 1
               transform: translateY(0px)
               transition: all .3s ease-out
+
+
+
+.pagination
+  text-align: center
+  margin-bottom: 150px
+  margin-top: -30px
+
+  li
+    width: 57px
+    height: 17px
+    display: inline-block
+    vertical-align: top
+    a
+      display: block
+      height: 17px
+
+    &.prev
+
+      margin-right: 140px
+      a
+        background: url("../img/icons/pagination_prev.png") no-repeat
+    &.next
+      a
+        background: url("../img/icons/pagination_next.png") no-repeat
