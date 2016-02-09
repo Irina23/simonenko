@@ -16,6 +16,14 @@ $main-color: #1c1c1c
   font-weight: normal
 
 
+@font-face
+  font-family: "SegoeUI-Semibold"
+  src: url("../fonts/SegoeUI-SemiBold.eot")
+  src: url("../fonts/SegoeUI-SemiBold.eot?#iefix")format("embedded-opentype"),url("../fonts/SegoeUI-SemiBold.woff") format("woff"),url("../fonts/SegoeUI-SemiBold.ttf") format("truetype")
+  font-style: normal
+  font-weight: normal
+
+
 
 
 =box-sizing($params)
@@ -279,3 +287,158 @@ footer
     font-family: "SegoeUILight", sans-serif
     color:  #fefefe
     font-size: 14px
+
+
+
+.popular_product
+  h3
+    text-align: center
+    line-height: 1em
+    font-size: 30px
+    color: #191919
+    margin-bottom: 70px
+    font-weight: normal
+    font-family: "SegoeUILight", sans-serif
+
+  .products
+    margin: 0 -10px
+    .product
+      display: inline-block
+      vertical-align: top
+      margin: 0 8px 20px
+      a
+        display: block
+        position: relative
+        .images
+          position: relative
+          &:before
+              background:  rgba(255, 228, 0, 0.71)
+              position: absolute
+              content: ''
+              top: 0
+              left: 0
+              height: 100%
+              width: 100%
+              transition: all .3s
+              opacity: 0
+          &:after
+            background:  url("../img/icons/product_hover.png") no-repeat center
+            position: absolute
+            content: ''
+            top: 50%
+            left: 50%
+            height: 45px
+            width: 45px
+            opacity: 0
+            transform: translateY(30px)
+            transition: all .3s ease-in
+            margin-top: -22px
+            margin-left: -22px
+
+        &:hover
+          .images
+            &:before
+              opacity: 1
+              transition: all .3s
+            &:after
+                opacity: 1
+                transform: translateY(0px)
+                transition: all .3s ease-out
+
+
+
+
+
+
+
+.slider
+  margin-bottom: 100px
+  height: 625px
+
+
+  li
+    height: 625px
+
+
+.container
+  position: relative
+  
+  
+body
+  &.home
+    header
+      padding-bottom: 410px
+
+    .container
+      margin-top: -355px
+      margin-bottom: -145px
+
+    footer
+      padding-top: 210px
+
+
+
+
+.list_products
+    margin: 0 -10px
+    .product
+      display: inline-block
+      vertical-align: top
+      margin: 0 20px 90px 0
+      &:nth-child(3n)
+        margin-right: 0
+      a
+        display: block
+        position: relative
+        .images
+          position: relative
+          margin-bottom: 10px
+          &:before
+            background:  rgba(255, 228, 0, 0.71)
+            position: absolute
+            content: ''
+            top: 0
+            left: 0
+            height: 100%
+            width: 100%
+            transition: all .3s
+            opacity: 0
+          &:after
+            background:  url("../img/icons/product_hover.png") no-repeat center
+            position: absolute
+            content: ''
+            top: 50%
+            left: 50%
+            height: 45px
+            width: 45px
+            opacity: 0
+            transform: translateY(30px)
+            transition: all .3s ease-in
+            margin-top: -22px
+            margin-left: -22px
+
+
+
+        .product_name
+          font-size: 20px
+          line-height: 1em
+          font-family: "SegoeUILight", sans-serif
+          color: #000
+          margin-bottom: 20px
+        .price
+          font-size: 20px
+          line-height: 1em
+          font-family: "SegoeUI-Semibold", sans-serif
+          color: #000
+
+
+        &:hover
+          text-decoration: none
+          .images
+            &:before
+              opacity: 1
+              transition: all .3s
+            &:after
+              opacity: 1
+              transform: translateY(0px)
+              transition: all .3s ease-out
