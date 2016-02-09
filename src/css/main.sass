@@ -386,11 +386,11 @@ body
 
 
 .list_products
-    margin: 0 -10px
+
     .product
       display: inline-block
       vertical-align: top
-      margin: 0 20px 90px 0
+      margin: 0 16px 90px 0
       &:nth-child(3n)
         margin-right: 0
       a
@@ -475,3 +475,82 @@ body
     &.next
       a
         background: url("../img/icons/pagination_next.png") no-repeat
+
+
+
+
+
+.categories
+  margin-bottom: 130px
+  .category
+    display: inline-block
+    vertical-align: top
+    margin: 0 16px 20px 0
+    &:nth-child(3n)
+      margin-right: 0
+    a
+      display: block
+      position: relative
+      .images
+        position: relative
+        width: 300px
+        height: 350px
+        &:before
+          background:  rgba(255, 228, 0, 0.71)
+          position: absolute
+          content: ''
+          top: 0
+          left: 0
+          height: 100%
+          width: 100%
+          transition: all .3s
+          opacity: 0
+        &:after
+          background:  url("../img/icons/product_hover.png") no-repeat center
+          position: absolute
+          content: ''
+          top: 50%
+          left: 50%
+          height: 45px
+          width: 45px
+          opacity: 0
+          transform: translateY(30px)
+          transition: all .3s ease-in
+          margin-top: -22px
+          margin-left: -22px
+
+
+
+      .category_name
+        font-size: 24px
+        line-height: 1em
+        font-family: "SegoeUILight", sans-serif
+        color: #000
+        background:  rgba(255, 228, 0, 0.71)
+        position: absolute
+        bottom: 0
+        left: 0
+        width: 100%
+        -webkit-box-sizing: border-box
+        -moz-box-sizing: border-box
+        box-sizing: border-box
+        padding: 20px 15px
+
+
+
+
+
+
+
+      &:hover
+        text-decoration: none
+        .category_name
+          display: none
+        .images
+          &:before
+            opacity: 1
+            transition: all .3s
+          &:after
+            opacity: 1
+            transform: translateY(0px)
+            transition: all .3s ease-out
