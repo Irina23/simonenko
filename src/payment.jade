@@ -9,7 +9,7 @@ html(lang="ru")
         script(src="/js/untils.js")
 
 
-    body.shop
+    body
         header
 
             .wrap
@@ -60,44 +60,53 @@ html(lang="ru")
         div.container
             .wrap
 
+                form.payment
+                    h3 Оплата
 
-                .categories
+                    .radio.cf
 
-                    .category
-                        a(href="#")
-                            .images
-                                img(src="img/content/img2.jpg" alt="Товар 2")
-                            .category_name Кошельки
+                        div
+                            input(type="radio", name="payment", value="visa", id="visa",checked="")
+                            label(for="visa") VISA
+                        div
+                            input(type="radio", name="payment", value="privat24",id="privat24")
+                            label(for="privat24") Privat24
+                        div
+                            input(type="radio", name="payment", value="mastercard" id="mastercard")
+                            label(for="mastercard") Mastercard
 
-                    .category
-                        a(href="#")
-                            .images
-                                img(src="img/content/img3.jpg" alt="Товар 3")
-                            .category_name Галстуки
+                        div
+                            input(type="radio", name="payment", value="paypal", id="paypal")
+                            label(for="paypal") PayPal
 
-                    .category
-                        a(href="#")
-                            .images
-                                img(src="img/content/img4.jpg" alt="Товар 4")
-                            .category_name Рубашки
 
-                    .category
-                        a(href="#")
-                            .images
-                                img(src="img/content/img5.jpg" alt="Товар 5")
-                            .category_name Штаны
+                        div
+                            input(type="radio", name="payment", value="novaposhta", id="novaposhta")
+                            label(for="novaposhta") Наложный платеж “Новая почта”
 
-                    .category
-                        a(href="#")
-                            .images
-                                img(src="img/content/img2.jpg" alt="Товар 2")
-                            .category_name Рюкзаки
 
-                    .category
-                        a(href="#")
-                            .images
-                                img(src="img/content/img3.jpg" alt="Товар 3")
-                            .category_name Рюкзаки
+
+                    h3 Доставка
+                    .radio.cf
+                        div
+                            input(type="radio", name="delivery", value="courier", id="courier", checked="")
+                            label(for="courier") Курьером по г. Черкассы
+
+                        div
+                            input(type="radio", name="delivery", value="novaposhta2" id="novaposhta2")
+                            label(for="novaposhta2")  Новая почта (наложный платеж)
+
+
+                    h3 Контактная информация
+                    input(type="text", placeholder="Имя:")
+                    input(type="text", placeholder="Фамилия:")
+                    input(type="text", placeholder="Страна:")
+                    input(type="text", placeholder="Город:")
+                    input(type="text", placeholder="Улица:")
+                    input(type="text", placeholder="Email:")
+                    input(type="submit", name="Отправить")
+
+
 
 
 
