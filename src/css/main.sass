@@ -799,3 +799,125 @@ form.payment
           + label
             background-position: top left
 
+
+
+.productfull
+  margin: 105px auto 160px
+  .image
+    display: inline-block
+    margin-right: 75px
+    vertical-align: top
+    img
+      width: 400px
+      height: 350px
+
+
+
+  .info
+    width: 460px
+    display: inline-block
+    vertical-align: top
+    form
+        h1
+          color:  #010101
+          font-size: 24px
+          line-height: 1em
+          margin-bottom: 10px
+          font-weight: normal
+
+        .code
+          display: block
+          margin-bottom: 20px
+          font-size: 16px
+          line-height: 1em
+          color: #000
+
+
+        .description
+          display: block
+          margin-bottom: 30px
+          font-size: 16px
+          line-height: 1.5em
+          color: #000
+
+
+        .price
+          font-size: 24px
+          text-transform: uppercase
+          color: #000000
+          line-height: 1em
+
+
+        .radio.color
+          position: relative
+          padding-bottom: 40px
+          margin-bottom: 25px
+          >div
+            display: inline-block
+            vertical-align: middle
+
+            &.active
+              label
+                border-color: #ffe400
+
+            label
+              cursor: pointer
+              display: block
+              margin: 0 10px
+              padding: 2px
+              border: 2px solid rgba(255, 228, 0, 0)
+              width: 20px
+              height: 20px
+
+
+
+
+
+            input[type="radio"]
+              position: absolute
+              left: -100000px
+              &:checked ~ .price
+                display: inline-block
+            .price
+                position: absolute
+                bottom: 0
+                display: none
+                left: 0
+        button
+              padding: 0
+              margin-bottom: 40px
+              width: 178px
+              height: 43px
+              border: 1px solid #000000
+              background: none
+              display: block
+              font-size: 18px
+              -webkit-box-sizing: border-box
+              -moz-box-sizing: border-box
+              box-sizing: border-box
+              line-height: 41px
+              -webkit-transition: all 0.35s
+              -moz-transition: all 0.35s
+              -o-transition: all 0.35s
+              transition: all 0.35s
+              &:hover
+                background: #000000
+                color: #fff
+                -webkit-transition: all 0.35s
+                -moz-transition: all 0.35s
+                -o-transition: all 0.35s
+                transition: all 0.35s
+    .related
+      li
+        display: inline-block
+        vertical-align: top
+        width: 140px
+        height: 75px
+        margin-right: 18px
+        margin-bottom: 20px
+        &:last-child,&:nth-child(3n)
+          margin-right: 0
+
+
+
+
