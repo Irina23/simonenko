@@ -26,12 +26,6 @@ $main-color: #1c1c1c
 
 
 
-=box-sizing($params)
-  -webkit-box-sizing: $params
-  -moz-box-sizing: $params
-  box-sizing: $params
-
-
 
 
 
@@ -274,7 +268,7 @@ footer
         border: 1px solid #fff
         width: 220px
         height: 35px
-        +box-sizing(border-box)
+        box-sizing: border-box
         padding: 0 10px
         color: #FFF
         &::-webkit-input-placeholder, &:-moz-placeholder, &::-moz-placeholder, &:-ms-input-placeholder
@@ -549,6 +543,8 @@ footer
         background-size: contain
 
         filter: brightness(0.1)
+
+
         &:hover
 
             filter: none
@@ -746,6 +742,7 @@ footer
   form
     width: 538px
     display: inline-block
+    text-align: center
 
     input[type="text"]
       border: 1px #adacac  solid
@@ -755,7 +752,7 @@ footer
       -moz-box-sizing: border-box
       box-sizing: border-box
       padding: 0 15px
-      line-height: 48px
+      line-height: 46px
       color: #949292
       font-size: 18px
       font-family: "SegoeUILight", sans-serif
@@ -766,8 +763,6 @@ footer
     textarea
       width: 538px
       height: 108px
-      -webkit-box-sizing: border-box
-      -moz-box-sizing: border-box
       box-sizing: border-box
       padding: 0 15px
       line-height: 48px
@@ -776,27 +771,19 @@ footer
       font-family: "SegoeUILight", sans-serif
       border: 1px #adacac  solid
       margin-bottom: 20px
-    input[type="submit"]
+    button[type="submit"]
         margin: auto
         padding: 9px 20px 14px
         border: 1px solid #000000
         background: none
-        display: block
+        display: inline-block
         font-size: 18px
-        -webkit-box-sizing: border-box
-        -moz-box-sizing: border-box
         box-sizing: border-box
         line-height: 1em
-        -webkit-transition: all 0.35s
-        -moz-transition: all 0.35s
-        -o-transition: all 0.35s
         transition: all 0.35s
         &:hover
           background: #000000
           color: #fff
-          -webkit-transition: all 0.35s
-          -moz-transition: all 0.35s
-          -o-transition: all 0.35s
           transition: all 0.35s
 
 
@@ -819,6 +806,7 @@ footer
 form.payment
   margin: 110px auto 80px
   width: 700px
+  text-align: center
 
   h3
     margin-bottom: 35px
@@ -829,20 +817,16 @@ form.payment
     font-family: "SegoeUI", sans-serif
     clear: both
 
-  input[type="submit"]
+  button[type="submit"]
     margin: auto
     padding: 9px 20px 14px
     border: 1px solid #000000
     background: none
-    display: block
+    display: inline-block
     font-size: 18px
-    -webkit-box-sizing: border-box
-    -moz-box-sizing: border-box
+
     box-sizing: border-box
     line-height: 1em
-    -webkit-transition: all 0.35s
-    -moz-transition: all 0.35s
-    -o-transition: all 0.35s
     transition: all 0.35s
     &:hover
       background: #000000
@@ -870,11 +854,13 @@ form.payment
 
   .radio
     margin-bottom: 50px
+    text-align: left
     > div
       width: 50%
       float: left
       margin-bottom: 30px
       label
+        text-align: left
         cursor: pointer
         padding-left: 40px
         line-height: 25px
@@ -973,12 +959,16 @@ form.payment
               margin: 0 6px
               padding: 2px
               border: 2px solid rgba(255, 228, 0, 0)
-              width: 20px
-              height: 20px
+              width: 24px
+              height: 24px
+              position: relative
+              z-index: 1
+              box-sizing: border-box
 
 
               img
                 width: 20px
+                pointer-events: none
 
 
 
@@ -1137,6 +1127,7 @@ form.payment
 
 
 
+
     .control-pannel
       width: 220px
       float: right
@@ -1176,3 +1167,7 @@ form.payment
 
 .blog
   margin-bottom: 50px
+
+
+
+
