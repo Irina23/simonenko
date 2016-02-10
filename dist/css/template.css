@@ -2,7 +2,7 @@
 html,body { width:100%;margin: 0; padding: 0;    height: 100%;}
 
 body      { padding:0; margin:0; background:none;  line-height: 1em;}
-div,p,a,span,em,strong,img,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,td,tr,form,fieldset,label,select,checkbox,input,textarea {
+div,p,a,span,em,strong,img,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,td,tr,form,fieldset,label,select,input,textarea {
 	padding:0;
 	margin:0;
 	outline:none;
@@ -73,7 +73,8 @@ a:hover  { text-decoration:underline; }
     border-radius: 50%;
     border: 2px solid #646464;
     content: '';
-    left:0; top: 2px;
+    left:0;
+    top: 0;
     position: absolute;
     width: 25px;
     height: 25px;
@@ -88,7 +89,7 @@ a:hover  { text-decoration:underline; }
     background-color: #000;
     border-radius: 50%;
     position: absolute;
-    top: 6px;
+    top: 4px;
     left: 4px;
     width: 17px;
     height: 17px;
