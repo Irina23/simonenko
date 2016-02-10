@@ -11,24 +11,25 @@ html(lang="ru")
 
 
     body
-        include ./header.jade
+        .page_wrapper
+            include ./header.jade
 
-        div.container
-            .wrap
+            div.container
+                .wrap
 
-                .article
-                    h1 Контакты
-                    form
-                        input(type="text", placeholder="Имя:")
-                        input(type="text", placeholder="Телефон:")
-                        textarea( placeholder="Сообщение:")
-                        input(type="submit", name="Отправить")
-                    ul.contact
-                        li Skype: Symonenko.shop
-                        li Телефон: +38 (093) 526 35 69
-                        li Телефон: +38 (093) 526 35 69
-                        li Почта: Symonen.ko@gmail. com
+                    .article
+                        h1 Контакты
+                        form
+                            input(type="text", placeholder="Имя:")
+                            input(type="text", placeholder="Телефон:")
+                            textarea( placeholder="Сообщение:")
+                            input(type="submit", name="Отправить")
+                        ul.contact
+                            li Skype: Symonenko.shop
+                            li Телефон: +38 (093) 526 35 69
+                            li Телефон: +38 (093) 526 35 69
+                            li Почта: Symonen.ko@gmail. com
 
 
 
-        include ./footer.jade
+            include ./footer.jade

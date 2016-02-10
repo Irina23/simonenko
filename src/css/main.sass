@@ -70,34 +70,28 @@ header
         height: 23px
         margin-right: 45px
         a
-            background: url("../img/icons/social.png") no-repeat
-            -webkit-transition: all 0.35s
-            -moz-transition: all 0.35s
-            -o-transition: all 0.35s
-            transition: all 0.35s
-            display: block
-            width: 24px
-            height: 23px
-            &:hover
-              background: url("../img/icons/social_hover.png") no-repeat
-              -webkit-transition: all 0.35s
-              -moz-transition: all 0.35s
-              -o-transition: all 0.35s
-              transition: all 0.35s
-        &.facebook
-          a
-            background-position: -51px 0
-            &:hover
-              background-position: -51px 0
-        &.twitter
+          background: url("../img/icons/social.png") no-repeat top left
+          display: block
           width: 23px
-          a
-            background-position: top right
-            width: 23px
-            &:hover
-              background-position: top right
+          height: 23px
+          background-size: 100%
+          &:hover
+            background-position: 0 -69px
+
+        &.facebook
+            a
+              background-position: 0 -23px
+              &:hover
+                background-position: 0 -92px
+        &.twitter
+
+            a
+              background-position: 0 -46px
+
+              &:hover
+                background-position: bottom right
         &:last-child
-          margin-right: 0
+            margin-right: 0
 
 
   .lang
@@ -137,7 +131,9 @@ header
       margin-top: 20px
       a
         display: block
-        background: url("../img/icons/cart.png") no-repeat
+        background: url("../img/icons/cart.png") no-repeat top left
+        background-size: 100%
+
         width: 25px
         height: 28px
         color: #030303
@@ -147,6 +143,7 @@ header
         line-height: 32px
         &:hover
           text-decoration: none
+          background-position: bottom left
 
 
 
@@ -230,32 +227,26 @@ footer
           height: 23px
           margin-right: 20px
           a
-            background: url("../img/icons/social.png") no-repeat
-            -webkit-transition: all 0.35s
-            -moz-transition: all 0.35s
-            -o-transition: all 0.35s
-            transition: all 0.35s
+            background: url("../img/icons/social.png") no-repeat top left
             display: block
-            width: 24px
+            width: 23px
             height: 23px
+            background-size: 100%
             &:hover
-              background: url("../img/icons/social_hover.png") no-repeat
-              -webkit-transition: all 0.35s
-              -moz-transition: all 0.35s
-              -o-transition: all 0.35s
-              transition: all 0.35s
+              background-position: 0 -69px
+
           &.facebook
             a
-              background-position: -51px 0
+              background-position: 0 -23px
               &:hover
-                background-position: -51px 0
+                background-position: 0 -92px
           &.twitter
-            width: 23px
+
             a
-              background-position: top right
-              width: 23px
+              background-position: 0 -46px
+
               &:hover
-                background-position: top right
+                background-position: bottom right
           &:last-child
             margin-right: 0
 
@@ -534,22 +525,37 @@ footer
   clear: both
 
   li
-    width: 57px
-    height: 17px
-    display: inline-block
-    vertical-align: top
-    a
-      display: block
+      width: 57px
       height: 17px
+      display: inline-block
+      vertical-align: top
+      &.disabled
+        a
+          opacity: 0.7
+          &:hover
+            opacity: 0.7
 
-    &.prev
+            filter: brightness(0.1)
 
-      margin-right: 140px
+      &.prev
+        margin-right: 140px
+        a
+          transform: rotate(180deg)
+
       a
-        background: url("../img/icons/pagination_prev.png") no-repeat
-    &.next
-      a
-        background: url("../img/icons/pagination_next.png") no-repeat
+        display: block
+        height: 17px
+        background: url("../img/icons/pagination.png") no-repeat
+        background-size: contain
+
+        filter: brightness(0.1)
+        &:hover
+
+            filter: none
+            opacity: 1
+
+
+
 
 
 
@@ -971,6 +977,10 @@ form.payment
               height: 20px
 
 
+              img
+                width: 20px
+
+
 
 
 
@@ -1111,6 +1121,9 @@ form.payment
                 span
                   color: #ffe400
 
+                img
+                  filter: none
+
               span
                 display: block
                 color: #000000
@@ -1119,6 +1132,8 @@ form.payment
 
               img
                 margin-bottom: 10px
+                width: 19px
+                filter: brightness(0.1)
 
 
 
