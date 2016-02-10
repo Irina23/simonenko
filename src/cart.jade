@@ -17,7 +17,55 @@ html(lang="ru")
             div.container
                 .wrap
 
-                    .cart
+                    .cart_page
+                        h1 Ваша корзина
+
+                        form.cf
+                            .products
+                                .product-item
+                                    .image
+                                        a(href="/product.html")
+                                            img(src="../img/content/small_img.jpg", alt="Кожанный кошелек")
+                                    .item-name
+                                        a(href="/product.html") Кожанный кошелек
+                                        span.code Код товара: 36525
+
+                                    .attr
+                                        .color
+                                            span.attr_name Цвет:
+                                            img(src="img/content/color1.jpg")
+                                        .counts Количество 1 шт.
+
+                                    .price 499.00 UAH
+                                    .delete
+                                        a(href="#")
+                                            img(src="img/icons/delete.jpg")
+                                            span Удалить
+
+
+                                .product-item
+                                    .image
+                                        a(href="/product.html")
+                                            img(src="../img/content/small_img.jpg", alt="Кожанный кошелек")
+                                    .item-name
+                                        a(href="/product.html") Кожанный кошелек
+                                        span.code Код товара: 36525
+
+                                    .attr
+                                        .color
+                                            span.attr_name Цвет:
+                                            img(src="img/content/color2.jpg")
+                                        .counts Количество 1 шт.
+
+                                    .price 499.00 UAH
+                                    .delete
+                                        a(href="#")
+                                            img(src="img/icons/delete.jpg")
+                                            span Удалить
+                            .control-pannel
+                                .total_price Всего: 898.00 UAH
+                                button(type="submit") Оформить заказ
+
 
 
 
