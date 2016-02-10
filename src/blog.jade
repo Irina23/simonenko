@@ -1,0 +1,42 @@
+doctype html
+html(lang="ru")
+    head
+        link(href="/css/main.css" rel="stylesheet" type="text/css")
+        link(href="bower_components/normalize-css/normalize.css" rel="stylesheet" type="text/css")
+        link(href="/css/owl.carousel.css" rel="stylesheet" type="text/css")
+        link(href="/css/template.css" rel="stylesheet" type="text/css")
+        script(src="bower_components/jquery/dist/jquery.js")
+        script(src="/js/owl.carousel.js")
+        script(src="/js/untils.js")
+
+
+    body
+        .page_wrapper
+            include ./header.jade
+
+            div.container
+                .wrap
+
+                    .blog.cf
+                        h1 Блог
+                        .item-page
+
+                            .image-left
+                                a(href="/about.html")
+                                    img(src="../img/content/img_about.jpg")
+
+                            .text_overflow
+                                p.
+                                    Разнообразный и богатый опыт новая модель организационной деятельности в значительной степени обуславливает создание новых предложений. Задача организации, в особенности же консультация с широким активом играет важную роль в формировании системы обучения кадров, соответствует насущным потребностям. Таким образом укрепление и развитие структуры способствует подготовки и реализации позиций, занимаемых участниками в отношении поставленных задач. Товарищи! дальнейшее развитие различных форм деятельности играет важную роль в формировании дальнейших направлений развития. Идейные соображения высшего порядка, а также консультация с широким активом влечет за собой процесс внедрения и модернизации модели развития. С другой стороны рамки и место обучения кадров позволяет оценить значение соответствующий условий активизации.
+
+
+                    .pagination
+                        ul
+                            li.prev
+                                a(href="#")
+                            li.next
+                                a(href="#")
+
+
+
+            include ./footer.jade
