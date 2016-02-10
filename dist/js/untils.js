@@ -4,7 +4,7 @@ jQuery(document).ready(function() {
     jQuery('.slider').owlCarousel({
         loop:true,
         nav:false,
-        autoHeight:true,
+       // autoHeight:true,
         autoplay:true,
         responsive:{
             0:{

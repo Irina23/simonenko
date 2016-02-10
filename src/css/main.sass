@@ -36,6 +36,9 @@ body
   line-height: 1em
   font-size: 14px
 
+.img-holder
+  overflow: hidden
+  height: 100%
 img
    max-width: 100%
 .wrap
@@ -125,7 +128,7 @@ header
       margin-top: 20px
       a
         display: block
-        background: url("../img/icons/cart.png") no-repeat top left
+        background: url("../img/icons/cart.png") no-repeat
         background-size: 100%
 
         width: 25px
@@ -137,7 +140,8 @@ header
         line-height: 32px
         &:hover
           text-decoration: none
-          background-position: bottom left
+          background: url("../img/icons/cart_hover.png") no-repeat
+          background-size: 100%
 
 
 
@@ -343,10 +347,11 @@ footer
     color: #191919
     margin-bottom: 70px
     font-weight: normal
-    font-family: "SegoeUILight", sans-serif
+    font-family: "SegoeUI", sans-serif
 
   .products
     margin: 0 -10px
+    text-align: center
     .product
       display: inline-block
       vertical-align: top
@@ -439,22 +444,23 @@ footer
 
 
 .list_products
-
+    text-align: center
+    margin: auto -10px
     .product
       display: inline-block
       vertical-align: top
-      margin: 0 16px 90px 0
+      margin: 0 8px 90px
       width: 300px
-      &:nth-child(3n)
-        margin-right: 0
+
       a
         display: block
         position: relative
+        text-align: left
         .images
           position: relative
           margin-bottom: 10px
-          width: 300px
-          height: 350px
+          width: 100%
+          //height: 350px
           &:before
             background:  rgba(255, 228, 0, 0.71)
             position: absolute
@@ -558,25 +564,30 @@ footer
 
 
 .categories
-  margin-bottom: 130px
+
+  text-align: center
+  margin: auto -10px 130px
   .category
     display: inline-block
     vertical-align: top
-    margin: 0 16px 20px 0
+    margin: 0 8px 20px
     width: 300px
-    height: 350px
+    //height: 350px
     overflow: hidden
 
 
-    &:nth-child(3n)
-      margin-right: 0
+
     a
       display: block
       position: relative
       .images
         position: relative
-        width: 300px
-        height: 350px
+        width: 100%
+
+        //height: 350px
+
+
+
         &:before
           background:  rgba(255, 228, 0, 0.71)
           position: absolute
@@ -604,6 +615,7 @@ footer
 
 
       .category_name
+        text-align: left
         font-size: 24px
         line-height: 1em
         font-family: "SegoeUILight", sans-serif
@@ -623,11 +635,6 @@ footer
         opacity: 1
         transform: translateY(0px)
         transition: all .3s ease-out
-
-
-
-
-
 
 
       &:hover
@@ -746,7 +753,7 @@ footer
 
     input[type="text"]
       border: 1px #adacac  solid
-      width: 538px
+      width: 100%
       height: 48px
       -webkit-box-sizing: border-box
       -moz-box-sizing: border-box
@@ -761,7 +768,7 @@ footer
 
 
     textarea
-      width: 538px
+      width: 100%
       height: 108px
       box-sizing: border-box
       padding: 0 15px
@@ -816,6 +823,7 @@ form.payment
     font-weight: normal
     font-family: "SegoeUI", sans-serif
     clear: both
+    text-align: left
 
   button[type="submit"]
     margin: auto
@@ -1147,20 +1155,13 @@ form.payment
       background: none
       display: block
       font-size: 20px
-      -webkit-box-sizing: border-box
-      -moz-box-sizing: border-box
       box-sizing: border-box
       line-height: 1em
-      -webkit-transition: all 0.35s
-      -moz-transition: all 0.35s
-      -o-transition: all 0.35s
+
       transition: all 0.35s
       &:hover
         background: #000000
         color: #fff
-        -webkit-transition: all 0.35s
-        -moz-transition: all 0.35s
-        -o-transition: all 0.35s
         transition: all 0.35s
 
 
@@ -1171,3 +1172,86 @@ form.payment
 
 
 
+@media screen and (max-width: 1000px)
+  .wrap
+      width: 880px
+  header
+    .menu
+      li
+        margin-right: 67px
+  .slider
+    height: 585px
+
+
+  footer .wrap .adress
+    margin: auto 135px
+
+
+  .productfull
+    .image
+      margin-right: 50px
+    .info
+      width: 425px
+
+
+  .article, .blog
+    margin: 50px auto
+    h1
+      font-size: 28px
+      margin-bottom: 50px
+    form
+        width: 480px
+
+    p
+      font-size: 14px
+      margin-bottom: 20px
+
+
+  .cart_page
+    margin: 50px auto
+
+    h1
+      font-size: 28px
+      margin-bottom: 50px
+    form
+      .products
+        .product-item
+          > div
+            &.image
+              padding: 0 10px
+            &.item-name
+              padding: 25px 10px 0 10px
+              width: 270px
+
+            &.attr
+              padding: 25px 0 0 10px
+              width: 150px
+            &.price
+              width: 150px
+              font-size: 20px
+            &.delete
+              width: 130px
+
+
+  .page_wrapper.shop .container
+    top: -327px
+    margin-bottom: -327px
+
+
+  form.payment
+      margin: 50px auto
+
+  .categories
+    .category
+      width: 280px
+
+
+
+
+
+
+
+
+@media screen and (max-width: 780px)
+  .wrap
+    width: 100%
