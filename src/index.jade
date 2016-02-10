@@ -4,151 +4,58 @@ html(lang="ru")
         link(href="/css/main.css" rel="stylesheet" type="text/css")
         link(href="bower_components/normalize-css/normalize.css" rel="stylesheet" type="text/css")
         link(href="/css/owl.carousel.css" rel="stylesheet" type="text/css")
+        link(href="/css/template.css" rel="stylesheet" type="text/css")
         script(src="bower_components/jquery/dist/jquery.js")
         script(src="/js/owl.carousel.js")
         script(src="/js/untils.js")
 
 
-    body.home
-        header
+    body
+        .page_wrapper.home
+            include ./header.jade
 
-            .wrap
-                .logo
-                    a(href="/")
-                        img(src="img/icons/logo.png")
+            div.container
+                .wrap
 
-                ul.social
-                    li.vk
-                        a(href="#")
-                    li.facebook
-                        a(href="#")
-                    li.twitter
-                        a(href="#")
-                ul.lang
-                    li.ua
-                        a(href="#") ua
-                    li.ru.active
-                        a(href="#") ru
-                    li.en
-                        a(href="#") en
+                    ul.slider
 
-
-                div.cart
-                    a(href='#') 1
-
-
-                .menu
-                    ul
-                        li.active
-                            a(href="#") Главная
                         li
-                            a(href="#") Купить онлайн
+                            img(src="img/content/slider.jpg")
                         li
-                            a(href="#") Где купить
+                            img(src="img/content/slider.jpg")
+
                         li
-                            a(href="#") О нас
-                        li
-                            a(href="#") FAQ
-                        li
-                            a(href="#") Блог
-                        li
-                            a(href="#") Контакты
+                            img(src="img/content/slider.jpg")
 
 
 
 
-
-        div.container
-            .wrap
-
-                ul.slider
-
-                    li
-                        img(src="img/content/slider.jpg")
-                    li
-                        img(src="img/content/slider.jpg")
-
-                    li
-                        img(src="img/content/slider.jpg")
-
-
-
-
-                .popular_product
-                    h3 Популярные товары
-                    .products
-                        .product
-                            a(href="#")
+                    .popular_product
+                        h3 Популярные товары
+                        .products
+                            .product
+                                a(href="/product.html")
+                                        .images
+                                            img(src="img/content/img1.jpg" alt="Товар 1")
+                            .product
+                                a(href="/product.html")
                                     .images
-                                        img(src="img/content/img1.jpg" alt="Товар 1")
-                        .product
-                            a(href="#")
-                                .images
-                                    img(src="img/content/img2.jpg" alt="Товар 2")
-                        .product
-                            a(href="#")
-                                .images
-                                    img(src="img/content/img3.jpg" alt="Товар 3")
-                        .product
-                            a(href="#")
-                                .images
-                                    img(src="img/content/img4.jpg" alt="Товар 4")
-                        .product
-                            a(href="#")
-                                .images
-                                    img(src="img/content/img5.jpg" alt="Товар 5")
+                                        img(src="img/content/img2.jpg" alt="Товар 2")
+                            .product
+                                a(href="/product.html")
+                                    .images
+                                        img(src="img/content/img3.jpg" alt="Товар 3")
+                            .product
+                                a(href="/product.html")
+                                    .images
+                                        img(src="img/content/img4.jpg" alt="Товар 4")
+                            .product
+                                a(href="/product.html")
+                                    .images
+                                        img(src="img/content/img5.jpg" alt="Товар 5")
 
 
 
 
 
-footer
-            .wrap
-                div
-                    div.call_us
-                        h3 Позвонить нам
-                        ul
-                            li
-                                a(href="+380935263954") +38 (093) 52 63 954
-                            li
-                                a(href="+380935263954") +38 (093) 52 63 954
-
-
-                    .social
-                        h3 Социальные сети
-                        li.vk
-                            a(href="#")
-                        li.facebook
-                            a(href="#")
-                        li.twitter
-                            a(href="#")
-
-                div.adress
-                    h3 Где мы находимся
-                    ul
-                        li г. Черкассы, ул. Ильина 1, 2 этаж “ Кооператор”
-                        li г. Черкассы, ул. Ильина 1, 2 этаж “ Кооператор”
-
-
-
-                div
-                    div.subscription
-                        h3 Подписаться на новости
-                        form
-                            input(type='text' placeholder='mail:')
-
-                    div.payment
-                        h3 Способы оплаты
-                        ul
-                            li.payment1
-                                a(href="#")
-                            li.privat
-                                a(href="#")
-                            li.visa
-                                a(href="#")
-                            li.paypal
-                                a(href="#")
-
-
-
-                p.copyright © 2016 Symonen.ko
+            include ./footer.jade

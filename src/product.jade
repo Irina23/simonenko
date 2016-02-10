@@ -4,165 +4,81 @@ html(lang="ru")
         link(href="/css/main.css" rel="stylesheet" type="text/css")
         link(href="bower_components/normalize-css/normalize.css" rel="stylesheet" type="text/css")
         link(href="/css/owl.carousel.css" rel="stylesheet" type="text/css")
+        link(href="/css/template.css" rel="stylesheet" type="text/css")
         script(src="bower_components/jquery/dist/jquery.js")
         script(src="/js/owl.carousel.js")
         script(src="/js/untils.js")
 
 
     body
-        header
+        .page_wrapper
+            include ./header.jade
 
-            .wrap
-                .logo
-                    a(href="/")
-                        img(src="img/icons/logo.png")
+            div.container
+                .wrap
 
-                ul.social
-                    li.vk
-                        a(href="#")
-                    li.facebook
-                        a(href="#")
-                    li.twitter
-                        a(href="#")
-                ul.lang
-                    li.ua
-                        a(href="#") ua
-                    li.ru.active
-                        a(href="#") ru
-                    li.en
-                        a(href="#") en
-
-
-                div.cart
-                    a(href='#') 1
-
-
-                .menu
-                    ul
-                        li.active
-                            a(href="#") Главная
-                        li
-                            a(href="#") Купить онлайн
-                        li
-                            a(href="#") Где купить
-                        li
-                            a(href="#") О нас
-                        li
-                            a(href="#") FAQ
-                        li
-                            a(href="#") Блог
-                        li
-                            a(href="#") Контакты
-
-
-
-
-        div.container
-            .wrap
-
-                .productfull
-                    .image
-                        img(src="img/content/img_product.jpg", alt="Кожанный кошелек")
-
-                    .info
-                        form
-                            h1 Кожанный кошелек
-                            span.code Код товара: 36525
-
-                            .description При создании генератора мы использовали небезызвестный универсальный код речей.
-
-
-                            .radio.color.cf
-                                div.active
-                                    input(type="radio", name="color", value="brown", id="brown",checked="")
-                                    .price 599.00 UAH
-                                    label(for="brown")
-                                        img(src="img/content/color1.jpg")
-
+                    .productfull
+                        .image
+                            .big-images
+                                div
+                                    img(src="img/content/img_product.jpg", alt="Кожанный кошелек")
+                                div
+                                    img(src="img/content/img_product.jpg", alt="Кожанный кошелек")
+                                div
+                                    img(src="img/content/img_product.jpg", alt="Кожанный кошелек")
+                                div
+                                    img(src="img/content/img_product.jpg", alt="Кожанный кошелек")
+                            .thumbs
 
                                 div
-                                    input(type="radio", name="color", value="black",id="black")
-                                    .price 699.00 UAH
-                                    label(for="black")
-                                        img(src="img/content/color2.jpg")
-
+                                    img(src="img/content/related1.jpg", alt="Товар 1")
                                 div
-                                    input(type="radio", name="color", value="brown2" id="brown2")
-                                    .price 499.00 UAH
-                                    label(for="brown2")
-                                        img(src="img/content/color3.jpg")
-
-
-
-                            button(type="submit") Добавить в корзину
-
-
-
-
-                        .related
-                           li
-                            a(href="#")
-                                img(src="img/content/related1.jpg", alt="Товар 1")
-
-                            li
-                                a(href="#")
                                     img(src="img/content/related2.jpg", alt="Товар 1")
-                            li
-                                a(href="#")
+                                div
+                                    img(src="img/content/related3.jpg", alt="Товар 1")
+                                div
                                     img(src="img/content/related3.jpg", alt="Товар 1")
 
+                        .info
+                            form
+                                h1 Кожанный кошелек
+                                span.code Код товара: 36525
+
+                                .description При создании генератора мы использовали небезызвестный универсальный код речей.
+
+
+                                .radio.color.cf
+                                    span.attr_name Цвет:
+
+                                    div
+                                        input(type="radio", name="color", value="brown", id="brown",checked="")
+                                        .price 599.00 UAH
+                                        label(for="brown")
+                                            img(src="img/content/color1.jpg")
+
+
+                                    div
+                                        input(type="radio", name="color", value="black",id="black")
+                                        .price 699.00 UAH
+                                        label(for="black")
+                                            img(src="img/content/color2.jpg")
+
+                                    div
+                                        input(type="radio", name="color", value="brown2" id="brown2")
+                                        .price 499.00 UAH
+                                        label(for="brown2")
+                                            img(src="img/content/color3.jpg")
+
+
+
+                                button(type="submit") Добавить в корзину
 
 
 
 
 
-footer
-            .wrap
-                div
-                    div.call_us
-                        h3 Позвонить нам
-                        ul
-                            li
-                                a(href="+380935263954") +38 (093) 52 63 954
-                            li
-                                a(href="+380935263954") +38 (093) 52 63 954
-
-
-                    .social
-                        h3 Социальные сети
-                        li.vk
-                            a(href="#")
-                        li.facebook
-                            a(href="#")
-                        li.twitter
-                            a(href="#")
-
-                div.adress
-                    h3 Где мы находимся
-                    ul
-                        li г. Черкассы, ул. Ильина 1, 2 этаж “ Кооператор”
-                        li г. Черкассы, ул. Ильина 1, 2 этаж “ Кооператор”
 
 
 
-                div
-                    div.subscription
-                        h3 Подписаться на новости
-                        form
-                            input(type='text' placeholder='mail:')
 
-                    div.payment
-                        h3 Способы оплаты
-                        ul
-                            li.payment1
-                                a(href="#")
-                            li.privat
-                                a(href="#")
-                            li.visa
-                                a(href="#")
-                            li.paypal
-                                a(href="#")
-
-
-
-                p.copyright © 2016 Symonen.ko
+            include ./footer.jade

@@ -4,152 +4,62 @@ html(lang="ru")
         link(href="/css/main.css" rel="stylesheet" type="text/css")
         link(href="bower_components/normalize-css/normalize.css" rel="stylesheet" type="text/css")
         link(href="/css/owl.carousel.css" rel="stylesheet" type="text/css")
+        link(href="/css/template.css" rel="stylesheet" type="text/css")
         script(src="bower_components/jquery/dist/jquery.js")
         script(src="/js/owl.carousel.js")
         script(src="/js/untils.js")
 
 
-    body.shop
-        header
+    body
+        .page_wrapper.shop
 
-            .wrap
-                .logo
-                    a(href="/")
-                        img(src="img/icons/logo.png")
-
-                ul.social
-                    li.vk
-                        a(href="#")
-                    li.facebook
-                        a(href="#")
-                    li.twitter
-                        a(href="#")
-                ul.lang
-                    li.ua
-                        a(href="#") ua
-                    li.ru.active
-                        a(href="#") ru
-                    li.en
-                        a(href="#") en
+            include ./header.jade
 
 
-                div.cart
-                    a(href='#') 1
+            div.container
+                .wrap
 
 
-                .menu
-                    ul
-                        li.active
-                            a(href="#") Главная
-                        li
-                            a(href="#") Купить онлайн
-                        li
-                            a(href="#") Где купить
-                        li
-                            a(href="#") О нас
-                        li
-                            a(href="#") FAQ
-                        li
-                            a(href="#") Блог
-                        li
-                            a(href="#") Контакты
+                    .categories
 
+                        .category
+                            a(href="/list_products.html")
+                                .images
+                                    img(src="img/content/img2.jpg" alt="Товар 2")
+                                .category_name Кошельки
 
+                        .category
+                            a(href="/list_products.html")
+                                .images
+                                    img(src="img/content/img3.jpg" alt="Товар 3")
+                                .category_name Галстуки
 
-
-        div.container
-            .wrap
-
-
-                .categories
-
-                    .category
-                        a(href="#")
-                            .images
-                                img(src="img/content/img2.jpg" alt="Товар 2")
-                            .category_name Кошельки
-
-                    .category
-                        a(href="#")
-                            .images
-                                img(src="img/content/img3.jpg" alt="Товар 3")
-                            .category_name Галстуки
-
-                    .category
-                        a(href="#")
-                            .images
-                                img(src="img/content/img4.jpg" alt="Товар 4")
-                            .category_name Рубашки
-
-                    .category
-                        a(href="#")
-                            .images
-                                img(src="img/content/img5.jpg" alt="Товар 5")
-                            .category_name Штаны
-
-                    .category
-                        a(href="#")
-                            .images
-                                img(src="img/content/img2.jpg" alt="Товар 2")
-                            .category_name Рюкзаки
-
-                    .category
-                        a(href="#")
-                            .images
-                                img(src="img/content/img3.jpg" alt="Товар 3")
-                            .category_name Рюкзаки
-
-
-
-
-
-footer
-            .wrap
-                div
-                    div.call_us
-                        h3 Позвонить нам
-                        ul
-                            li
-                                a(href="+380935263954") +38 (093) 52 63 954
-                            li
-                                a(href="+380935263954") +38 (093) 52 63 954
-
-
-                    .social
-                        h3 Социальные сети
-                        li.vk
+                        .category
                             a(href="#")
-                        li.facebook
-                            a(href="#")
-                        li.twitter
-                            a(href="#")
+                                .images
+                                    img(src="img/content/img4.jpg" alt="Товар 4")
+                                .category_name Рубашки
 
-                div.adress
-                    h3 Где мы находимся
-                    ul
-                        li г. Черкассы, ул. Ильина 1, 2 этаж “ Кооператор”
-                        li г. Черкассы, ул. Ильина 1, 2 этаж “ Кооператор”
+                        .category
+                            a(href="/list_products.html")
+                                .images
+                                    img(src="img/content/img5.jpg" alt="Товар 5")
+                                .category_name Штаны
 
+                        .category
+                            a(href="/list_products.html")
+                                .images
+                                    img(src="img/content/img2.jpg" alt="Товар 2")
+                                .category_name Рюкзаки
 
-
-                div
-                    div.subscription
-                        h3 Подписаться на новости
-                        form
-                            input(type='text' placeholder='mail:')
-
-                    div.payment
-                        h3 Способы оплаты
-                        ul
-                            li.payment1
-                                a(href="#")
-                            li.privat
-                                a(href="#")
-                            li.visa
-                                a(href="#")
-                            li.paypal
-                                a(href="#")
+                        .category
+                            a(href="/list_products.html")
+                                .images
+                                    img(src="img/content/img3.jpg" alt="Товар 3")
+                                .category_name Рюкзаки
 
 
 
-                p.copyright © 2016 Symonen.ko
+
+
+            include ./footer.jade

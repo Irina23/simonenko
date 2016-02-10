@@ -4,178 +4,87 @@ html(lang="ru")
         link(href="/css/main.css" rel="stylesheet" type="text/css")
         link(href="bower_components/normalize-css/normalize.css" rel="stylesheet" type="text/css")
         link(href="/css/owl.carousel.css" rel="stylesheet" type="text/css")
+        link(href="/css/template.css" rel="stylesheet" type="text/css")
         script(src="bower_components/jquery/dist/jquery.js")
         script(src="/js/owl.carousel.js")
         script(src="/js/untils.js")
 
 
-    body.shop
-        header
-
-            .wrap
-                .logo
-                    a(href="/")
-                        img(src="img/icons/logo.png")
-
-                ul.social
-                    li.vk
-                        a(href="#")
-                    li.facebook
-                        a(href="#")
-                    li.twitter
-                        a(href="#")
-                ul.lang
-                    li.ua
-                        a(href="#") ua
-                    li.ru.active
-                        a(href="#") ru
-                    li.en
-                        a(href="#") en
+    body
+        .page_wrapper.shop
+            include ./header.jade
 
 
-                div.cart
-                    a(href='#') 1
+            div.container
+                .wrap
 
 
-                .menu
-                    ul
-                        li.active
-                            a(href="#") Главная
-                        li
-                            a(href="#") Купить онлайн
-                        li
-                            a(href="#") Где купить
-                        li
-                            a(href="#") О нас
-                        li
-                            a(href="#") FAQ
-                        li
-                            a(href="#") Блог
-                        li
-                            a(href="#") Контакты
+                    .list_products
 
-
-
-
-        div.container
-            .wrap
-
-
-                .list_products
-
-                    .product
-                        a(href="#")
-                            .images
-                                img(src="img/content/img2.jpg" alt="Товар 2")
-                            .product_name Кошелек кожаный Symonen.ko
-                            .price 390,00 UAH
-                    .product
-                        a(href="#")
-                            .images
-                                img(src="img/content/img3.jpg" alt="Товар 3")
-                            .product_name Кошелек кожаный Symonen.ko
-                            .price 390,00 UAH
-                    .product
-                        a(href="#")
-                            .images
-                                img(src="img/content/img4.jpg" alt="Товар 4")
-                            .product_name Кошелек кожаный Symonen.ko
-                            .price 390,00 UAH
-                    .product
-                        a(href="#")
-                            .images
-                                img(src="img/content/img5.jpg" alt="Товар 5")
-                            .product_name Кошелек кожаный Symonen.ko
-                            .price 390,00 UAH
-                    .product
-                        a(href="#")
-                            .images
-                                img(src="img/content/img2.jpg" alt="Товар 2")
-                            .product_name Кошелек кожаный Symonen.ko
-                            .price 390,00 UAH
-                    .product
-                        a(href="#")
-                            .images
-                                img(src="img/content/img3.jpg" alt="Товар 3")
-                            .product_name Кошелек кожаный Symonen.ko
-                            .price 390,00 UAH
-                    .product
-                        a(href="#")
-                            .images
-                                img(src="img/content/img4.jpg" alt="Товар 4")
-                            .product_name Кошелек кожаный Symonen.ko
-                            .price 390,00 UAH
-                    .product
-                        a(href="#")
-                            .images
-                                img(src="img/content/img5.jpg" alt="Товар 5")
-                            .product_name Кошелек кожаный Symonen.ko
-                            .price 390,00 UAH
-                    .product
-                        a(href="#")
-                            .images
-                                img(src="img/content/img4.jpg" alt="Товар 4")
-                            .product_name Кошелек кожаный Symonen.ko
-                            .price 390,00 UAH
+                        .product
+                            a(href="/product.html")
+                                .images
+                                    img(src="img/content/img2.jpg" alt="Товар 2")
+                                .product_name Кошелек кожаный Symonen.ko
+                                .price 390,00 UAH
+                        .product
+                            a(href="/product.html")
+                                .images
+                                    img(src="img/content/img3.jpg" alt="Товар 3")
+                                .product_name Кошелек кожаный Symonen.ko
+                                .price 390,00 UAH
+                        .product
+                            a(href="/product.html")
+                                .images
+                                    img(src="img/content/img4.jpg" alt="Товар 4")
+                                .product_name Кошелек кожаный Symonen.ko
+                                .price 390,00 UAH
+                        .product
+                            a(href="/product.html")
+                                .images
+                                    img(src="img/content/img5.jpg" alt="Товар 5")
+                                .product_name Кошелек кожаный Symonen.ko
+                                .price 390,00 UAH
+                        .product
+                            a(href="/product.html")
+                                .images
+                                    img(src="img/content/img2.jpg" alt="Товар 2")
+                                .product_name Кошелек кожаный Symonen.ko
+                                .price 390,00 UAH
+                        .product
+                            a(href="/product.html")
+                                .images
+                                    img(src="img/content/img3.jpg" alt="Товар 3")
+                                .product_name Кошелек кожаный Symonen.ko
+                                .price 390,00 UAH
+                        .product
+                            a(href="/product.html")
+                                .images
+                                    img(src="img/content/img4.jpg" alt="Товар 4")
+                                .product_name Кошелек кожаный Symonen.ko
+                                .price 390,00 UAH
+                        .product
+                            a(href="/product.html")
+                                .images
+                                    img(src="img/content/img5.jpg" alt="Товар 5")
+                                .product_name Кошелек кожаный Symonen.ko
+                                .price 390,00 UAH
+                        .product
+                            a(href="/product.html")
+                                .images
+                                    img(src="img/content/img4.jpg" alt="Товар 4")
+                                .product_name Кошелек кожаный Symonen.ko
+                                .price 390,00 UAH
 
 
 
-                .pagination
-                    ul
-                        li.prev
-                            a(href="#")
-                        li.next
-                            a(href="#")
-
-
-
-footer
-            .wrap
-                div
-                    div.call_us
-                        h3 Позвонить нам
+                    .pagination
                         ul
-                            li
-                                a(href="+380935263954") +38 (093) 52 63 954
-                            li
-                                a(href="+380935263954") +38 (093) 52 63 954
-
-
-                    .social
-                        h3 Социальные сети
-                        li.vk
-                            a(href="#")
-                        li.facebook
-                            a(href="#")
-                        li.twitter
-                            a(href="#")
-
-                div.adress
-                    h3 Где мы находимся
-                    ul
-                        li г. Черкассы, ул. Ильина 1, 2 этаж “ Кооператор”
-                        li г. Черкассы, ул. Ильина 1, 2 этаж “ Кооператор”
-
-
-
-                div
-                    div.subscription
-                        h3 Подписаться на новости
-                        form
-                            input(type='text' placeholder='mail:')
-
-                    div.payment
-                        h3 Способы оплаты
-                        ul
-                            li.payment1
+                            li.prev
                                 a(href="#")
-                            li.privat
-                                a(href="#")
-                            li.visa
-                                a(href="#")
-                            li.paypal
+                            li.next
                                 a(href="#")
 
 
 
-                p.copyright © 2016 Symonen.ko
+            include ./footer.jade
