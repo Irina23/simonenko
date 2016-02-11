@@ -20,6 +20,7 @@ jQuery(document).ready(function() {
     })
 
 
+
     jQuery(document).ready(function ($) {
         var $sync1 = $(".big-images"),
             $sync2 = $(".thumbs"),
@@ -63,5 +64,107 @@ jQuery(document).ready(function() {
                 }
             });
     });
+
+
+
+
+    jQuery(".payment").validate({
+
+        rules:{
+
+            name:{
+                required: true,
+                minlength: 2
+
+            },
+            surname:{
+                required: true,
+                minlength: 2
+            },
+            country:{
+                required: true
+
+            },
+            city:{
+                required: true
+
+            },
+            street:{
+                required: true
+
+            },
+            number:{
+                required: true,
+                digits: true
+
+            },
+            phone:{
+                required: true,
+                digits: true
+
+            },
+            email:{
+                required: true,
+                email: true
+            }
+
+        }
+
+
+
+    });
+    jQuery(".contacts").validate({
+
+        rules:{
+
+            name:{
+                required: true,
+                minlength: 2
+
+            },
+
+            email:{
+                required: true,
+                email: true
+            },
+            message:{
+                required: true
+            }
+
+        }
+
+
+
+    });
+    jQuery(".subscription_mail").validate({
+
+        rules:{
+
+
+            email:{
+                required: true,
+                email: true
+            }
+
+        }
+
+
+
+    });
+    jQuery('.add_cart').validate();
+
+
+
 });
+
+window.onload = function(){
+    document.getElementById('links').onclick = function (event) {
+    event = event || window.event;
+    var target = event.target || event.srcElement,
+        link = target.src ? target.parentNode : target,
+        options = {index: link, event: event},
+        links = this.getElementsByTagName('a');
+    blueimp.Gallery(links, options);
+    };
+};
 

@@ -30,8 +30,11 @@ footer
         div
             div.subscription
                 h3 Подписаться на новости
-                form
-                    input(type='text' placeholder='mail:')
+                form.subscription_mail
+                    div
+                        input(type='email' placeholder='mail:', data-validate="email")
+
+
 
             div.payment
                 h3 Способы оплаты

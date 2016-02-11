@@ -5,9 +5,12 @@ html(lang="ru")
         link(href="bower_components/normalize-css/normalize.css" rel="stylesheet" type="text/css")
         link(href="/css/owl.carousel.css" rel="stylesheet" type="text/css")
         link(href="/css/template.css" rel="stylesheet" type="text/css")
+        link(href="/css/blueimp-gallery.css" rel="stylesheet" type="text/css")
         script(src="bower_components/jquery/dist/jquery.js")
         script(src="/js/owl.carousel.js")
         script(src="/js/untils.js")
+        script(src="/js/jquery.validate.min.js")
+        script(src="/js/blueimp-gallery.min.js")
 
 
     body
@@ -19,15 +22,18 @@ html(lang="ru")
 
                     .productfull
                         .image.img-holder
-                            .big-images
-                                div
-                                    img(src="img/content/img_product.jpg", alt="Кожанный кошелек")
-                                div
-                                    img(src="img/content/img_product.jpg", alt="Кожанный кошелек")
-                                div
-                                    img(src="img/content/img_product.jpg", alt="Кожанный кошелек")
-                                div
-                                    img(src="img/content/img_product.jpg", alt="Кожанный кошелек")
+                            .big-images#links
+
+                                    a(href="img/content/img_product.jpg")
+                                        img(src="img/content/img_product.jpg", alt="Кожанный кошелек")
+
+                                    a(href="img/content/img_product.jpg")
+                                        img(src="img/content/img_product.jpg", alt="Кожанный кошелек")
+
+                                    a(href="img/content/img_product.jpg")
+                                        img(src="img/content/img_product.jpg", alt="Кожанный кошелек")
+                                    a(href="img/content/img_product.jpg")
+                                        img(src="img/content/img_product.jpg", alt="Кожанный кошелек")
                             .thumbs
 
                                 div
@@ -40,7 +46,7 @@ html(lang="ru")
                                     img(src="img/content/related3.jpg", alt="Товар 1")
 
                         .info
-                            form
+                            form.add_cart
                                 h1 Кожанный кошелек
                                 span.code Код товара: 36525
 
@@ -83,3 +89,13 @@ html(lang="ru")
 
 
             include ./footer.jade
+
+
+        #blueimp-gallery.blueimp-gallery
+            .slides
+            h3.title
+            a.prev ‹
+            a.next ›
+            a.close ×
+            a.play-pause
+            ol.indicator
