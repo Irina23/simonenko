@@ -1,11 +1,33 @@
 
 jQuery(document).ready(function() {
 
+
+
+    jQuery(window).resize(function() {
+        jQuery('.slider').owlCarousel({
+            loop:true,
+            nav:false,
+            autoHeight:true,
+          //  autoplay:true,
+            responsive:{
+                0:{
+                    items:1
+                },
+                600:{
+                    items:1
+                },
+                1000:{
+                    items:1
+                }
+            }
+        })
+
+    });
     jQuery('.slider').owlCarousel({
         loop:true,
         nav:false,
-        //autoHeight:true,
-        autoplay:true,
+        autoHeight:true,
+        //autoplay:true,
         responsive:{
             0:{
                 items:1
@@ -17,7 +39,7 @@ jQuery(document).ready(function() {
                 items:1
             }
         }
-    })
+    });
 
 
 

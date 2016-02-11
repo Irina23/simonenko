@@ -258,8 +258,7 @@ footer
           li
             margin-bottom: 30px
 
-            &:last-child
-              margin-bottom: 0
+
 
 
     .subscription
@@ -1580,11 +1579,35 @@ header
 
 
 
-@media screen and (max-width: 768px)
+@media screen and (max-width: 780px)
   .wrap
     width: 100%
     padding: 0 20px
     box-sizing: border-box
+
+
+  footer
+    background: #000
+    .wrap
+      > div
+        display: block
+        vertical-align: top
+        margin: auto
+        text-align: center
+
+      .adress
+        margin: auto
+    .copyright
+        text-align: center
+        margin-top: 20px
+
+
+  .slider
+    .owl-stage-outer
+      height: auto!important
+
+
+
 @media screen and (max-width: 480px)
   .wrap
     width: 100%
