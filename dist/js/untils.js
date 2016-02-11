@@ -4,7 +4,7 @@ jQuery(document).ready(function() {
     jQuery('.slider').owlCarousel({
         loop:true,
         nav:false,
-       // autoHeight:true,
+        //autoHeight:true,
         autoplay:true,
         responsive:{
             0:{
@@ -158,6 +158,11 @@ jQuery(document).ready(function() {
 
 
 
+    jQuery(".navbar-toggle").on("click", function(){
+        jQuery(".mobile-navbar-holder").slideToggle();
+        jQuery(this).toggleClass("active");
+        jQuery(".mobile-navbar").toggleClass("active")
+    });
 });
 
 

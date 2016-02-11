@@ -408,6 +408,7 @@ footer
 .slider
   margin-bottom: 100px
   height: 625px
+  overflow: hidden
 
 
   li
@@ -419,6 +420,7 @@ footer
   
   
 .page_wrapper
+  position: relative
   header
     background: url("../img/bg/bg_header.jpg") repeat-x
     -webkit-box-sizing: border-box
@@ -1117,8 +1119,6 @@ form.payment
         > div
           display: inline-block
           vertical-align: top
-          -webkit-box-sizing: border-box
-          -moz-box-sizing: border-box
           box-sizing: border-box
           border-right: 1px solid  #dbdbdb
           height: 100px
@@ -1126,7 +1126,6 @@ form.payment
             border: 0
           &.image
               width: 160px
-              height: 100px
               padding: 0 15px
           &.item-name
               padding: 25px 15px 0 15px
@@ -1304,9 +1303,49 @@ form.payment
         background-position: bottom left
 
 
+.mobile-navbar
+  background-color: #000
+  display: none
+  left: 0
+  top: 0
+  z-index: 2
+  transition: all .6s ease
+  width: 100%
+  position: absolute
+  &.active
 
+    z-index: 101
+    background: #000
+    width: 100%
 
-@media screen and (max-width: 1000px)
+  .navbar-toggle
+    background-color: transparent
+    display: inline-block
+    position: relative
+    padding: 9px 15px
+    z-index: 2
+    cursor: pointer
+    margin-top: 40px
+    .icon-bar
+        background-color: #ffe400
+        display: block
+        width: 30px
+        height: 3px
+
+        + .icon-bar
+          margin-top: 5px
+
+  .mobile-navbar-holder
+    .menu
+      li
+        display: block
+        margin: auto
+        padding: 10px 0
+        margin-bottom: 20px
+        &:last-child
+          text-align: center
+
+@media screen and (max-width: 992px)
   .wrap
       width: 880px
   header
@@ -1339,7 +1378,8 @@ form.payment
     p
       font-size: 14px
       margin-bottom: 20px
-
+    .image-left ~ .text_overflow
+      width: 425px
 
   .cart_page
     margin: 50px auto
@@ -1394,6 +1434,166 @@ form.payment
 
 
 
-@media screen and (max-width: 780px)
+
+
+
+
+
+@media screen and (max-width: 959px)
+  .wrap
+    width: 720px
+  .slider
+    height: 480px
+    margin-bottom: 50px
+
+
+  .popular_product
+    h3
+      margin-bottom: 40px
+      font-size: 24px
+
+footer
+  .wrap
+    .adress
+      margin: auto 55px
+
+    > div ul li
+      font-size: 14px
+
+
+.productfull
+  margin: 50px auto
+  .image
+    margin-right: 0
+    margin-bottom: 30px
+
+  .info
+    width: 100%
+
+.article, .blog
+  form
+    display: block
+    margin: 0 auto 30px
+  ul.contact
+    display: block
+    float: none
+    text-align: center
+  .image-left
+    margin-right: 0
+    margin-bottom: 30px
+    ~ .text_overflow
+      width: 100%
+
+
+
+
+
+
+.cart_page
+
+
+
+    form
+      .products
+        .product-item
+          > div
+            &.image
+              padding: 0
+              width: 100px
+              vertical-align: middle
+            &.item-name
+
+              width: 200px
+              a
+                font-size: 16px
+
+            &.attr
+
+              width: 140px
+              .color .attr_name
+                font-size: 16px
+
+            &.price
+              width: 140px
+              font-size: 18px
+            &.delete
+              width: 120px
+
+
+.mobile-navbar
+  display: block
+  .mobile-navbar-holder
+    display: none
+    .social,.lang,.menu
+      display: block
+
+header
+  height: 125px
+  position: relative
+  width: 100%
+  z-index: 100
+  padding: 0
+
+
+  .social,.lang,.menu
+    display: none
+
+  .logo
+    margin-right: 0
+    position: absolute
+    top: 30px
+    left: 50%
+    margin-left: -100px
+    z-index: 10
+
+  .cart
+    position: absolute
+    top: 30px
+    right: 15px
+    z-index: 10
+
+
+  .social,.lang
+    margin: 0 auto 30px
+    text-align: center
+
+
+.page_wrapper.home footer
+  padding-top: 65px
+
+.page_wrapper.home header
+  height: 125px
+  position: relative
+  width: 100%
+  z-index: 100
+
+
+.page_wrapper.home .container
+  top: 0
+  margin-bottom: 0
+  margin-top: 50px
+
+
+
+
+
+
+
+
+@media screen and (max-width: 768px)
   .wrap
     width: 100%
+    padding: 0 20px
+    box-sizing: border-box
+@media screen and (max-width: 480px)
+  .wrap
+    width: 100%
+    padding: 0 20px
+    box-sizing: border-box
+
+@media screen and (max-width: 320px)
+  .wrap
+    width: 100%
+    padding: 0 20px
+    box-sizing: border-box
+
