@@ -8,7 +8,7 @@ html(lang="ru")
         script(src="bower_components/jquery/dist/jquery.js")
         script(src="/js/owl.carousel.js")
         script(src="/js/untils.js")
-        script(src="/js/jquery.validate.min.js")
+        script(src="/js/alexValidate.js")
 
 
     body
@@ -21,12 +21,15 @@ html(lang="ru")
                     .article
                         h1 Контакты
                         form.contacts
-                            input(type="text", placeholder="Имя:", name="name", minlength="2", data-validate="name")
-                            span.error Поле обязательное для заполнения
-                            input(type="email", placeholder="E-mail:", name="email", data-validate="email")
-                            span.error Поле обязательное для заполнения
-                            textarea( placeholder="Сообщение:", name="message")
-                            span.error Поле обязательное для заполнения
+                            div
+                                input(type="text", placeholder="Имя:", name="name", minlength="2", data-validate="name")
+                                span.error Поле обязательное для заполнения
+                            div
+                                input(type="email", placeholder="E-mail:", name="email", data-validate="email")
+                                span.error Поле обязательное для заполнения
+                            div
+                                textarea( placeholder="Сообщение:", name="message",data-validate="name")
+                                span.error Поле обязательное для заполнения
                             button(type="submit") Отправить
                         ul.contact
                             li Skype: Symonenko.shop

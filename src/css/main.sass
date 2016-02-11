@@ -764,6 +764,12 @@ footer
 
     label
       display: none!important
+    .error
+      input[type="text"],input[type="email"],textarea
+        border: 2px solid #ee2115
+        ~ span.error
+          display: block
+
     input[type="text"],input[type="email"]
       border: 1px #adacac  solid
       width: 100%
@@ -777,10 +783,7 @@ footer
       font-size: 18px
       font-family: "SegoeUILight", sans-serif
       margin-bottom: 20px
-      &.error
-        border: 2px solid #ee2115
-        ~ span.error
-          display: block
+
 
 
 
