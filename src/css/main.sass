@@ -743,11 +743,16 @@ footer
     &:last-child
       margin-bottom: 0
   .image-left
-    float: left
+    //float: left
     width: 400px
     margin-right: 50px
+    display: inline-block
+    vertical-align: middle
     ~ .text_overflow
       overflow: hidden
+      display: inline-block
+      vertical-align: middle
+      width: 485px
 
 
   form
@@ -1240,6 +1245,40 @@ form.payment
 
   .item-arcticle
     margin-bottom: 80px
+    clear: both
+    .image-left
+      position: relative
+      &:after
+        position: absolute
+        content: ""
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background: rgba(255, 228, 0, 0.71)
+        transition: all .3s
+        opacity: 0
+
+    .text_overflow
+      vertical-align: middle
+
+    .blog-date
+        display: block
+        margin-bottom: 20px
+        color: #000
+
+
+
+    a:hover
+      text-decoration: none
+      .image-left
+        &:after
+          transition: all .3s
+          opacity: 1
+
+      h3
+        color: #e3cc0a
+
 
 
 #blueimp-gallery
