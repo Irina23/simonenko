@@ -33,7 +33,7 @@
   z-index: 999999;
   overflow: hidden;
   background: #000;
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0.8);
   opacity: 0;
   display: none;
   direction: ltr;
@@ -99,29 +99,13 @@
   position: absolute;
   top: 50%;
   left: 15px;
-  width: 40px;
-  height: 40px;
-  margin-top: -23px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 60px;
-  font-weight: 100;
-  line-height: 30px;
-  color: #fff;
+  margin-top: -17px;
   text-decoration: none;
-  text-shadow: 0 0 2px #000;
-  text-align: center;
-  background: #222;
-  background: rgba(0, 0, 0, 0.5);
   -webkit-box-sizing: content-box;
-     -moz-box-sizing: content-box;
-          box-sizing: content-box;
-  border: 3px solid #fff;
-  -webkit-border-radius: 23px;
-     -moz-border-radius: 23px;
-          border-radius: 23px;
-  opacity: 0.5;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
   cursor: pointer;
-  display: none;
+
 }
 .blueimp-gallery > .next {
   left: auto;
@@ -138,10 +122,10 @@
   color: #fff;
   text-shadow: 0 0 2px #000;
   opacity: 0.8;
-  display: none;
+
 }
 .blueimp-gallery > .close {
-  padding: 15px;
+
   right: 15px;
   left: auto;
   margin: -15px;
@@ -155,7 +139,7 @@
   bottom: 15px;
   width: 15px;
   height: 15px;
-  background: url(../img/play-pause.png) 0 0 no-repeat;
+  background: url(../img/icons/play-pause.png) 0 0 no-repeat;
   cursor: pointer;
   opacity: 0.5;
   display: none;
@@ -205,13 +189,13 @@
 
 /* Replace PNGs with SVGs for capable browsers (excluding IE<9) */
 body:last-child .blueimp-gallery > .slides > .slide-error {
-  background-image: url(../img/error.svg);
+  background-image: url(../img/icons/error.svg);
 }
 body:last-child .blueimp-gallery > .play-pause {
   width: 20px;
   height: 20px;
   background-size: 40px 20px;
-  background-image: url(../img/play-pause.svg);
+  background-image: url(../img/icons/play-pause.svg);
 }
 body:last-child .blueimp-gallery-playing > .play-pause {
   background-position: -20px 0;
