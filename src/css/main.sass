@@ -1598,6 +1598,43 @@ form.payment
 
 
 
+.error404
+  background: #ffe400
+  padding-top: 200px
+  text-align: center
+  h3
+    font-size: 120px
+    color: #000
+    font-family: Arial, sans-serif
+    line-height: 1em
+    text-align: center
+    margin-bottom: 40px
+    font-weight: 900
+  p
+    color: #000
+    text-align: center
+    margin-bottom: 70px
+    font-size: 48px
+    font-family: Arial, sans-serif
+    font-weight: 700
+    line-height: 1em
+
+  a
+    display: inline-block
+    padding: 15px 25px 21px
+    border: 2px solid #000
+    font-family: "SegoeUI-Semibold", sans-serif
+    color:  #010000
+    font-size: 20px
+    transition: all 0.35s
+    &:hover
+      transition: all 0.35s
+      background: #000000
+      color: #fff
+      text-decoration: none
+
+
+
 
 @media screen and (max-width: 780px)
   .wrap
@@ -1805,11 +1842,17 @@ form.payment
 
 
 
-  .article , .blog
+  .article, .blog
     margin: 30px auto
     h1
       font-size: 20px
       margin-bottom: 30px
+
+    h3
+      margin-bottom: 30px
+      margin-top: 0
+      font-size: 18px
+
 
 
 
@@ -1821,22 +1864,55 @@ form.payment
 
 
 
-  form,.article form, .blog form
+  form,.article form
     input[type="text"],  input[type="email"]
       width: 100%
+
+
+  .list_products,.categories
+    margin: auto
+    .product,.category
+      margin: 0 auto 30px
+
+  body
+      min-width: 320px
+
+  .error404
+    padding-top: 50px
+    h3
+      font-size: 50px
+      margin-bottom: 30px
+    p
+      margin-bottom: 30px
+      font-size: 18px
+
+    a
+      padding: 15px 15px 17px
+      font-size: 14px
 
 
 
 
 @media screen and (max-width: 320px)
+
+
+
   .wrap
-    width: 100%
+    width: auto
     padding: 0 20px
     box-sizing: border-box
 
   header .logo
       width: 150px
       margin-left: -75px
+
+  form,.article form
+    input[type="text"],  input[type="email"]
+      width: 280px
+
+  form.payment
+    input[type="text"], input[type="email"]
+      width: 280px
 
 
 
@@ -1899,3 +1975,6 @@ body.client-moz
             > div.attr
               .color img
                 width: 20px
+
+
+
