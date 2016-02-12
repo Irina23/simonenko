@@ -1,7 +1,14 @@
 
 jQuery(document).ready(function() {
 
-
+    // subscriber
+    $('.subscriber').find('input').on('focus', function () {
+        $(this).closest('.subscriber').addClass('focused');
+    }).on('blur', function () {
+        setTimeout(function () {
+            $(this).closest('.subscriber').removeClass('focused');
+        }.bind(this), 500);
+    });
 
     jQuery(window).resize(function() {
         jQuery('.slider').owlCarousel({
