@@ -1838,3 +1838,64 @@ form.payment
       width: 150px
       margin-left: -75px
 
+
+
+
+
+
+body.client-ie,
+body.client-safari
+  .cart_page form .products .product-item > div.delete
+        a
+          position: relative
+          padding-top: 33px
+          display: block
+          &:after
+              position: absolute
+              top: 0
+              left: 50%
+              background: url("../img/icons/delete2.png") no-repeat top center
+              background-size: 100%
+              width: 19px
+              content: ""
+              height: 23px
+              margin-left: -10px
+
+          img
+            display: none
+
+          &:hover:after
+            background: url("../img/icons/delete.png") no-repeat top center
+            background-size: 100%
+
+  .pagination
+        li
+          &.prev a
+            transform: rotate(0deg)
+          &.next a
+            transform: rotate(180deg)
+          a
+            background: url("../img/icons/pagination2.png") no-repeat
+            background-position: 0 -18px
+            background-size: 100%
+            &:hover
+              background-position: left bottom
+        &.disabled
+          a
+            background-position: 0 0
+            &:hover
+              background-position: 0 0
+
+
+body.client-moz
+  @media screen and (max-width: 959px)
+    img
+      width: 100%
+
+    .cart_page
+      form
+        .products
+          .product-item
+            > div.attr
+              .color img
+                width: 20px
