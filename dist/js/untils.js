@@ -67,12 +67,13 @@ jQuery(document).ready(function() {
 
         $sync2
             .owlCarousel({
-                margin:18,
+                margin:5,
                 items: 3,
+                nav:true,
                // loop:true,
              //   nav: true,
              //   center: true,
-                dots: false
+                dots: true
             })
             .on('click', '.owl-item', function () {
                 $sync1.trigger('to.owl.carousel', [$(this).index(), duration, true]);

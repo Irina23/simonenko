@@ -181,6 +181,7 @@ header
 
 footer
   background: url("../img/bg/bg_footer.jpg") repeat-x
+  background-position: 50% 100%
   padding-top: 65px
   padding-bottom: 20px
   color: #fff
@@ -283,6 +284,7 @@ footer
 
 
     .payment
+      width: 220px
       ul
         li
           height: 17px
@@ -591,8 +593,6 @@ footer
         width: 100%
         //height: 350px
 
-
-
         &:before
           background:  rgba(255, 228, 0, 0.71)
           position: absolute
@@ -630,8 +630,6 @@ footer
         bottom: 0
         left: 0
         width: 100%
-        -webkit-box-sizing: border-box
-        -moz-box-sizing: border-box
         box-sizing: border-box
         padding: 20px 15px
         white-space: nowrap
@@ -652,19 +650,12 @@ footer
           &:before
             opacity: 1
             transition: all .3s
-            -webkit-transition-delay: 0.3s
-            -o-transition-delay: 0.3s
-            -moz-transition-delay: 0.3s
-            transition-delay: 0.3s
+            transition-delay: 0.1s
           &:after
             opacity: 1
             transform: translateY(0px)
             transition: all .3s ease-out
-
-            -webkit-transition-delay: 0.3s
-            -o-transition-delay: 0.3s
-            -moz-transition-delay: 0.3s
-            transition-delay: 0.3s
+            transition-delay: 0.1s
 
 
 
@@ -763,10 +754,13 @@ footer
     span.error
       display: none
       font-size: 16px
-      margin: 0 auto 20px
+      margin: -15px auto 20px
       white-space: nowrap
       text-overflow: ellipsis
       overflow: hidden
+      text-align: right
+      color: #ee2115
+
 
     label
       display: none!important
@@ -837,6 +831,14 @@ footer
         font-size: 20px
         font-family: "SegoeUI", sans-serif
         margin-bottom: 30px
+        a
+            text-decoration: none
+            color: #000000
+            display: inline-block
+            margin-left: 10px
+            &:hover
+              color: #e3cc0a
+              text-decoration: none
 
 
 
@@ -889,10 +891,12 @@ form.payment
         span.error
           display: none
           font-size: 16px
-          margin: 10px auto
+          margin: 5px auto 0
           white-space: nowrap
           text-overflow: ellipsis
           overflow: hidden
+          text-align: left
+          color: #ee2115
 
         input[type="text"],input[type="email"]
           border: 2px solid #ee2115
@@ -966,10 +970,38 @@ form.payment
         height: 350px
 
     .thumbs
+      position: relative
+      width: 360px
+      margin: auto
       .owl-item
-        width: 140px
+        //width: 140px
         height: 75px
         margin-right: 18px
+      .owl-controls
+        .owl-nav
+          .owl-prev,
+          .owl-next
+            position: absolute
+            top: 50%
+            margin-top: -20px
+            background: url("../img/icons/array_slider.png") no-repeat
+            background-size: 100%
+            width: 15px
+            height: 25px
+            text-indent: -99999px
+            &:hover
+              background-position: bottom left
+
+
+          .owl-prev
+            left: -20px
+          .owl-next
+            right: -20px
+            transform: rotate(180deg)
+
+
+
+
 
 
 
@@ -1124,7 +1156,7 @@ form.payment
           &:last-child
             border: 0
           &.image
-              width: 160px
+              width: 190px
               padding: 0 15px
           &.item-name
               padding: 25px 15px 0 15px
@@ -1174,7 +1206,7 @@ form.payment
               font-family: "SegoeUILight", sans-serif
 
           &.delete
-            width: 140px
+            width: 127px
             padding-top: 30px
             text-align: center
             a
@@ -1375,10 +1407,14 @@ form.payment
       margin-bottom: 50px
     form
         width: 480px
+        display: block
+        margin: 0 auto 30px
+    ul.contact
+      display: block
+      float: none
+      text-align: center
 
-    p
-      font-size: 14px
-      margin-bottom: 20px
+
     .image-left ~ .text_overflow
       width: 425px
 
@@ -1480,20 +1516,14 @@ form.payment
   .productfull
     margin: 50px auto
     .image
-      margin-right: 0
-      margin-bottom: 30px
+      margin: 0 auto 30px
+      display: block
 
     .info
       width: 100%
 
-  .article, .blog
-    form
-      display: block
-      margin: 0 auto 30px
-    ul.contact
-      display: block
-      float: none
-      text-align: center
+
+
     .image-left
       margin-right: 0
       margin-bottom: 30px
@@ -1610,40 +1640,7 @@ form.payment
 
 
 
-.error404
-  background: #ffe400
-  padding-top: 200px
-  text-align: center
-  h3
-    font-size: 120px
-    color: #000
-    font-family: Arial, sans-serif
-    line-height: 1em
-    text-align: center
-    margin-bottom: 40px
-    font-weight: 900
-  p
-    color: #000
-    text-align: center
-    margin-bottom: 70px
-    font-size: 48px
-    font-family: Arial, sans-serif
-    font-weight: 700
-    line-height: 1em
 
-  a
-    display: inline-block
-    padding: 15px 25px 21px
-    border: 2px solid #000
-    font-family: "SegoeUI-Semibold", sans-serif
-    color:  #010000
-    font-size: 20px
-    transition: all 0.35s
-    &:hover
-      transition: all 0.35s
-      background: #000000
-      color: #fff
-      text-decoration: none
 
 
 
@@ -1751,6 +1748,9 @@ form.payment
       li
         font-size: 14px
         margin-bottom: 15px
+
+
+
 
   .buy
     width: 100%
@@ -1992,3 +1992,37 @@ body.client-moz
 
 
 
+.error404
+  background: #ffe400
+  padding-top: 200px
+  text-align: center
+  h3
+    font-size: 120px
+    color: #000
+    font-family: Arial, sans-serif
+    line-height: 1em
+    text-align: center
+    margin-bottom: 40px
+    font-weight: 900
+  p
+    color: #000
+    text-align: center
+    margin-bottom: 70px
+    font-size: 48px
+    font-family: Arial, sans-serif
+    font-weight: 700
+    line-height: 1em
+
+  a
+    display: inline-block
+    padding: 15px 25px 21px
+    border: 2px solid #000
+    font-family: "SegoeUI-Semibold", sans-serif
+    color:  #010000
+    font-size: 20px
+    transition: all 0.35s
+    &:hover
+      transition: all 0.35s
+      background: #000000
+      color: #fff
+      text-decoration: none

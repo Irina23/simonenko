@@ -21,9 +21,9 @@
 					DOM.$fields = $self.find('[data-validate]');
 					 $self.on('submit', plg.submit);
 					//$self.find('.btn.submit').on('click', plg.submit);
-					 DOM.$fields.on('blur keyup', function () {
-					 	plg.validate( $(this) );
-					 });
+					// DOM.$fields.on('blur keyup', function () {
+					// 	plg.validate( $(this) );
+					// });
 					DOM.$fields.on('focus', function () {
 						plg.removeLabel( $(this) );
 					})
