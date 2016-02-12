@@ -1313,7 +1313,7 @@ form.payment
   position: absolute
   &.active
 
-    z-index: 101
+    //z-index: 101
     background: #000
     width: 100%
 
@@ -1485,6 +1485,7 @@ form.payment
     .image-left
       margin-right: 0
       margin-bottom: 30px
+      width: auto
       ~ .text_overflow
         width: 100%
 
@@ -1565,21 +1566,35 @@ form.payment
   .page_wrapper.home footer
     padding-top: 65px
 
-  .page_wrapper.home header
+  .page_wrapper.home header,.page_wrapper.shop header
     height: 125px
     position: relative
     width: 100%
     z-index: 100
 
 
-  .page_wrapper.home .container
+  .page_wrapper.home .container,
+  .page_wrapper.shop .container
     top: 0
     margin-bottom: 0
     margin-top: 50px
 
 
+  .categories
+    margin: auto -10px 50px
+    .category
+      a
+        .category_name
+          font-size: 18px
 
 
+  .list_products
+    .product
+      a
+        .product_name
+          font-size: 18px
+        .price
+          font-size: 16px
 
 
 
@@ -1607,9 +1622,98 @@ form.payment
         margin-top: 20px
 
 
+
+
+
   .slider
     .owl-stage-outer
       height: auto!important
+
+  .cart_page
+    form
+      .products
+        .product-item
+          > div
+            display: block
+            border: 0
+            margin: auto
+            margin-bottom: 20px
+            padding: 0
+            height: auto
+            &.image
+              width: 160px
+
+            &.item-name,&.attr,&.price,&.delete
+              width: 280px
+              padding: 0
+              text-align: center
+              a
+                font-size: 20px
+
+
+            &.attr
+              .color
+                .attr_name
+                  font-size: 20px
+
+            &.price
+              font-size: 20px
+
+
+
+
+  form.payment
+    width: auto
+    .radio > div
+      width: auto
+      margin-bottom: 20px
+      float: none
+      label
+        font-size: 15px
+    .row-form > div
+      display: block
+      margin: auto
+      margin-bottom: 20px
+
+      &:nth-child(2n+1)
+        margin-right: auto
+
+
+    input[type="text"], input[type="email"]
+      width: 280px
+    h3
+      margin-bottom: 20px
+      font-size: 20px
+
+
+  .pagination li.prev
+    margin-right: 40px
+
+
+
+  form,.article form, .blog form
+    width: 100%
+    input[type="text"],  input[type="email"]
+      width: 100%
+
+
+  .article,.blog
+    ul.contact
+      li
+        font-size: 14px
+        margin-bottom: 15px
+
+  .buy
+    width: 100%
+    li
+      width: 100%
+      float: none!important
+      margin-bottom: 20px
+
+      strong
+        font-size: 16px
+      p
+        font-size: 15px
 
 
 
@@ -1618,10 +1722,119 @@ form.payment
     width: 100%
     padding: 0 20px
     box-sizing: border-box
+  .popular_product
+    h3
+      font-size: 18px
+      margin-bottom: 20px
+
+  .slider
+    margin-bottom: 30px
+
+
+  .page_wrapper.home .container, .page_wrapper.shop .container
+    margin-top: 30px
+
+  .productfull
+    margin: 30px auto
+    .image
+      width: 100%
+      .big-images img
+        width: auto
+        height: auto
+      .thumbs .owl-item
+        height: auto
+    .info
+      form
+        button
+          padding: 9px 15px 12px
+          font-size: 14px
+          margin-bottom: 0
+        .description
+          font-size: 14px
+        h1
+          font-size: 18px
+        .price
+          font-size: 18px
+
+        .code
+          font-size: 16px
+  header .logo
+    width: 180px
+    margin-left: -90px
+
+
+  .cart_page
+    margin: 30px auto
+    h1
+      font-size: 20px
+      margin-bottom: 30px
+    form
+      .total_price
+        font-size: 18px
+        margin-bottom: 20px
+
+      .control-pannel
+        width: 100%
+
+
+      .products
+        margin-bottom: 20px
+        .product-item
+          > div
+            &.item-name,&.attr,&.price,&.delete
+              width: auto
+            &.item-name,&.attr
+              a,.color .attr_name
+                font-size: 18px
+
+      button
+        font-size: 16px
+        padding: 8px 15px 12px
+
+
+
+
+  form.payment
+    margin: 30px auto
+    input[type="text"], input[type="email"]
+      width: 100%
+
+    .radio
+      margin-bottom: 20px
+
+
+
+
+  .article , .blog
+    margin: 30px auto
+    h1
+      font-size: 20px
+      margin-bottom: 30px
+
+
+
+  .blog
+    margin-bottom: 0
+    .item-arcticle
+      margin-bottom: 30px
+
+
+
+
+  form,.article form, .blog form
+    input[type="text"],  input[type="email"]
+      width: 100%
+
+
+
 
 @media screen and (max-width: 320px)
   .wrap
     width: 100%
     padding: 0 20px
     box-sizing: border-box
+
+  header .logo
+      width: 150px
+      margin-left: -75px
 
