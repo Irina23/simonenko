@@ -2,11 +2,11 @@
 jQuery(document).ready(function() {
 
     // subscriber
-    $('.subscriber').find('input').on('focus', function () {
-        $(this).closest('.subscriber').addClass('focused');
+    jQuery('.subscriber').find('input[type="email"]').on('focus', function () {
+        jQuery(this).addClass('focused');
     }).on('blur', function () {
         setTimeout(function () {
-            $(this).closest('.subscriber').removeClass('focused');
+            jQuery(this).removeClass('focused');
         }.bind(this), 500);
     });
 
@@ -15,7 +15,8 @@ jQuery(document).ready(function() {
             loop:true,
             nav:false,
             autoHeight:true,
-          //  autoplay:true,
+            autoplay:true,
+            dots: true,
             responsive:{
                 0:{
                     items:1
@@ -34,7 +35,8 @@ jQuery(document).ready(function() {
         loop:true,
         nav:false,
         autoHeight:true,
-        //autoplay:true,
+        autoplay:true,
+        dots: true,
         responsive:{
             0:{
                 items:1
