@@ -2,13 +2,13 @@
 jQuery(document).ready(function() {
 
     // subscriber
-    jQuery('.subscriber').find('input[type="email"]').on('focus', function () {
+    /*jQuery('.subscriber').find('input[type="email"]').on('focus', function () {
         jQuery(this).addClass('focused');
     }).on('blur', function () {
         setTimeout(function () {
             jQuery(this).removeClass('focused');
         }.bind(this), 500);
-    });
+    });*/
 
     jQuery(window).resize(function() {
         jQuery('.slider').owlCarousel({
