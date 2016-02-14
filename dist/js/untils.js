@@ -76,7 +76,7 @@ jQuery(document).ready(function() {
 
         $sync2
             .owlCarousel({
-                margin:5,
+                margin:10,
                 items: 3,
                 nav:true,
                // loop:true,
