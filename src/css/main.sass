@@ -1036,11 +1036,12 @@ form.payment
 
     .thumbs
       position: relative
-      width: 360px
+      padding: 0 20px
+      box-sizing: border-box
       margin: auto
       .owl-item
         //width: 140px
-        height: 75px
+        //height: 75px
         margin-right: 18px
       .owl-controls
         .owl-nav
@@ -1048,20 +1049,21 @@ form.payment
           .owl-next
             position: absolute
             top: 50%
-            margin-top: -20px
+            margin-top: -12px
             background: url("../img/icons/array_slider.png") no-repeat
             background-size: 100%
             width: 15px
             height: 25px
             text-indent: -99999px
+            opacity: 1
             &:hover
-              background-position: bottom left
+              opacity: 0.8
 
 
           .owl-prev
-            left: -20px
+            left: 0
           .owl-next
-            right: -20px
+            right: 0
             transform: rotate(180deg)
 
 
