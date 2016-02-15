@@ -49,7 +49,7 @@
 					$el.parent().removeClass('error');
 				},
 				validate: function ($el) {
-					if ( plg.test( $el.val(), $el.data('validate') ) ) {
+					if ( plg.test( $el.val(), $el.attr('data-validate') ) ) {
 						plg.removeLabel( $el );
 					} else {
 						plg.addLabel( $el );
@@ -58,7 +58,7 @@
 				},
 				submit: function (e) {
 					state.errors = 0;
-					DOM.$fields.each( function () {
+					$self.find('[data-validate]').each( function () {
 						plg.validate( $(this) );
 					} );
 					if (state.errors) {

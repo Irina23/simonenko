@@ -37,7 +37,7 @@ html(lang="ru")
 
 
                         h3 Доставка
-                        .radio.cf
+                        .radio.cf.delivery
 
                             div
                                 input(type="radio", name="delivery", value="courier", id="courier", checked="")
@@ -58,17 +58,17 @@ html(lang="ru")
                                 span.error Поле обязательное для заполнения
                         .row-form
                             div
-                                input(type="text", placeholder="Страна:", name="country", data-validate="name")
+                                input(type="text", placeholder="Страна:", name="country", data-validate="name" id="country")
                                 span.error Поле обязательное для заполнения
                             div
-                                input(type="text", placeholder="Город:",name="city", data-validate="name")
+                                input(type="text", placeholder="Город:",name="city", data-validate="name", id="city")
                                 span.error Поле обязательное для заполнения
-                        .row-form
+                        .row-form.delivery_novaposhta
                             div
-                                input(type="text", placeholder="Улица:", name="street", data-validate="name")
+                                input(type="text", placeholder="Улица:", name="street", data-validate="name" id="street")
                                 span.error Поле обязательное для заполнения
                             div
-                                input(type="text", placeholder="Дом:",name="number", data-validate="number")
+                                input(type="text", placeholder="Дом:",name="number", data-validate="number" id="number")
                                 span.error Поле обязательное для заполнения
                         .row-form
                             div

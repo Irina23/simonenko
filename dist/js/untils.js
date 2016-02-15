@@ -195,6 +195,23 @@ jQuery(document).ready(function() {
         jQuery(this).toggleClass("active");
         jQuery(".mobile-navbar").toggleClass("active")
     });
+
+
+
+
+    jQuery(".delivery input[type='radio']").change(function() {
+
+        if (jQuery('#novaposhta2').is(':checked')){
+            jQuery(".row-form.delivery_novaposhta").hide();
+            jQuery(".row-form.delivery_novaposhta input").attr("data-validate",true);
+
+        } else{
+            jQuery(".row-form.delivery_novaposhta").show();
+            jQuery(".row-form.delivery_novaposhta input#street").attr("data-validate","name");
+            jQuery(".row-form.delivery_novaposhta input#number").attr("data-validate","number");
+        }
+
+    });
 });
 
 
