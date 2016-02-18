@@ -150,16 +150,28 @@ header
   .menu
       margin-top: 50px
 
+      ul
+        display: table
+        width: 100%
+
 
 
       li
         list-style: none
         text-align: center
-        display: inline-block
-        margin-right: 78px
-        &:last-child
-          margin-right: 0
+        //display: inline-block
+        display: table-cell
+        //margin-right: 78px
+        //min-width: 130px
+        padding: 0 20px
+        &:first-child
           text-align: left
+          padding: 0
+        &:last-child
+          //margin-right: 0
+          //text-align: left
+          text-align: right
+          padding: 0
         &.active
           a
             color: #ffe400
@@ -1446,6 +1458,7 @@ form.payment
         margin: auto
         padding: 10px 0
         margin-bottom: 20px
+        &:first-child,
         &:last-child
           text-align: center
 
