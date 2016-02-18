@@ -12,7 +12,7 @@ jQuery(document).ready(function() {
 
     jQuery(window).resize(function() {
         jQuery('.slider').owlCarousel({
-            loop:true,
+            //loop:true,
             nav:false,
             autoHeight:true,
             autoplay:true,
@@ -32,7 +32,7 @@ jQuery(document).ready(function() {
 
     });
     jQuery('.slider').owlCarousel({
-        loop:true,
+        //loop:true,
         nav:false,
         autoHeight:true,
         autoplay:true,
