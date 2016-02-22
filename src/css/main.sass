@@ -1117,11 +1117,12 @@ form.payment
           text-transform: uppercase
           color: #000000
           line-height: 1em
+          margin-bottom: 25px
 
 
         .radio.color
           position: relative
-          padding-bottom: 40px
+          //padding-bottom: 40px
           margin-bottom: 25px
           .attr_name
             line-height: 1em
@@ -1143,13 +1144,18 @@ form.payment
               cursor: pointer
               display: block
               margin: 0 6px
-              padding: 2px
-              border: 2px solid rgba(255, 228, 0, 0)
-              width: 24px
-              height: 24px
+              //padding: 2px
+              border: 2px solid #fff
+              width: 20px
+              height: 20px
               position: relative
               z-index: 1
-              box-sizing: border-box
+              //box-sizing: border-box
+              padding: 0
+              &:before,&:after
+                width: 0
+                height: 0
+                border: 0
 
 
               img
@@ -1163,6 +1169,11 @@ form.payment
             input[type="radio"]
               position: absolute
               left: -100000px
+              display: none
+
+
+
+
               &:checked ~ .price
                 display: inline-block
               &:checked ~ label
