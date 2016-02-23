@@ -1317,6 +1317,7 @@ form.payment
               border: 0
               padding: 0
               display: inline-block
+              background: none
               &:hover
                 text-decoration: none
                 background: none
@@ -1344,6 +1345,26 @@ form.payment
     .control-pannel
       width: 220px
       float: right
+      a
+
+        padding: 8px 15px 14px
+        border: 1px solid #000000
+        background: none
+        display: inline-block
+        font-size: 20px
+        box-sizing: border-box
+        line-height: 1em
+        color: #000
+        text-align: center
+
+
+        transition: all 0.35s
+        &:hover
+          background: #000000
+          color: #fff
+          transition: all 0.35s
+          text-decoration: none
+
     .total_price
       letter-spacing: 0.12px
       color: #000000
@@ -1353,21 +1374,6 @@ form.payment
       margin-bottom: 40px
 
 
-    button
-
-      padding: 8px 15px 14px
-      border: 1px solid #000000
-      background: none
-      display: block
-      font-size: 20px
-      box-sizing: border-box
-      line-height: 1em
-
-      transition: all 0.35s
-      &:hover
-        background: #000000
-        color: #fff
-        transition: all 0.35s
 
 
 
@@ -1497,7 +1503,7 @@ body.client-safari
     button
       position: relative
       padding-top: 33px
-      display: block
+      display: inline-block
       &:after
         position: absolute
         top: 0
