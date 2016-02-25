@@ -28,6 +28,7 @@
 						plg.removeLabel( $(this) );
 					})
 				},
+
 				test: function (data, type) {
 					switch (type) {
 						case 'name':
