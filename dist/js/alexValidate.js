@@ -19,9 +19,9 @@
 			var plg = {
 				init: function () {
 					DOM.$fields = $self.find('[data-validate]');
-					 $self.on('submit', plg.submit);
-					//$self.find('.btn.submit').on('click', plg.submit);
-					// DOM.$fields.on('blur keyup', function () {
+					 //$self.on('submit', plg.submit);
+					$self.find('.btn.submit').on('click', plg.submit);
+					 //DOM.$fields.on('blur keyup', function () {
 					// 	plg.validate( $(this) );
 					// });
 					DOM.$fields.on('focus', function () {
@@ -38,6 +38,8 @@
 							return /^[0-9a-zA-Z._-]+@[0-9a-zA-Z_-]+\.[a-zA-Z._-]+/.test(data);
 						case 'number':
 							return /^[0-9]/.test(data);
+						case 'empty':
+							return /^[a-zA-Z0-9]+/.test(data);
 						default:
 							return true;
 					}
