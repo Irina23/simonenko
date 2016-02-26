@@ -1328,13 +1328,22 @@ body.client-safari .pagination.disabled a {
   .categories .category {
     width: 280px;
     height: 325px; }
+    .categories .category a {
+      height: 100%; }
   .list_products .product {
     width: 280px;
     margin-bottom: 50px; }
-    .list_products .product a .images {
-      height: 325px; }
+    .list_products .product a {
+      height: 100%; }
+      .list_products .product a .images {
+        height: 325px; }
   .pagination {
-    margin-bottom: 70px; } }
+    margin-bottom: 70px; }
+  .popular_product .products .product {
+    width: 280px;
+    height: 325px; }
+    .popular_product .products .product a {
+      height: 100%; } }
 
 .success-payment .container {
   margin: 100px auto 0; }
