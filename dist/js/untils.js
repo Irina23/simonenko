@@ -212,6 +212,18 @@ jQuery(document).ready(function() {
         }
 
     });
+    jQuery(".payments.radio input[type='radio']").change(function() {
+
+        if (jQuery('#courier1').is(':checked')){
+            jQuery(".novaposhta2").hide();
+
+
+        } else{
+            jQuery(".novaposhta2").show();
+
+        }
+
+    });
 });
 
 

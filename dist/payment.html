@@ -74,36 +74,28 @@
         <div class="wrap">
           <form class="payment">
             <h3>Оплата</h3>
-            <div class="radio cf">
+            <div class="radio cf payments">
               <div>
-                <input type="radio" name="payment" value="visa" id="visa" checked="">
-                <label for="visa">VISA</label>
-              </div>
-              <div>
-                <input type="radio" name="payment" value="privat24" id="privat24">
-                <label for="privat24">Privat24</label>
-              </div>
-              <div>
-                <input type="radio" name="payment" value="mastercard" id="mastercard">
-                <label for="mastercard">Mastercard</label>
-              </div>
-              <div>
-                <input type="radio" name="payment" value="paypal" id="paypal">
-                <label for="paypal">PayPal</label>
+                <input type="radio" name="payment" value="liqpay" id="liqpay" checked="">
+                <label for="liqpay">LiqPay</label>
               </div>
               <div>
                 <input type="radio" name="payment" value="novaposhta" id="novaposhta">
                 <label for="novaposhta">Наложный платеж “Новая почта”</label>
               </div>
+              <div>
+                <input type="radio" name="payment" value="courier" id="courier1">
+                <label for="courier1">Оплата курєру</label>
+              </div>
             </div>
             <h3>Доставка</h3>
             <div class="radio cf delivery">
               <div>
-                <input type="radio" name="delivery" value="courier" id="courier" checked="">
+                <input type="radio" name="shipping_type" value="courier" id="courier" checked="">
                 <label for="courier">Курьером по г. Черкассы</label>
               </div>
-              <div>
-                <input type="radio" name="delivery" value="novaposhta2" id="novaposhta2">
+              <div class="novaposhta2">
+                <input type="radio" name="shipping_type" value="novaposhta2" id="novaposhta2">
                 <label for="novaposhta2"> Новая почта (наложный платеж)</label>
               </div>
             </div>

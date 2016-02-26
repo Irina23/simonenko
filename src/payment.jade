@@ -13,38 +13,30 @@ html(lang="ru")
                     form.payment
                         h3 Оплата
 
-                        .radio.cf
+                        .radio.cf.payments
 
                             div
-                                input(type="radio", name="payment", value="visa", id="visa",checked="")
-                                label(for="visa") VISA
-                            div
-                                input(type="radio", name="payment", value="privat24",id="privat24")
-                                label(for="privat24") Privat24
-                            div
-                                input(type="radio", name="payment", value="mastercard" id="mastercard")
-                                label(for="mastercard") Mastercard
-
-                            div
-                                input(type="radio", name="payment", value="paypal", id="paypal")
-                                label(for="paypal") PayPal
-
+                                input(type="radio", name="payment", value="liqpay", id="liqpay",checked="")
+                                label(for="liqpay") LiqPay
 
                             div
                                 input(type="radio", name="payment", value="novaposhta", id="novaposhta")
                                 label(for="novaposhta") Наложный платеж “Новая почта”
 
+                            div
+                                input(type="radio", name="payment", value="courier", id="courier1")
+                                label(for="courier1") Оплата курєру
 
 
                         h3 Доставка
                         .radio.cf.delivery
 
                             div
-                                input(type="radio", name="delivery", value="courier", id="courier", checked="")
+                                input(type="radio", name="shipping_type", value="courier", id="courier", checked="")
                                 label(for="courier") Курьером по г. Черкассы
 
-                            div
-                                input(type="radio", name="delivery", value="novaposhta2" id="novaposhta2")
+                            div.novaposhta2
+                                input(type="radio", name="shipping_type", value="novaposhta2" id="novaposhta2")
                                 label(for="novaposhta2")  Новая почта (наложный платеж)
 
 
