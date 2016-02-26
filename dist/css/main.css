@@ -1114,7 +1114,7 @@ form.payment {
     margin-bottom: 40px; }
 
 .blog {
-  margin-bottom: 50px; }
+  margin-bottom: 55px; }
   .blog h3 {
     line-height: 1em;
     color: #191919;
@@ -1126,6 +1126,8 @@ form.payment {
   .blog .item-arcticle {
     margin-bottom: 80px;
     clear: both; }
+    .blog .item-arcticle:last-child {
+      margin-bottom: 0; }
     .blog .item-arcticle .image-left {
       position: relative;
       vertical-align: middle; }
