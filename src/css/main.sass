@@ -401,11 +401,22 @@ footer
       display: inline-block
       vertical-align: top
       margin: 0 8px 20px
+      width: 300px
+      height: 350px
+      overflow: hidden
       a
         display: block
         position: relative
+        height: 350px
+        width: 300px
+        overflow: hidden
         .images
           position: relative
+          height: 100%
+          img
+            height: 100%
+            max-width: inherit
+
           &:before
               background:  rgba(255, 228, 0, 0.71)
               position: absolute
@@ -549,6 +560,10 @@ footer
           margin-bottom: 10px
           width: 100%
           height: 350px
+          img
+            max-width: inherit
+            width: auto
+            height: 100%
           &:before
             background:  rgba(255, 228, 0, 0.71)
             position: absolute
@@ -662,16 +677,25 @@ footer
     width: 300px
     height: 350px
     overflow: hidden
+    position: relative
 
 
 
     a
       display: block
       position: relative
+      height: 350px
+      overflow: hidden
+
+
       .images
         position: relative
-        width: 100%
+        //width: 100%
         //height: 350px
+        img
+          width: auto
+          max-width: inherit
+          height: 100%
 
         &:before
           background:  rgba(255, 228, 0, 0.71)
@@ -700,24 +724,24 @@ footer
 
 
       .category_name
-        text-align: left
-        font-size: 24px
-        line-height: 1em
-        font-family: "SegoeUILight", sans-serif
-        color: #000
-        background:  rgba(255, 228, 0, 0.71)
-        position: absolute
-        bottom: 0
-        left: 0
-        width: 100%
-        box-sizing: border-box
-        padding: 20px 15px
-        white-space: nowrap
-        text-overflow: ellipsis
-        overflow: hidden
-        opacity: 1
-        transform: translateY(0px)
-        transition: all .3s ease-out
+          text-align: left
+          font-size: 24px
+          line-height: 1em
+          font-family: "SegoeUILight", sans-serif
+          color: #000
+          background:  rgba(255, 228, 0, 0.71)
+          position: absolute
+          bottom: 0
+          left: 0
+          width: 100%
+          box-sizing: border-box
+          padding: 20px 15px
+          white-space: nowrap
+          text-overflow: ellipsis
+          overflow: hidden
+          opacity: 1
+          transform: translateY(0px)
+          transition: all .3s ease-out
 
 
       &:hover
@@ -1031,7 +1055,7 @@ form.payment
             background-position: top left
 
     &.delivery
-      #novaposhta2:checked
+      //#novaposhta2:checked
 
 
 .productfull
