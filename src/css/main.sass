@@ -1063,6 +1063,13 @@ form.payment
 
 .productfull
   margin: 105px auto 160px
+  position: relative
+  .img-slider
+    position: absolute
+    top: 0
+    left: 0
+    width: 400px
+    height: 450px
 
   .image
     display: inline-block
@@ -1070,6 +1077,8 @@ form.payment
     margin-right: 75px
     vertical-align: top
     width: 400px
+    position: relative
+    height: 450px
 
     .big-images
       margin-bottom: 40px
@@ -2062,6 +2071,12 @@ body.client-moz
 
 
 @media screen and (max-width: 480px)
+  .productfull .img-slider
+    width: 100%
+    height: auto
+
+  .productfull .image
+    height: 360px
   .wrap
     width: 100%
     padding: 0 20px

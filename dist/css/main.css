@@ -852,12 +852,21 @@ form.payment {
           background-position: top left; }
 
 .productfull {
-  margin: 105px auto 160px; }
+  margin: 105px auto 160px;
+  position: relative; }
+  .productfull .img-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: 450px; }
   .productfull .image {
     display: inline-block;
     margin-right: 75px;
     vertical-align: top;
-    width: 400px; }
+    width: 400px;
+    position: relative;
+    height: 450px; }
     .productfull .image .big-images {
       margin-bottom: 40px; }
       .productfull .image .big-images img {
@@ -1573,6 +1582,11 @@ body.client-safari .pagination.disabled a {
     background-size: 100%; } }
 
 @media screen and (max-width: 480px) {
+  .productfull .img-slider {
+    width: 100%;
+    height: auto; }
+  .productfull .image {
+    height: 360px; }
   .wrap {
     width: 100%;
     padding: 0 20px;
