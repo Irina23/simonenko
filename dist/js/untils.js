@@ -207,11 +207,16 @@ jQuery(document).ready(function() {
         jQuery(".courier").hide();
         jQuery("#courier").prop( "checked", false );
         jQuery("#novaposhta2").prop( "checked", true );
+        jQuery(".row-form.delivery_courier").hide();
+        jQuery(".row-form.delivery_courier input").attr("data-validate",true);
 
     } else{
         jQuery(".courier").show();
         jQuery("#novaposhta2").prop( "checked", false );
         jQuery("#courier").prop( "checked", true );
+        jQuery(".row-form.delivery_courier").show();
+        jQuery(".row-form.delivery_courier input#street").attr("data-validate","name");
+        jQuery(".row-form.delivery_courier input#number").attr("data-validate","number");
 
     }
     jQuery(".payments.radio input[type='radio']").change(function() {
@@ -220,18 +225,24 @@ jQuery(document).ready(function() {
             jQuery(".novaposhta2").hide();
             jQuery("#novaposhta2").prop( "checked", false );
             jQuery("#courier").prop( "checked", true );
+            jQuery(".row-form.delivery_novaposhta").hide();
+            jQuery(".row-form.delivery_novaposhta input").attr("data-validate",true);
 
 
         } else{
             jQuery(".novaposhta2").show();
             jQuery("#courier").prop( "checked", false );
             jQuery("#novaposhta2").prop( "checked", true );
+            jQuery(".row-form.delivery_novaposhta").show();
+            jQuery(".row-form.delivery_novaposhta input#number_np").attr("data-validate","empty");
 
         }
         if (jQuery('#liqpay, #novaposhta').is(':checked')){
             jQuery(".courier").hide();
             jQuery("#courier").prop( "checked", false );
             jQuery("#novaposhta2").prop( "checked", true );
+            jQuery(".row-form.delivery_courier").hide();
+            jQuery(".row-form.delivery_courier input").attr("data-validate",true);
 
 
 
@@ -239,37 +250,20 @@ jQuery(document).ready(function() {
             jQuery(".courier").show();
             jQuery("#novaposhta2").prop( "checked", false );
             jQuery("#courier").prop( "checked", true );
+            jQuery(".row-form.delivery_courier").show();
+            jQuery(".row-form.delivery_courier input#street").attr("data-validate","name");
+            jQuery(".row-form.delivery_courier input#number").attr("data-validate","number");
 
         }
 
     });
 
 
-    if (jQuery('#novaposhta2').is(':checked')){
-        console.log("5555");
-        jQuery(".row-form.delivery_courier").hide();
-        jQuery(".row-form.delivery_courier input").attr("data-validate",true);
 
-    } else{
-        jQuery(".row-form.delivery_courier").show();
-        jQuery(".row-form.delivery_courier input#street").attr("data-validate","name");
-        jQuery(".row-form.delivery_courier input#number").attr("data-validate","number");
-    }
-
-    if (jQuery('#courier').is(':checked')){
-        console.log("666");
-        jQuery(".row-form.delivery_novaposhta").hide();
-        jQuery(".row-form.delivery_novaposhta input").attr("data-validate",true);
-
-    } else{
-        jQuery(".row-form.delivery_novaposhta").show();
-        jQuery(".row-form.delivery_novaposhta input#number_np").attr("data-validate","empty");
-
-    }
-
+/*
     jQuery(".delivery input[type='radio']").change(function() {
 
-        if (jQuery('#novaposhta2').is(':checked')){
+        if (jQuery('#novaposhta2').prop( "checked")==true){
             console.log("5555");
             jQuery(".row-form.delivery_courier").hide();
             jQuery(".row-form.delivery_courier input").attr("data-validate",true);
@@ -280,7 +274,7 @@ jQuery(document).ready(function() {
             jQuery(".row-form.delivery_courier input#number").attr("data-validate","number");
         }
 
-        if (jQuery('#courier').is(':checked')){
+        if (jQuery('#courier').prop( "checked")==true){
             console.log("666");
             jQuery(".row-form.delivery_novaposhta").hide();
             jQuery(".row-form.delivery_novaposhta input").attr("data-validate",true);
@@ -291,7 +285,7 @@ jQuery(document).ready(function() {
 
         }
 
-    });
+    });*/
 
 });
 
