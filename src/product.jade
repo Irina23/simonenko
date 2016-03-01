@@ -9,19 +9,66 @@ html(lang="ru")
                 .wrap
 
                     .productfull
-                        .image.img-holder
+                        .image.img-holder(data-cat="brown2")
                             .big-images#links
 
-                                    a(href="img/content/img_product.jpg")
-                                        img(src="img/content/img_product.jpg", alt="Кожанный кошелек")
+                                    a(href="img/content/60-0.jpg")
+                                        img(src="img/content/60-0.jpg", alt="Кожанный кошелек")
 
-                                    a(href="img/content/img_product.jpg")
-                                        img(src="img/content/img_product.jpg", alt="Кожанный кошелек")
+                                    a(href="img/content/60-0.jpg")
+                                        img(src="img/content/60-0.jpg", alt="Кожанный кошелек")
 
-                                    a(href="img/content/img_product.jpg")
-                                        img(src="img/content/img_product.jpg", alt="Кожанный кошелек")
-                                    a(href="img/content/img_product.jpg")
-                                        img(src="img/content/img_product.jpg", alt="Кожанный кошелек")
+                                    a(href="img/content/60-0.jpg")
+                                        img(src="img/content/60-0.jpg", alt="Кожанный кошелек")
+                                    a(href="img/content/60-0.jpg")
+                                        img(src="img/content/60-0.jpg", alt="Кожанный кошелек")
+                            .thumbs
+
+                                div
+                                    img(src="img/content/related1.jpg", alt="Товар 1")
+                                div
+                                    img(src="img/content/related2.jpg", alt="Товар 1")
+                                div
+                                    img(src="img/content/related3.jpg", alt="Товар 1")
+                                div
+                                    img(src="img/content/related3.jpg", alt="Товар 1")
+                        .image.img-holder(data-cat="black")
+                            .big-images#links
+
+                                a(href="img/content/530-0.jpg")
+                                    img(src="img/content/530-0.jpg", alt="Кожанный кошелек")
+
+                                a(href="img/content/530-0.jpg")
+                                    img(src="img/content/530-0.jpg", alt="Кожанный кошелек")
+
+                                a(href="img/content/530-0.jpg")
+                                    img(src="img/content/530-0.jpg", alt="Кожанный кошелек")
+                                a(href="img/content/530-0.jpg")
+                                    img(src="img/content/530-0.jpg", alt="Кожанный кошелек")
+                            .thumbs
+
+                                div
+                                    img(src="img/content/related1.jpg", alt="Товар 1")
+                                div
+                                    img(src="img/content/related2.jpg", alt="Товар 1")
+                                div
+                                    img(src="img/content/related3.jpg", alt="Товар 1")
+                                div
+                                    img(src="img/content/related3.jpg", alt="Товар 1")
+
+                        .image.img-holder(data-cat="brown")
+                            .big-images#links
+
+                                a(href="img/content/535-0.jpg")
+                                    img(src="img/content/535-0.jpg", alt="Кожанный кошелек")
+
+                                a(href="img/content/535-0.jpg")
+                                    img(src="img/content/535-0.jpg", alt="Кожанный кошелек")
+
+                                a(href="img/content/535-0.jpg")
+                                    img(src="img/content/535-0.jpg", alt="Кожанный кошелек")
+                                a(href="img/content/535-0.jpg")
+                                    img(src="img/content/535-0.jpg", alt="Кожанный кошелек")
                             .thumbs
 
                                 div
@@ -44,26 +91,26 @@ html(lang="ru")
                                 .radio.color.cf
                                     span.attr_name Цвет:
 
-                                    div
-                                        input(type="radio", name="color", value="brown", id="brown",checked="")
-                                        //.price 599.00 UAH
-                                        label(for="brown", style="background: #46311b")
-
-                                            //img(src="img/content/color1.jpg")
 
 
                                     div
-                                        input(type="radio", name="color", value="black",id="black")
+                                        input(type="radio", name="color", value="brown2" id="brown2", checked="", data-filter="brown2")
+                                        //.price 499.00 UAH
+                                        label(for="brown2", style="background: #975f23")
+                                            //img(src="img/content/color3.jpg")
+                                    div
+                                        input(type="radio", name="color", value="black",id="black", data-filter="black")
                                         //.price 699.00 UAH
                                         label(for="black", style="background: #000")
                                             //img(src="img/content/color2.jpg")
 
-                                    div
-                                        input(type="radio", name="color", value="brown2" id="brown2")
-                                        //.price 499.00 UAH
-                                        label(for="brown2", style="background: #975f23")
-                                            //img(src="img/content/color3.jpg")
 
+                                    div
+                                        input(type="radio", name="color", value="brown", id="brown", data-filter="brown")
+                                        //.price 599.00 UAH
+                                        label(for="brown", style="background: #46311b")
+
+                                            //img(src="img/content/color1.jpg")
 
                                 .price 499.00 UAH
                                 button(type="submit") Добавить в корзину

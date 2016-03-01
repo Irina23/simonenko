@@ -30,6 +30,12 @@ jQuery(document).ready(function() {
             }
         })
 
+
+
+
+
+
+
     });
     jQuery('.slider').owlCarousel({
         //loop:true,
@@ -52,53 +58,88 @@ jQuery(document).ready(function() {
 
 
 
+
+
+
+
+
+
     jQuery(document).ready(function ($) {
-        var $sync1 = $(".big-images"),
-            $sync2 = $(".thumbs"),
-            flag = false,
-            duration = 300;
 
-        $sync1
-            .owlCarousel({
-                items: 1,
-             //   margin: 10,
-               // loop:true,
-               // nav: true,
-                dots: false
-            })
-            .on('change.owl.carousel', function (e) {
-                if (e.namespace && e.property.name === 'items' && !flag) {
-                    flag = true;
-                    $sync2.trigger('to.owl.carousel', [e.item.index, duration, true]);
-                    flag = false;
-                }
-            });
+            var $sync1 = $(".big-images"),
+                $sync2 = $(".thumbs"),
+                flag = false,
+                duration = 300;
 
-        $sync2
-            .owlCarousel({
-                margin:10,
-                items: 3,
-                nav:true,
-               // loop:true,
-             //   nav: true,
-             //   center: true,
-                dots: true
-            })
-            .on('click', '.owl-item', function () {
-                $sync1.trigger('to.owl.carousel', [$(this).index(), duration, true]);
-            })
-            .on('change.owl.carousel', function (e) {
+            $sync1
+                .owlCarousel({
+                    items: 1,
+                 //   margin: 10,
+                   // loop:true,
+                   // nav: true,
+                    dots: false
+                })
+                .on('change.owl.carousel', function (e) {
+                    if (e.namespace && e.property.name === 'items' && !flag) {
+                        flag = true;
+                        $sync2.trigger('to.owl.carousel', [e.item.index, duration, true]);
+                        flag = false;
+                    }
+                });
 
-                if (e.namespace && e.property.name === 'items' && !flag) {
-                    flag = true;
-                    $sync1.trigger('to.owl.carousel', [e.item.index, duration, true]);
-                    flag = false;
-                }
-            });
+            $sync2
+                .owlCarousel({
+                    margin:10,
+                    items: 3,
+                    nav:true,
+                   // loop:true,
+                 //   nav: true,
+                 //   center: true,
+                    dots: true
+                })
+                .on('click', '.owl-item', function () {
+                    $sync1.trigger('to.owl.carousel', [$(this).index(), duration, true]);
+                })
+                .on('change.owl.carousel', function (e) {
+
+                    if (e.namespace && e.property.name === 'items' && !flag) {
+                        flag = true;
+                        $sync1.trigger('to.owl.carousel', [e.item.index, duration, true]);
+                        flag = false;
+                    }
+                });
+
     });
 
 
 
+    jQuery(window).load(function() {
+        // Variable
+        var posts = jQuery('.productfull .img-holder');
+        posts.hide();
+        jQuery('.productfull .img-holder:first-child').show();
+        //jQuery(".productfull .image").resize();
+
+    // Click function
+        jQuery( ".productfull .radio.color input" ).click(function() {
+            // Get data of category
+
+            var customType = jQuery( this ).data('filter'); // category
+            //console.log(customType);
+            //console.log(posts.length); // Length of articles
+
+            posts
+                .hide()
+                .filter(function () {
+                    return jQuery(this).data('cat') === customType;
+                })
+                .show();
+
+            jQuery(window).trigger('resize');
+
+
+        });
+    });
 
     jQuery(".payment").validate({
 
@@ -286,6 +327,11 @@ jQuery(document).ready(function() {
         }
 
     });*/
+
+
+
+
+
 
 });
 
