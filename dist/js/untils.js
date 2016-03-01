@@ -74,6 +74,7 @@ jQuery(document).ready(function() {
             $sync1
                 .owlCarousel({
                     items: 1,
+                    //autoWidth: true,
                  //   margin: 10,
                    // loop:true,
                    // nav: true,
@@ -91,6 +92,7 @@ jQuery(document).ready(function() {
                 .owlCarousel({
                     margin:10,
                     items: 3,
+                    //autoWidth: true,
                     nav:true,
                    // loop:true,
                  //   nav: true,
@@ -109,6 +111,9 @@ jQuery(document).ready(function() {
                     }
                 });
 
+
+        //jQuery(window).trigger('resize');
+
     });
 
 
@@ -116,8 +121,8 @@ jQuery(document).ready(function() {
     jQuery(window).load(function() {
         // Variable
         var posts = jQuery('.productfull .img-holder');
-        posts.hide();
-        jQuery('.productfull .img-holder:first-child').show();
+        posts.css("visibility", "hidden");
+        jQuery('.productfull .img-holder:first-child').css("visibility", "visible");
         //jQuery(".productfull .image").resize();
 
     // Click function
@@ -129,11 +134,13 @@ jQuery(document).ready(function() {
             //console.log(posts.length); // Length of articles
 
             posts
-                .hide()
+                .css("visibility", "hidden")
+                //.hide()
                 .filter(function () {
                     return jQuery(this).data('cat') === customType;
                 })
-                .show();
+                .css("visibility", "visible");
+                //.show();
 
             jQuery(window).trigger('resize');
 
@@ -337,9 +344,21 @@ jQuery(document).ready(function() {
 
 
 window.onload = function(){
+    //jQuery(".productfull").each(function() {
+       /* if (document.getElementsByClassName('img-slider')) {
+            document.getElementsByClassName('img-slider').onclick = function (event) {
+                event = event || window.event;
+                var target = event.target || event.srcElement,
+                    link = target.src ? target.parentNode : target,
+                    options = {index: link, event: event},
+                    links = this.getElementsByTagName('a');
+                blueimp.Gallery(links, options);
+            };
+        }*/
+   // });
 
-    if (document.getElementById('links')) {
-        document.getElementById('links').onclick = function (event) {
+    jQuery('.big-images').each(function () {
+        this.onclick = function (event) {
             event = event || window.event;
             var target = event.target || event.srcElement,
                 link = target.src ? target.parentNode : target,
@@ -347,7 +366,7 @@ window.onload = function(){
                 links = this.getElementsByTagName('a');
             blueimp.Gallery(links, options);
         };
-    }
+    });
 
 
     if ($.browser.safari && !$.browser.mobile ) $('body').addClass('client-safari');
