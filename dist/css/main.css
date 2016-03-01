@@ -854,12 +854,10 @@ form.payment {
 .productfull {
   margin: 105px auto 160px; }
   .productfull .image {
-    display: none;
+    display: inline-block;
     margin-right: 75px;
     vertical-align: top;
     width: 400px; }
-    .productfull .image:first-child {
-      display: inline-block; }
     .productfull .image .big-images {
       margin-bottom: 40px; }
       .productfull .image .big-images img {

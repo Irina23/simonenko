@@ -116,8 +116,8 @@ jQuery(document).ready(function() {
     jQuery(window).load(function() {
         // Variable
         var posts = jQuery('.productfull .img-holder');
-        //posts.hide();
-        //jQuery('.productfull .img-holder:first-child').show();
+        posts.hide();
+        jQuery('.productfull .img-holder:first-child').show();
         //jQuery(".productfull .image").resize();
 
     // Click function
@@ -129,11 +129,11 @@ jQuery(document).ready(function() {
             //console.log(posts.length); // Length of articles
 
             posts
-                .css("display","none")
+                .hide()
                 .filter(function () {
                     return jQuery(this).data('cat') === customType;
                 })
-                .css("display","inline-block");
+                .show();
 
             jQuery(window).trigger('resize');
 
