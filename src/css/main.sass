@@ -80,7 +80,7 @@ header
               background-position: 0 -23px
               &:hover
                 background-position: 0 -92px
-        &.twitter
+        &.instagram
 
             a
               background-position: 0 -46px
@@ -94,6 +94,7 @@ header
   .lang
       display: inline-block
       vertical-align: middle
+      margin-right: 115px
 
       li
         display: inline-block
@@ -125,8 +126,8 @@ header
   .cart
       display: inline-block
       vertical-align: middle
-      float: right
-      margin-top: 20px
+      //float: right
+      //margin-top: 20px
       a
         display: block
         background: url("../img/icons/cart.png") no-repeat
@@ -255,7 +256,7 @@ footer
               background-position: 0 -23px
               &:hover
                 background-position: 0 -92px
-          &.twitter
+          &.instagram
 
             a
               background-position: 0 -46px
@@ -988,6 +989,7 @@ form.payment
 
       display: inline-block
       vertical-align: top
+      float: left
       span.error
         display: none
 
@@ -1004,6 +1006,7 @@ form.payment
 
         input[type="text"],input[type="email"]
           border: 2px solid #ee2115
+
           ~ span.error
             display: block
 
@@ -1499,7 +1502,7 @@ form.payment
     padding: 9px 15px
     z-index: 2
     cursor: pointer
-    margin-top: 40px
+    margin-top: 45px
     .icon-bar
         background-color: #ffe400
         display: block
@@ -1588,6 +1591,10 @@ body.client-moz
   .wrap
       width: 880px
   header
+    .social
+      margin-right: 80px
+    .lang
+      margin-right: 85px
     .menu
       li
         margin-right: 67px
@@ -1978,13 +1985,16 @@ body.client-moz
       float: none
       label
         font-size: 15px
-    .row-form > div
-      display: block
-      margin: auto
-      margin-bottom: 20px
+    .row-form
+      margin-bottom: 0
+      > div
+        float: none
+        display: block
+        margin: auto
+        margin-bottom: 20px
 
-      &:nth-child(2n+1)
-        margin-right: auto
+        &:nth-child(2n+1)
+          margin-right: auto
 
 
     input[type="text"], input[type="email"]

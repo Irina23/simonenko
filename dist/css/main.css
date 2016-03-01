@@ -66,15 +66,16 @@ header {
         background-position: 0 -23px; }
         header .social li.facebook a:hover {
           background-position: 0 -92px; }
-      header .social li.twitter a {
+      header .social li.instagram a {
         background-position: 0 -46px; }
-        header .social li.twitter a:hover {
+        header .social li.instagram a:hover {
           background-position: bottom right; }
       header .social li:last-child {
         margin-right: 0; }
   header .lang {
     display: inline-block;
-    vertical-align: middle; }
+    vertical-align: middle;
+    margin-right: 115px; }
     header .lang li {
       display: inline-block;
       vertical-align: middle;
@@ -100,9 +101,7 @@ header {
           color: #ffe400; }
   header .cart {
     display: inline-block;
-    vertical-align: middle;
-    float: right;
-    margin-top: 20px; }
+    vertical-align: middle; }
     header .cart a {
       display: block;
       background: url("../img/icons/cart.png") no-repeat;
@@ -199,9 +198,9 @@ footer {
           background-position: 0 -23px; }
           footer .wrap > div .social li.facebook a:hover {
             background-position: 0 -92px; }
-        footer .wrap > div .social li.twitter a {
+        footer .wrap > div .social li.instagram a {
           background-position: 0 -46px; }
-          footer .wrap > div .social li.twitter a:hover {
+          footer .wrap > div .social li.instagram a:hover {
             background-position: bottom right; }
         footer .wrap > div .social li:last-child {
           margin-right: 0; }
@@ -798,7 +797,8 @@ form.payment {
     margin-bottom: 20px; }
     form.payment .row-form > div {
       display: inline-block;
-      vertical-align: top; }
+      vertical-align: top;
+      float: left; }
       form.payment .row-form > div span.error {
         display: none; }
       form.payment .row-form > div.error span.error {
@@ -1198,7 +1198,7 @@ form.payment {
     padding: 9px 15px;
     z-index: 2;
     cursor: pointer;
-    margin-top: 40px; }
+    margin-top: 45px; }
     .mobile-navbar .navbar-toggle .icon-bar {
       background-color: #ffe400;
       display: block;
@@ -1273,6 +1273,10 @@ body.client-safari .pagination.disabled a {
 @media screen and (max-width: 992px) {
   .wrap {
     width: 880px; }
+  header .social {
+    margin-right: 80px; }
+  header .lang {
+    margin-right: 85px; }
   header .menu li {
     margin-right: 67px; }
   .slider {
@@ -1524,12 +1528,15 @@ body.client-safari .pagination.disabled a {
       float: none; }
       form.payment .radio > div label {
         font-size: 15px; }
-    form.payment .row-form > div {
-      display: block;
-      margin: auto;
-      margin-bottom: 20px; }
-      form.payment .row-form > div:nth-child(2n+1) {
-        margin-right: auto; }
+    form.payment .row-form {
+      margin-bottom: 0; }
+      form.payment .row-form > div {
+        float: none;
+        display: block;
+        margin: auto;
+        margin-bottom: 20px; }
+        form.payment .row-form > div:nth-child(2n+1) {
+          margin-right: auto; }
     form.payment input[type="text"], form.payment input[type="email"] {
       width: 280px; }
     form.payment h3 {

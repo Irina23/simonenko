@@ -31,44 +31,51 @@ html(lang="ru")
                         h3 Доставка
                         .radio.cf.delivery
 
-                            div
+                            div.courier
                                 input(type="radio", name="shipping_type", value="courier", id="courier", checked="")
                                 label(for="courier") Курьером по г. Черкассы
 
                             div.novaposhta2
                                 input(type="radio", name="shipping_type", value="novaposhta2" id="novaposhta2")
-                                label(for="novaposhta2")  Новая почта (наложный платеж)
+                                label(for="novaposhta2")  Новая почта
 
 
                         h3 Контактная информация
-                        .row-form
+                        .row-form.cf
                             div
                                 input(type="text", placeholder="Имя:", name="name", minlength="2", data-validate="name")
                                 span.error Поле обязательное для заполнения
                             div
                                 input(type="text", placeholder="Фамилия:", name="surname", minlength="2", data-validate="name")
                                 span.error Поле обязательное для заполнения
-                        .row-form
+                        .row-form.cf
                             div
                                 input(type="text", placeholder="Страна:", name="country", data-validate="name" id="country")
                                 span.error Поле обязательное для заполнения
                             div
                                 input(type="text", placeholder="Город:",name="city", data-validate="name", id="city")
                                 span.error Поле обязательное для заполнения
-                        .row-form.delivery_novaposhta
+                        .row-form.delivery_courier.cf
                             div
                                 input(type="text", placeholder="Улица:", name="street", data-validate="name" id="street")
                                 span.error Поле обязательное для заполнения
                             div
                                 input(type="text", placeholder="Дом:",name="number", data-validate="number" id="number")
                                 span.error Поле обязательное для заполнения
-                        .row-form
+
+                        .row-form.cf
                             div
                                 input(type="text", placeholder="Телефон:", name="phone", data-validate="phone")
                                 span.error Поле обязательное для заполнения
                             div
                                 input(type="email", placeholder="Email:", name="email", data-validate="email")
                                 span.error Поле обязательное для заполнения
+
+                        .row-form.delivery_novaposhta.cf
+                            div
+                                input(type="text", placeholder="Номер отделения:",name="number_np", data-validate="empty" id="number_np")
+                                span.error Поле обязательное для заполнения
+
                         //button(type="submit")  Отправить
                         .btn.submit  Отправить
 

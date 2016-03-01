@@ -199,31 +199,77 @@ jQuery(document).ready(function() {
 
 
 
+
+
+
+
+    if (jQuery('#liqpay, #novaposhta').is(':checked')){
+        jQuery(".courier").hide();
+        jQuery("#courier").prop( "checked", false );
+        jQuery("#novaposhta2").prop( "checked", true );
+
+    } else{
+        jQuery(".courier").show();
+        jQuery("#novaposhta2").prop( "checked", false );
+        jQuery("#courier").prop( "checked", true );
+
+    }
+    jQuery(".payments.radio input[type='radio']").change(function() {
+
+        if (jQuery('#courier1').is(':checked')){
+            jQuery(".novaposhta2").hide();
+            jQuery("#novaposhta2").prop( "checked", false );
+            jQuery("#courier").prop( "checked", true );
+
+
+        } else{
+            jQuery(".novaposhta2").show();
+            jQuery("#courier").prop( "checked", false );
+            jQuery("#novaposhta2").prop( "checked", true );
+
+        }
+        if (jQuery('#liqpay, #novaposhta').is(':checked')){
+            jQuery(".courier").hide();
+            jQuery("#courier").prop( "checked", false );
+            jQuery("#novaposhta2").prop( "checked", true );
+
+
+
+        } else{
+            jQuery(".courier").show();
+            jQuery("#novaposhta2").prop( "checked", false );
+            jQuery("#courier").prop( "checked", true );
+
+        }
+
+    });
+
+
     jQuery(".delivery input[type='radio']").change(function() {
 
         if (jQuery('#novaposhta2').is(':checked')){
+            alert();
+            jQuery(".row-form.delivery_courier").hide();
+            jQuery(".row-form.delivery_courier input").attr("data-validate",true);
+
+        } else{
+            jQuery(".row-form.delivery_courier").show();
+            jQuery(".row-form.delivery_courier input#street").attr("data-validate","name");
+            jQuery(".row-form.delivery_courier input#number").attr("data-validate","number");
+        }
+
+        if (jQuery('#courier').is(':checked')){
             jQuery(".row-form.delivery_novaposhta").hide();
             jQuery(".row-form.delivery_novaposhta input").attr("data-validate",true);
 
         } else{
             jQuery(".row-form.delivery_novaposhta").show();
-            jQuery(".row-form.delivery_novaposhta input#street").attr("data-validate","name");
-            jQuery(".row-form.delivery_novaposhta input#number").attr("data-validate","number");
-        }
-
-    });
-    jQuery(".payments.radio input[type='radio']").change(function() {
-
-        if (jQuery('#courier1').is(':checked')){
-            jQuery(".novaposhta2").hide();
-
-
-        } else{
-            jQuery(".novaposhta2").show();
+            jQuery(".row-form.delivery_novaposhta input#number_np").attr("data-validate","empty");
 
         }
 
     });
+
 });
 
 
