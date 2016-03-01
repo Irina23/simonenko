@@ -245,10 +245,32 @@ jQuery(document).ready(function() {
     });
 
 
+    if (jQuery('#novaposhta2').is(':checked')){
+        console.log("5555");
+        jQuery(".row-form.delivery_courier").hide();
+        jQuery(".row-form.delivery_courier input").attr("data-validate",true);
+
+    } else{
+        jQuery(".row-form.delivery_courier").show();
+        jQuery(".row-form.delivery_courier input#street").attr("data-validate","name");
+        jQuery(".row-form.delivery_courier input#number").attr("data-validate","number");
+    }
+
+    if (jQuery('#courier').is(':checked')){
+        console.log("666");
+        jQuery(".row-form.delivery_novaposhta").hide();
+        jQuery(".row-form.delivery_novaposhta input").attr("data-validate",true);
+
+    } else{
+        jQuery(".row-form.delivery_novaposhta").show();
+        jQuery(".row-form.delivery_novaposhta input#number_np").attr("data-validate","empty");
+
+    }
+
     jQuery(".delivery input[type='radio']").change(function() {
 
         if (jQuery('#novaposhta2').is(':checked')){
-            alert();
+            console.log("5555");
             jQuery(".row-form.delivery_courier").hide();
             jQuery(".row-form.delivery_courier input").attr("data-validate",true);
 
@@ -259,6 +281,7 @@ jQuery(document).ready(function() {
         }
 
         if (jQuery('#courier').is(':checked')){
+            console.log("666");
             jQuery(".row-form.delivery_novaposhta").hide();
             jQuery(".row-form.delivery_novaposhta input").attr("data-validate",true);
 
