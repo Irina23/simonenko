@@ -3,20 +3,22 @@ jQuery(document).ready(function() {
 
     // subscriber
     /*jQuery('.subscriber').find('input[type="email"]').on('focus', function () {
-        jQuery(this).addClass('focused');
-    }).on('blur', function () {
-        setTimeout(function () {
-            jQuery(this).removeClass('focused');
-        }.bind(this), 500);
-    });*/
+     jQuery(this).addClass('focused');
+     }).on('blur', function () {
+     setTimeout(function () {
+     jQuery(this).removeClass('focused');
+     }.bind(this), 500);
+     });*/
+
+    var loop = ($('.slider li img').length > 1);
 
     jQuery(window).resize(function() {
         jQuery('.slider').owlCarousel({
-            //loop:true,
+            loop: loop,
             nav:false,
             autoHeight:true,
             autoplay:true,
-            dots: true,
+            dots: loop,
             responsive:{
                 0:{
                     items:1
@@ -38,11 +40,11 @@ jQuery(document).ready(function() {
 
     });
     jQuery('.slider').owlCarousel({
-        //loop:true,
+        loop: loop,
         nav:false,
         autoHeight:true,
         autoplay:true,
-        dots: true,
+        dots: loop,
         responsive:{
             0:{
                 items:1
@@ -66,50 +68,50 @@ jQuery(document).ready(function() {
 
     jQuery(document).ready(function ($) {
 
-            var $sync1 = $(".big-images"),
-                $sync2 = $(".thumbs"),
-                flag = false,
-                duration = 300;
+        var $sync1 = $(".big-images"),
+            $sync2 = $(".thumbs"),
+            flag = false,
+            duration = 300;
 
-            $sync1
-                .owlCarousel({
-                    items: 1,
-                    //autoWidth: true,
-                 //   margin: 10,
-                   // loop:true,
-                   // nav: true,
-                    dots: false
-                })
-                .on('change.owl.carousel', function (e) {
-                    if (e.namespace && e.property.name === 'items' && !flag) {
-                        flag = true;
-                        $sync2.trigger('to.owl.carousel', [e.item.index, duration, true]);
-                        flag = false;
-                    }
-                });
+        $sync1
+            .owlCarousel({
+                items: 1,
+                //autoWidth: true,
+                //   margin: 10,
+                // loop:true,
+                // nav: true,
+                dots: false
+            })
+            .on('change.owl.carousel', function (e) {
+                if (e.namespace && e.property.name === 'items' && !flag) {
+                    flag = true;
+                    $sync2.trigger('to.owl.carousel', [e.item.index, duration, true]);
+                    flag = false;
+                }
+            });
 
-            $sync2
-                .owlCarousel({
-                    margin:10,
-                    items: 3,
-                    //autoWidth: true,
-                    nav:true,
-                   // loop:true,
-                 //   nav: true,
-                 //   center: true,
-                    dots: true
-                })
-                .on('click', '.owl-item', function () {
-                    $sync1.trigger('to.owl.carousel', [$(this).index(), duration, true]);
-                })
-                .on('change.owl.carousel', function (e) {
+        $sync2
+            .owlCarousel({
+                margin:10,
+                items: 3,
+                //autoWidth: true,
+                nav:true,
+                // loop:true,
+                //   nav: true,
+                //   center: true,
+                dots: true
+            })
+            .on('click', '.owl-item', function () {
+                $sync1.trigger('to.owl.carousel', [$(this).index(), duration, true]);
+            })
+            .on('change.owl.carousel', function (e) {
 
-                    if (e.namespace && e.property.name === 'items' && !flag) {
-                        flag = true;
-                        $sync1.trigger('to.owl.carousel', [e.item.index, duration, true]);
-                        flag = false;
-                    }
-                });
+                if (e.namespace && e.property.name === 'items' && !flag) {
+                    flag = true;
+                    $sync1.trigger('to.owl.carousel', [e.item.index, duration, true]);
+                    flag = false;
+                }
+            });
 
 
         //jQuery(window).trigger('resize');
@@ -125,7 +127,7 @@ jQuery(document).ready(function() {
         jQuery('.productfull .img-holder:first-child').css("visibility", "visible");
         //jQuery(".productfull .image").resize();
 
-    // Click function
+        // Click function
         jQuery( ".productfull .radio.color input" ).click(function() {
             // Get data of category
 
@@ -140,7 +142,7 @@ jQuery(document).ready(function() {
                     return jQuery(this).data('cat') === customType;
                 })
                 .css("visibility", "visible");
-                //.show();
+            //.show();
 
             jQuery(window).trigger('resize');
 
@@ -195,29 +197,29 @@ jQuery(document).ready(function() {
     });
 
 
-        jQuery(".contacts").validate({
+    jQuery(".contacts").validate({
 
-            rules:{
+        rules:{
 
-                name:{
-                    required: true,
-                    minlength: 2
+            name:{
+                required: true,
+                minlength: 2
 
-                },
+            },
 
-                email:{
-                    required: true,
-                    email: true
-                },
-                message:{
-                    required: true
-                }
-
+            email:{
+                required: true,
+                email: true
+            },
+            message:{
+                required: true
             }
 
+        }
 
 
-        });
+
+    });
 
     jQuery(".subscription_mail").validate({
 
@@ -308,32 +310,32 @@ jQuery(document).ready(function() {
 
 
 
-/*
-    jQuery(".delivery input[type='radio']").change(function() {
+    /*
+     jQuery(".delivery input[type='radio']").change(function() {
 
-        if (jQuery('#novaposhta2').prop( "checked")==true){
-            console.log("5555");
-            jQuery(".row-form.delivery_courier").hide();
-            jQuery(".row-form.delivery_courier input").attr("data-validate",true);
+     if (jQuery('#novaposhta2').prop( "checked")==true){
+     console.log("5555");
+     jQuery(".row-form.delivery_courier").hide();
+     jQuery(".row-form.delivery_courier input").attr("data-validate",true);
 
-        } else{
-            jQuery(".row-form.delivery_courier").show();
-            jQuery(".row-form.delivery_courier input#street").attr("data-validate","name");
-            jQuery(".row-form.delivery_courier input#number").attr("data-validate","number");
-        }
+     } else{
+     jQuery(".row-form.delivery_courier").show();
+     jQuery(".row-form.delivery_courier input#street").attr("data-validate","name");
+     jQuery(".row-form.delivery_courier input#number").attr("data-validate","number");
+     }
 
-        if (jQuery('#courier').prop( "checked")==true){
-            console.log("666");
-            jQuery(".row-form.delivery_novaposhta").hide();
-            jQuery(".row-form.delivery_novaposhta input").attr("data-validate",true);
+     if (jQuery('#courier').prop( "checked")==true){
+     console.log("666");
+     jQuery(".row-form.delivery_novaposhta").hide();
+     jQuery(".row-form.delivery_novaposhta input").attr("data-validate",true);
 
-        } else{
-            jQuery(".row-form.delivery_novaposhta").show();
-            jQuery(".row-form.delivery_novaposhta input#number_np").attr("data-validate","empty");
+     } else{
+     jQuery(".row-form.delivery_novaposhta").show();
+     jQuery(".row-form.delivery_novaposhta input#number_np").attr("data-validate","empty");
 
-        }
+     }
 
-    });*/
+     });*/
 
 
 
@@ -345,17 +347,17 @@ jQuery(document).ready(function() {
 
 window.onload = function(){
     //jQuery(".productfull").each(function() {
-       /* if (document.getElementsByClassName('img-slider')) {
-            document.getElementsByClassName('img-slider').onclick = function (event) {
-                event = event || window.event;
-                var target = event.target || event.srcElement,
-                    link = target.src ? target.parentNode : target,
-                    options = {index: link, event: event},
-                    links = this.getElementsByTagName('a');
-                blueimp.Gallery(links, options);
-            };
-        }*/
-   // });
+    /* if (document.getElementsByClassName('img-slider')) {
+     document.getElementsByClassName('img-slider').onclick = function (event) {
+     event = event || window.event;
+     var target = event.target || event.srcElement,
+     link = target.src ? target.parentNode : target,
+     options = {index: link, event: event},
+     links = this.getElementsByTagName('a');
+     blueimp.Gallery(links, options);
+     };
+     }*/
+    // });
 
     jQuery('.big-images').each(function () {
         this.onclick = function (event) {
@@ -571,6 +573,5 @@ window.onload = function(){
 
     return window.jQBrowser;
 }));
-
 
 
