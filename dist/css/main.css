@@ -250,6 +250,7 @@ footer {
       width: 28px;
       display: inline-block;
       vertical-align: middle;
+      background: url("../img/icons/master_card.png") no-repeat;
       margin-right: 24px; }
       footer .wrap .payment ul li a {
         display: block;
@@ -263,6 +264,7 @@ footer {
           -webkit-transition: all 0.35s;
           transition: all 0.35s; }
       footer .wrap .payment ul li.privat {
+        background-position: -55px 0;
         width: 15px; }
         footer .wrap .payment ul li.privat a {
           background-position: -55px 0; }
@@ -276,8 +278,10 @@ footer {
           footer .wrap .payment ul li.visa a:hover {
             background-position: -100px 0; }
       footer .wrap .payment ul li.paypal {
+        display: none;
         width: 58px;
-        margin-right: 0; }
+        margin-right: 0;
+        background-position: top right; }
         footer .wrap .payment ul li.paypal a {
           background-position: top right; }
           footer .wrap .payment ul li.paypal a:hover {
