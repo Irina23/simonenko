@@ -188,6 +188,9 @@ jQuery(document).ready(function() {
             email:{
                 required: true,
                 email: true
+            },
+            message:{
+                required: false
             }
 
         }

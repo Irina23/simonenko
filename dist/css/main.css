@@ -780,6 +780,21 @@ form.payment {
     font-family: "SegoeUI", sans-serif;
     clear: both;
     text-align: left; }
+  form.payment textarea {
+    width: 100%;
+    height: 108px;
+    box-sizing: border-box;
+    padding: 0 15px;
+    line-height: 48px;
+    color: #949292;
+    font-size: 18px;
+    font-family: "SegoeUILight", sans-serif;
+    border: 1px #adacac  solid;
+    margin-bottom: 20px; }
+    form.payment textarea.error {
+      border: 2px solid #ee2115; }
+      form.payment textarea.error ~ span.error {
+        display: block; }
   form.payment button[type="submit"], form.payment .btn.submit {
     margin: auto;
     padding: 9px 20px 14px;
@@ -802,6 +817,10 @@ form.payment {
     vertical-align: top;
     float: left;
     margin-bottom: 20px; }
+    form.payment .row-form > div:last-child {
+      display: block;
+      float: none;
+      margin-right: 0 !important; }
     form.payment .row-form > div span.error {
       display: none; }
     form.payment .row-form > div.error span.error {
@@ -820,7 +839,7 @@ form.payment {
     form.payment .row-form > div label {
       display: none !important; }
     form.payment .row-form > div:nth-child(2n+1) {
-      margin-right: 20px; }
+      margin-right: 24px; }
   form.payment input[type="text"], form.payment input[type="email"] {
     border: 1px #adacac  solid;
     width: 338px;
@@ -928,6 +947,40 @@ form.payment {
       color: #000000;
       line-height: 1em;
       margin-bottom: 25px; }
+    .productfull .info form .radio.size {
+      margin-bottom: 25px; }
+      .productfull .info form .radio.size .attr_name {
+        line-height: 1em;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 10px;
+        color: #000000;
+        font-size: 18px; }
+      .productfull .info form .radio.size .size-holder {
+        display: inline-block;
+        vertical-align: middle; }
+        .productfull .info form .radio.size .size-holder > div {
+          display: inline-block;
+          vertical-align: middle; }
+          .productfull .info form .radio.size .size-holder > div label {
+            padding: 5px 10px;
+            margin: 0 3px;
+            border: 1px solid #000;
+            font-size: 16px;
+            line-height: 1em;
+            text-align: center;
+            display: block; }
+            .productfull .info form .radio.size .size-holder > div label:before, .productfull .info form .radio.size .size-holder > div label:after {
+              width: 0;
+              height: 0;
+              border: 0; }
+          .productfull .info form .radio.size .size-holder > div input[type="radio"] {
+            position: absolute;
+            left: -100000px;
+            display: none; }
+            .productfull .info form .radio.size .size-holder > div input[type="radio"]:checked ~ label {
+              border-color: #ffe400;
+              background: #ffe400; }
     .productfull .info form .radio.color {
       position: relative;
       margin-bottom: 25px; }
@@ -938,39 +991,44 @@ form.payment {
         margin-right: 10px;
         color: #000000;
         font-size: 18px; }
-      .productfull .info form .radio.color > div {
-        display: inline-block;
-        vertical-align: middle; }
-        .productfull .info form .radio.color > div label {
-          cursor: pointer;
-          display: block;
-          margin: 0 6px;
-          border: 1px solid #000;
-          width: 20px;
-          height: 20px;
-          position: relative;
-          z-index: 1;
-          padding: 0; }
-          .productfull .info form .radio.color > div label:before, .productfull .info form .radio.color > div label:after {
-            width: 0;
-            height: 0;
-            border: 0; }
-          .productfull .info form .radio.color > div label img {
+      .productfull .info form .radio.color .color-holder {
+        display: block;
+        margin-top: 20px; }
+        .productfull .info form .radio.color .color-holder > div {
+          display: inline-block;
+          vertical-align: middle; }
+          .productfull .info form .radio.color .color-holder > div label {
+            cursor: pointer;
+            display: block;
+            margin: 0 6px;
+            border: 1px solid #000;
             width: 20px;
-            pointer-events: none; }
-        .productfull .info form .radio.color > div input[type="radio"] {
-          position: absolute;
-          left: -100000px;
-          display: none; }
-          .productfull .info form .radio.color > div input[type="radio"]:checked ~ .price {
-            display: inline-block; }
-          .productfull .info form .radio.color > div input[type="radio"]:checked ~ label {
-            border-color: #e3cc0a; }
-        .productfull .info form .radio.color > div .price {
-          position: absolute;
-          bottom: 0;
-          display: none;
-          left: 0; }
+            height: 20px;
+            position: relative;
+            z-index: 1;
+            padding: 0; }
+            .productfull .info form .radio.color .color-holder > div label:before, .productfull .info form .radio.color .color-holder > div label:after {
+              width: 0;
+              height: 0;
+              border: 0; }
+            .productfull .info form .radio.color .color-holder > div label img {
+              width: 20px;
+              pointer-events: none; }
+          .productfull .info form .radio.color .color-holder > div input[type="radio"] {
+            position: absolute;
+            left: -100000px;
+            display: none; }
+            .productfull .info form .radio.color .color-holder > div input[type="radio"]:checked ~ .color {
+              display: inline-block; }
+            .productfull .info form .radio.color .color-holder > div input[type="radio"]:checked ~ label {
+              border-color: #e3cc0a; }
+          .productfull .info form .radio.color .color-holder > div .color {
+            position: absolute;
+            top: 0;
+            display: none;
+            left: 60px;
+            font-size: 18px;
+            line-height: 1em; }
     .productfull .info form button {
       padding: 9px 30px 14px;
       margin-bottom: 40px;
@@ -1011,14 +1069,13 @@ form.payment {
         vertical-align: top;
         box-sizing: border-box;
         border-right: 1px solid  #dbdbdb;
-        height: 100px;
+        height: 150px;
         position: relative; }
         .cart_page form .products .product-item > div:last-child {
           border: 0; }
         .cart_page form .products .product-item > div.image {
           width: 190px;
-          padding: 0 15px;
-          height: 100px;
+          padding: 25px 15px;
           overflow: hidden;
           text-align: center; }
           .cart_page form .products .product-item > div.image img {
@@ -1041,6 +1098,20 @@ form.payment {
         .cart_page form .products .product-item > div.attr {
           padding: 25px 0 0 15px;
           width: 160px; }
+          .cart_page form .products .product-item > div.attr .size {
+            margin-bottom: 10px; }
+            .cart_page form .products .product-item > div.attr .size .attr_name {
+              color: #191919;
+              display: inline-block;
+              vertical-align: middle;
+              font-size: 20px;
+              line-height: 1em;
+              margin-right: 8px; }
+            .cart_page form .products .product-item > div.attr .size .size_name {
+              font-size: 16px;
+              line-height: 20px;
+              display: inline-block;
+              vertical-align: middle; }
           .cart_page form .products .product-item > div.attr .color {
             margin-bottom: 10px; }
             .cart_page form .products .product-item > div.attr .color .attr_name {
@@ -1050,6 +1121,10 @@ form.payment {
               font-size: 20px;
               line-height: 1em;
               margin-right: 8px; }
+            .cart_page form .products .product-item > div.attr .color .color_name {
+              font-size: 16px;
+              line-height: 20px;
+              display: block; }
             .cart_page form .products .product-item > div.attr .color .color_bg {
               width: 20px;
               height: 20px;
@@ -1066,13 +1141,13 @@ form.payment {
         .cart_page form .products .product-item > div.price {
           width: 160px;
           text-align: center;
-          padding-top: 40px;
+          padding-top: 60px;
           font-size: 24px;
           line-height: 1em;
           font-family: "SegoeUILight", sans-serif; }
         .cart_page form .products .product-item > div.delete {
           width: 127px;
-          padding-top: 30px;
+          padding-top: 50px;
           text-align: center; }
           .cart_page form .products .product-item > div.delete button {
             border: 0;
@@ -1409,7 +1484,7 @@ body.client-safari .pagination.disabled a {
     vertical-align: middle; }
     .cart_page form .products .product-item > div.image img {
       height: 60px;
-      margin-top: 20px; }
+      margin-top: 45px; }
   .cart_page form .products .product-item > div.item-name {
     width: 200px; }
     .cart_page form .products .product-item > div.item-name a {
@@ -1699,7 +1774,9 @@ body.client-safari .pagination.disabled a {
   form input[type="text"], form input[type="email"], .article form input[type="text"], .article form input[type="email"] {
     width: 280px; }
   form.payment input[type="text"], form.payment input[type="email"] {
-    width: 280px; } }
+    width: 280px; }
+  .productfull .info form .radio.size .attr_name {
+    margin-bottom: 15px; } }
 
 .error404 {
   background: #ffe400;

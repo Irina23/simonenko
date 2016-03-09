@@ -967,6 +967,22 @@ form.payment
     clear: both
     text-align: left
 
+  textarea
+    width: 100%
+    height: 108px
+    box-sizing: border-box
+    padding: 0 15px
+    line-height: 48px
+    color: #949292
+    font-size: 18px
+    font-family: "SegoeUILight", sans-serif
+    border: 1px #adacac  solid
+    margin-bottom: 20px
+    &.error
+      border: 2px solid #ee2115
+      ~ span.error
+        display: block
+
   button[type="submit"], .btn.submit
     margin: auto
     padding: 9px 20px 14px
@@ -993,6 +1009,10 @@ form.payment
       vertical-align: top
       float: left
       margin-bottom: 20px
+      &:last-child
+        display: block
+        float: none
+        margin-right: 0!important
       span.error
         display: none
 
@@ -1016,7 +1036,7 @@ form.payment
       label
         display: none!important
       &:nth-child(2n+1)
-        margin-right: 20px
+        margin-right: 24px
 
     &.delivery_novaposhta
 
@@ -1162,6 +1182,45 @@ form.payment
           line-height: 1em
           margin-bottom: 25px
 
+        .radio.size
+          margin-bottom: 25px
+          .attr_name
+            line-height: 1em
+            display: inline-block
+            vertical-align: middle
+            margin-right: 10px
+            color: #000000
+            font-size: 18px
+          .size-holder
+            display: inline-block
+            vertical-align: middle
+            >div
+              display: inline-block
+              vertical-align: middle
+              label
+                padding: 5px 10px
+                margin: 0 3px
+                border: 1px solid #000
+                font-size: 16px
+                line-height: 1em
+                text-align: center
+                display: block
+                &:before,&:after
+                  width: 0
+                  height: 0
+                  border: 0
+              input[type="radio"]
+                position: absolute
+                left: -100000px
+                display: none
+
+                &:checked ~ label
+                  border-color: #ffe400
+                  background: #ffe400
+
+
+
+
 
         .radio.color
           position: relative
@@ -1174,58 +1233,56 @@ form.payment
             margin-right: 10px
             color: #000000
             font-size: 18px
+          .color-holder
+            display: block
+            margin-top: 20px
+            >div
+              display: inline-block
+              vertical-align: middle
 
 
-
-
-          >div
-            display: inline-block
-            vertical-align: middle
-
-
-            label
-              cursor: pointer
-              display: block
-              margin: 0 6px
-              //padding: 2px
-              border: 1px solid #000
-              width: 20px
-              height: 20px
-              position: relative
-              z-index: 1
-              //box-sizing: border-box
-              padding: 0
-              &:before,&:after
-                width: 0
-                height: 0
-                border: 0
-
-
-              img
+              label
+                cursor: pointer
+                display: block
+                margin: 0 6px
+                //padding: 2px
+                border: 1px solid #000
                 width: 20px
-                pointer-events: none
+                height: 20px
+                position: relative
+                z-index: 1
+                //box-sizing: border-box
+                padding: 0
+                &:before,&:after
+                  width: 0
+                  height: 0
+                  border: 0
+
+
+                img
+                  width: 20px
+                  pointer-events: none
 
 
 
 
 
-            input[type="radio"]
-              position: absolute
-              left: -100000px
-              display: none
-
-
-
-
-              &:checked ~ .price
-                display: inline-block
-              &:checked ~ label
-                border-color: #e3cc0a
-            .price
+              input[type="radio"]
                 position: absolute
-                bottom: 0
+                left: -100000px
                 display: none
-                left: 0
+
+                &:checked ~ .color
+                  display: inline-block
+                &:checked ~ label
+                  border-color: #e3cc0a
+              .color
+                  position: absolute
+                  top: 0
+                  display: none
+                  left: 60px
+                  font-size: 18px
+                  line-height: 1em
         button
               padding: 9px 30px 14px
               margin-bottom: 40px
@@ -1285,14 +1342,14 @@ form.payment
           vertical-align: top
           box-sizing: border-box
           border-right: 1px solid  #dbdbdb
-          height: 100px
+          height: 150px
           position: relative
           &:last-child
             border: 0
           &.image
               width: 190px
-              padding: 0 15px
-              height: 100px
+              padding: 25px 15px
+              //height: 100px
               overflow: hidden
               text-align: center
               img
@@ -1321,6 +1378,20 @@ form.payment
           &.attr
             padding: 25px 0 0 15px
             width: 160px
+            .size
+              margin-bottom: 10px
+              .attr_name
+                color: #191919
+                display: inline-block
+                vertical-align: middle
+                font-size: 20px
+                line-height: 1em
+                margin-right: 8px
+              .size_name
+                font-size: 16px
+                line-height: 20px
+                display: inline-block
+                vertical-align: middle
             .color
               margin-bottom: 10px
               .attr_name
@@ -1330,6 +1401,11 @@ form.payment
                 font-size: 20px
                 line-height: 1em
                 margin-right: 8px
+              .color_name
+                font-size: 16px
+                line-height: 20px
+                display: block
+
               .color_bg
                 width: 20px
                 height: 20px
@@ -1348,14 +1424,14 @@ form.payment
           &.price
               width: 160px
               text-align: center
-              padding-top: 40px
+              padding-top: 60px
               font-size: 24px
               line-height: 1em
               font-family: "SegoeUILight", sans-serif
 
           &.delete
             width: 127px
-            padding-top: 30px
+            padding-top: 50px
             text-align: center
             button
               border: 0
@@ -1798,7 +1874,7 @@ body.client-moz
                 vertical-align: middle
                 img
                   height: 60px
-                  margin-top: 20px
+                  margin-top: 45px
                   //top: 50%
                   //margin-top: -30px
                   //position: absolute
@@ -1892,6 +1968,7 @@ body.client-moz
           font-size: 18px
         .price
           font-size: 16px
+
 
 
 
@@ -2252,6 +2329,8 @@ body.client-moz
 
 
 
+  .productfull .info form .radio.size .attr_name
+    margin-bottom: 15px
 
 
 

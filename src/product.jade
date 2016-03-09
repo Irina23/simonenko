@@ -19,7 +19,6 @@ html(lang="ru")
                                         a(href="img/content/60-0.jpg")
                                             img(src="img/content/60-0.jpg", alt="Кожанный кошелек")
 
-
                                         a(href="img/content/60-0.jpg")
                                             img(src="img/content/60-0.jpg", alt="Кожанный кошелек")
                                         a(href="img/content/60-0.jpg")
@@ -91,28 +90,49 @@ html(lang="ru")
 
 
                                 .radio.color.cf
+
                                     span.attr_name Цвет:
 
 
+                                    .color-holder
+                                        div
+                                            input(type="radio", name="color", value="brown2" id="brown2", checked="", data-filter="brown2")
+                                            .color brown2
+                                            label(for="brown2", style="background: #975f23")
 
-                                    div
-                                        input(type="radio", name="color", value="brown2" id="brown2", checked="", data-filter="brown2")
-                                        //.price 499.00 UAH
-                                        label(for="brown2", style="background: #975f23")
-                                            //img(src="img/content/color3.jpg")
-                                    div
-                                        input(type="radio", name="color", value="black",id="black", data-filter="black")
-                                        //.price 699.00 UAH
-                                        label(for="black", style="background: #000")
-                                            //img(src="img/content/color2.jpg")
+                                        div
+                                            input(type="radio", name="color", value="black",id="black", data-filter="black")
+                                            .color black
+                                            label(for="black", style="background: #000")
 
 
-                                    div
-                                        input(type="radio", name="color", value="brown", id="brown", data-filter="brown")
-                                        //.price 599.00 UAH
-                                        label(for="brown", style="background: #46311b")
+                                        div
+                                            input(type="radio", name="color", value="brown", id="brown", data-filter="brown")
+                                            .color brown
+                                            label(for="brown", style="background: #46311b")
 
-                                            //img(src="img/content/color1.jpg")
+
+                                .radio.size.cf
+
+                                        span.attr_name Размер:
+
+                                        .size-holder
+                                            div
+                                                input(type="radio", name="size", value="size90" id="size90")
+                                                label(for="size90") 90
+
+                                            div
+                                                input(type="radio", name="size", value="size100",id="size100")
+                                                label(for="size100") 100
+
+                                            div
+                                                input(type="radio", name="size", value="size110", id="size110")
+                                                label(for="size110") 110
+                                            div
+                                                input(type="radio", name="size", value="size110", id="size120", checked="")
+                                                label(for="size120") 120
+
+
 
                                 .price 499.00 UAH
                                 button(type="submit") Добавить в корзину
