@@ -1131,7 +1131,8 @@ form.payment {
             .cart_page form .products .product-item > div.attr .color .color_name {
               font-size: 16px;
               line-height: 20px;
-              display: block; }
+              display: inline-block;
+              vertical-align: bottom; }
             .cart_page form .products .product-item > div.attr .color .color_bg {
               width: 20px;
               height: 20px;
