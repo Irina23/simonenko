@@ -336,10 +336,14 @@ footer {
           z-index: 999;
           background: #f34e0f;
           color: #fff;
+          width: 85px;
+          text-align: center;
           padding: 12px;
           font-size: 22px; }
         .popular_product .products .product a .images .new_mark {
           background: #0fbea4; }
+          .popular_product .products .product a .images .new_mark + .sale_mark {
+            top: 100px; }
         .popular_product .products .product a .images img {
           height: 100%;
           max-width: inherit; }
@@ -466,10 +470,14 @@ footer {
           z-index: 999;
           background: #f34e0f;
           color: #fff;
+          width: 85px;
+          text-align: center;
           padding: 12px;
           font-size: 22px; }
         .list_products .product a .images .new_mark {
           background: #0fbea4; }
+          .list_products .product a .images .new_mark + .sale_mark {
+            top: 100px; }
         .list_products .product a .images img {
           max-width: inherit;
           width: auto;
@@ -933,10 +941,14 @@ form.payment {
       z-index: 999;
       background: #f34e0f;
       color: #fff;
+      width: 85px;
+      text-align: center;
       padding: 12px;
       font-size: 22px; }
     .productfull .image .new_mark {
       background: #0fbea4; }
+      .productfull .image .new_mark + .sale_mark {
+        top: 100px; }
     .productfull .image .big-images {
       margin-bottom: 40px; }
       .productfull .image .big-images img {
