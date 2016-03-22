@@ -330,6 +330,16 @@ footer {
       .popular_product .products .product a .images {
         position: relative;
         height: 100%; }
+        .popular_product .products .product a .images .new_mark, .popular_product .products .product a .images .sale_mark {
+          position: absolute;
+          top: 50px;
+          z-index: 999;
+          background: #f34e0f;
+          color: #fff;
+          padding: 12px;
+          font-size: 22px; }
+        .popular_product .products .product a .images .new_mark {
+          background: #0fbea4; }
         .popular_product .products .product a .images img {
           height: 100%;
           max-width: inherit; }
