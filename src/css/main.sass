@@ -384,9 +384,14 @@ footer
     font-family: "SegoeUILight", sans-serif
     color:  #fefefe
     font-size: 14px
+    span
+      display: inline-block
+      vertical-align: middle
+      margin-right: 20px
     a
-      display: block
-      margin-top: 10px
+      display: inline-block
+      vertical-align: middle
+      //margin-top: 10px
       line-height: 1em
       &:hover
         text-decoration: none
@@ -570,6 +575,16 @@ footer
           margin-bottom: 10px
           width: 100%
           height: 350px
+          .new_mark,.sale_mark
+            position: absolute
+            top: 50px
+            z-index: 999
+            background: #f34e0f
+            color: #fff
+            padding: 12px
+            font-size: 22px
+          .new_mark
+            background: #0fbea4
           img
             max-width: inherit
             width: auto
@@ -614,7 +629,13 @@ footer
           line-height: 1em
           font-family: "SegoeUI-Semibold", sans-serif
           color: #000
-
+        .old_price
+          font-size: 16px
+          line-height: 1em
+          font-family: "SegoeUI-Semibold", sans-serif
+          color: #000
+          margin-top: 10px
+          text-decoration: line-through
 
         &:hover
           text-decoration: none
@@ -1109,6 +1130,16 @@ form.payment
     width: 400px
     position: relative
     height: 450px
+    .new_mark,.sale_mark
+      position: absolute
+      top: 50px
+      z-index: 999
+      background: #f34e0f
+      color: #fff
+      padding: 12px
+      font-size: 22px
+    .new_mark
+        background: #0fbea4
 
     .big-images
       margin-bottom: 40px
@@ -1188,7 +1219,13 @@ form.payment
           color: #000000
           line-height: 1em
           margin-bottom: 25px
-
+        .old_price
+          font-size: 18px
+          text-transform: uppercase
+          color: #000000
+          line-height: 1em
+          margin-bottom: 25px
+          text-decoration: line-through
         .radio.size
           margin-bottom: 25px
           .attr_name
@@ -2015,6 +2052,8 @@ body.client-moz
     .copyright
         text-align: center
         margin-top: 20px
+        a
+          display: block
 
 
 

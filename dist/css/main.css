@@ -290,9 +290,13 @@ footer {
     font-family: "SegoeUILight", sans-serif;
     color: #fefefe;
     font-size: 14px; }
+    footer .copyright span {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 20px; }
     footer .copyright a {
-      display: block;
-      margin-top: 10px;
+      display: inline-block;
+      vertical-align: middle;
       line-height: 1em; }
       footer .copyright a:hover {
         text-decoration: none;
@@ -446,6 +450,16 @@ footer {
         margin-bottom: 10px;
         width: 100%;
         height: 350px; }
+        .list_products .product a .images .new_mark, .list_products .product a .images .sale_mark {
+          position: absolute;
+          top: 50px;
+          z-index: 999;
+          background: #f34e0f;
+          color: #fff;
+          padding: 12px;
+          font-size: 22px; }
+        .list_products .product a .images .new_mark {
+          background: #0fbea4; }
         .list_products .product a .images img {
           max-width: inherit;
           width: auto;
@@ -490,6 +504,13 @@ footer {
         line-height: 1em;
         font-family: "SegoeUI-Semibold", sans-serif;
         color: #000; }
+      .list_products .product a .old_price {
+        font-size: 16px;
+        line-height: 1em;
+        font-family: "SegoeUI-Semibold", sans-serif;
+        color: #000;
+        margin-top: 10px;
+        text-decoration: line-through; }
       .list_products .product a:hover {
         text-decoration: none; }
         .list_products .product a:hover .product_name {
@@ -896,6 +917,16 @@ form.payment {
     width: 400px;
     position: relative;
     height: 450px; }
+    .productfull .image .new_mark, .productfull .image .sale_mark {
+      position: absolute;
+      top: 50px;
+      z-index: 999;
+      background: #f34e0f;
+      color: #fff;
+      padding: 12px;
+      font-size: 22px; }
+    .productfull .image .new_mark {
+      background: #0fbea4; }
     .productfull .image .big-images {
       margin-bottom: 40px; }
       .productfull .image .big-images img {
@@ -954,6 +985,13 @@ form.payment {
       color: #000000;
       line-height: 1em;
       margin-bottom: 25px; }
+    .productfull .info form .old_price {
+      font-size: 18px;
+      text-transform: uppercase;
+      color: #000000;
+      line-height: 1em;
+      margin-bottom: 25px;
+      text-decoration: line-through; }
     .productfull .info form .radio.size {
       margin-bottom: 25px; }
       .productfull .info form .radio.size .attr_name {
@@ -1579,6 +1617,8 @@ body.client-safari .pagination.disabled a {
     footer .copyright {
       text-align: center;
       margin-top: 20px; }
+      footer .copyright a {
+        display: block; }
   .slider .owl-stage-outer {
     height: auto !important; }
   .cart_page form .products .product-item > div {
