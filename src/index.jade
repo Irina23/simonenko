@@ -19,61 +19,62 @@ html(lang="ru")
                         h3 Наша продукция
                         form.filter
                             .title Фільтр
-                            .list_attribute
-                                .name_attribute Категории:
-                                .attribute_holder
-                                    .attribute
-                                        input(type="checkbox" name="option1" value="Ремень" id="option1" )
-                                        label(for="option1") Ремень
-                                    .attribute
-                                        input(type="checkbox" name="option2" value="Кошелек" id="option2" )
-                                        label(for="option2") Кошелек
-                            .list_attribute
-                                .name_attribute По цене:
-                                .attribute_holder
-                                    .attribute
-                                        input(type="radio" name="attribute_price" value="От дорогих к дешевым" id="option3" checked)
-                                        label(for="option3") От дорогих к дешевым
-                                    .attribute
-                                        input(type="radio" name="attribute_price" value="От дешевых к дорогим" id="option4" )
-                                        label(for="option4") От дешевых к дорогим
-                            .list_attribute
-                                .name_attribute Сортировать по:
-                                .attribute_holder
-                                    .attribute
-                                        input(type="radio" name="attribute_order" value="Популярности" id="option5" )
-                                        label(for="option5") Популярности
-                                    .attribute
-                                        input(type="radio" name="attribute_order" value="Новизне" id="option6" )
-                                        label(for="option6") Новизне
-                            .list_attribute
-                                .name_attribute По цвету:
-                                .attribute_holder
-                                    .attribute
-                                        input(type="checkbox" name="option7" value="Черный" id="option7" )
-                                        label(for="option7") Черный
-                                    .attribute
-                                        input(type="checkbox" name="option8" value="Коричневый" id="option8" )
-                                        label(for="option8") Коричневый
-                                    .attribute
-                                        input(type="checkbox" name="option9" value="Бордовый" id="option9" )
-                                        label(for="option9") Бордовый
-                                    .attribute
-                                        input(type="checkbox" name="option10" value="Белый" id="option10" )
-                                        label(for="option10") Белый
+                            .list_attributes
+                                .list_attribute
+                                    .name_attribute Категории:
+                                    .attribute_holder
+                                        .attribute
+                                            input(type="checkbox" name="option1" value="Ремень" id="option1" )
+                                            label(for="option1") Ремень
+                                        .attribute
+                                            input(type="checkbox" name="option2" value="Кошелек" id="option2" )
+                                            label(for="option2") Кошелек
+                                .list_attribute
+                                    .name_attribute По цене:
+                                    .attribute_holder
+                                        .attribute
+                                            input(type="radio" name="attribute_price" value="От дорогих к дешевым" id="option3" checked)
+                                            label(for="option3") От дорогих к дешевым
+                                        .attribute
+                                            input(type="radio" name="attribute_price" value="От дешевых к дорогим" id="option4" )
+                                            label(for="option4") От дешевых к дорогим
+                                .list_attribute
+                                    .name_attribute Сортировать по:
+                                    .attribute_holder
+                                        .attribute
+                                            input(type="radio" name="attribute_order" value="Популярности" id="option5" )
+                                            label(for="option5") Популярности
+                                        .attribute
+                                            input(type="radio" name="attribute_order" value="Новизне" id="option6" )
+                                            label(for="option6") Новизне
+                                .list_attribute
+                                    .name_attribute По цвету:
+                                    .attribute_holder
+                                        .attribute
+                                            input(type="checkbox" name="option7" value="Черный" id="option7" )
+                                            label(for="option7") Черный
+                                        .attribute
+                                            input(type="checkbox" name="option8" value="Коричневый" id="option8" )
+                                            label(for="option8") Коричневый
+                                        .attribute
+                                            input(type="checkbox" name="option9" value="Бордовый" id="option9" )
+                                            label(for="option9") Бордовый
+                                        .attribute
+                                            input(type="checkbox" name="option10" value="Белый" id="option10" )
+                                            label(for="option10") Белый
 
-                            .list_attribute
-                                .name_attribute Размер:
-                                .attribute_holder
-                                    .attribute
-                                        input(type="checkbox" name="size_s" value="s" id="size_s" )
-                                        label(for="size_s") S
-                                    .attribute
-                                        input(type="checkbox" name="size_m" value="m" id="size_m" )
-                                        label(for="size_m") M
-                                    .attribute
-                                        input(type="checkbox" name="size_l" value="s" id="size_l" )
-                                        label(for="size_l") L
+                                .list_attribute
+                                    .name_attribute Размер:
+                                    .attribute_holder
+                                        .attribute
+                                            input(type="checkbox" name="size_s" value="s" id="size_s" )
+                                            label(for="size_s") S
+                                        .attribute
+                                            input(type="checkbox" name="size_m" value="m" id="size_m" )
+                                            label(for="size_m") M
+                                        .attribute
+                                            input(type="checkbox" name="size_l" value="s" id="size_l" )
+                                            label(for="size_l") L
                         .products
                             .product
                                 a(href="/product.html")

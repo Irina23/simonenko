@@ -333,7 +333,7 @@ footer {
         .popular_product .products .product a .images .new_mark, .popular_product .products .product a .images .sale_mark {
           position: absolute;
           top: 50px;
-          z-index: 999;
+          z-index: 1;
           background: #f34e0f;
           color: #fff;
           width: 85px;
@@ -463,7 +463,7 @@ footer {
         .list_products .product a .images .new_mark, .list_products .product a .images .sale_mark {
           position: absolute;
           top: 50px;
-          z-index: 999;
+          z-index: 1;
           background: #f34e0f;
           color: #fff;
           width: 85px;
@@ -934,7 +934,7 @@ form.payment {
     .productfull .image .new_mark, .productfull .image .sale_mark {
       position: absolute;
       top: 50px;
-      z-index: 999;
+      z-index: 1;
       background: #f34e0f;
       color: #fff;
       width: 85px;
@@ -1625,6 +1625,19 @@ body.client-safari .pagination.disabled a {
           .list_product_home .products .product a .new_mark + .sale_mark {
             top: 100px; }
 
+.success-payment .container {
+  margin: 100px auto 0; }
+  .success-payment .container p {
+    text-align: center;
+    line-height: 1em;
+    font-weight: normal;
+    font-family: "SegoeUI", sans-serif;
+    font-size: 20px; }
+
+.container {
+  min-height: 33.5%;
+  height: auto !important; }
+
 @media screen and (max-width: 959px) {
   body.client-moz img {
     width: 100%; }
@@ -1710,20 +1723,16 @@ body.client-safari .pagination.disabled a {
     width: 280px;
     height: 325px; }
     .popular_product .products .product a {
-      height: 100%; } }
-
-.success-payment .container {
-  margin: 100px auto 0; }
-  .success-payment .container p {
-    text-align: center;
-    line-height: 1em;
-    font-weight: normal;
-    font-family: "SegoeUI", sans-serif;
-    font-size: 20px; }
-
-.container {
-  min-height: 33.5%;
-  height: auto !important; }
+      height: 100%; }
+  .list_product_home h3 {
+    font-size: 28px; }
+    .list_product_home h3:before, .list_product_home h3:after {
+      width: 150px;
+      margin-left: -75px;
+      height: 25px; }
+  .list_product_home .products {
+    width: 640px;
+    text-align: center; } }
 
 @media screen and (max-width: 959px) {
   .wrap {
@@ -1819,7 +1828,23 @@ body.client-safari .pagination.disabled a {
   .list_products .product a .product_name {
     font-size: 18px; }
   .list_products .product a .price {
-    font-size: 16px; } }
+    font-size: 16px; }
+  .page_wrapper.home .container {
+    padding-top: 0; }
+  .page_wrapper.home .img_home {
+    display: none; }
+  .page_wrapper.home form.filter {
+    display: block;
+    width: 100%;
+    float: none; }
+    .page_wrapper.home form.filter .title {
+      cursor: pointer; }
+    .page_wrapper.home form.filter .list_attributes {
+      display: none; }
+  .page_wrapper.home .products {
+    margin: auto;
+    width: 100%;
+    float: none; } }
 
 @media screen and (max-width: 780px) {
   .wrap {
@@ -1936,11 +1961,6 @@ body.client-safari .pagination.disabled a {
     background-size: 100%; } }
 
 @media screen and (max-width: 480px) {
-  .productfull .img-slider {
-    width: 100%;
-    height: auto; }
-  .productfull .image {
-    height: 360px; }
   .wrap {
     width: 100%;
     padding: 0 20px;
@@ -1954,13 +1974,6 @@ body.client-safari .pagination.disabled a {
     margin-top: 30px; }
   .productfull {
     margin: 30px auto; }
-    .productfull .image {
-      width: 100%; }
-      .productfull .image .big-images img {
-        width: auto;
-        height: auto; }
-      .productfull .image .thumbs .owl-item {
-        height: auto; }
     .productfull .info form button {
       padding: 9px 15px 12px;
       font-size: 14px;
@@ -2036,7 +2049,28 @@ body.client-safari .pagination.disabled a {
       padding: 15px 15px 17px;
       font-size: 14px; }
   .success-payment .container {
-    margin: 30px auto; } }
+    margin: 30px auto; }
+  .list_product_home .products .product a {
+    font-size: 18px; }
+    .list_product_home .products .product a .price {
+      font-size: 18px; }
+  .list_product_home h3 {
+    font-size: 24px; } }
+
+@media screen and (max-width: 440px) {
+  .productfull {
+    margin: 30px auto; }
+    .productfull .img-slider {
+      width: 100%;
+      height: auto; }
+    .productfull .image {
+      width: 280px;
+      height: 360px; }
+      .productfull .image .big-images img {
+        width: auto;
+        height: auto; }
+      .productfull .image .thumbs .owl-item {
+        height: auto; } }
 
 @media screen and (max-width: 320px) {
   .wrap {

@@ -431,7 +431,7 @@ footer
           .new_mark,.sale_mark
             position: absolute
             top: 50px
-            z-index: 999
+            z-index: 1
             background: #f34e0f
             color: #fff
             width: 85px
@@ -601,7 +601,7 @@ footer
           .new_mark,.sale_mark
             position: absolute
             top: 50px
-            z-index: 999
+            z-index: 1
             background: #f34e0f
             color: #fff
             width: 85px
@@ -1161,7 +1161,7 @@ form.payment
     .new_mark,.sale_mark
       position: absolute
       top: 50px
-      z-index: 999
+      z-index: 1
       background: #f34e0f
       color: #fff
       width: 85px
@@ -1959,6 +1959,22 @@ body.client-safari
 
 
 
+.success-payment
+  .container
+    margin: 100px auto 0
+    p
+      text-align: center
+      line-height: 1em
+      font-weight: normal
+      font-family: "SegoeUI", sans-serif
+      font-size: 20px
+
+.container
+  min-height: 33.5%
+  height: auto !important
+
+
+
 
 body.client-moz
   @media screen and (max-width: 959px)
@@ -2089,23 +2105,20 @@ body.client-moz
         a
             height: 100%
 
-
-
-
-
-.success-payment
-  .container
-    margin: 100px auto 0
-    p
+  .list_product_home
+    h3
+      font-size: 28px
+      &:before, &:after
+        width: 150px
+        margin-left: -75px
+        height: 25px
+    .products
+      width: 640px
       text-align: center
-      line-height: 1em
-      font-weight: normal
-      font-family: "SegoeUI", sans-serif
-      font-size: 20px
 
-.container
-  min-height: 33.5%
-  height: auto !important
+
+
+
 
 
 
@@ -2268,6 +2281,24 @@ body.client-moz
 
 
 
+
+  .page_wrapper.home .container
+    padding-top: 0
+  .page_wrapper.home
+    .img_home
+      display: none
+    form.filter
+      display: block
+      width: 100%
+      float: none
+      .title
+        cursor: pointer
+      .list_attributes
+        display: none
+    .products
+      margin: auto
+      width: 100%
+      float: none
 
 
 
@@ -2450,11 +2481,11 @@ body.client-moz
 
 
 @media screen and (max-width: 480px)
-  .productfull .img-slider
+  //.productfull .img-slider
     width: 100%
     height: auto
 
-  .productfull .image
+  //.productfull .image
     height: 360px
   .wrap
     width: 100%
@@ -2474,8 +2505,8 @@ body.client-moz
 
   .productfull
     margin: 30px auto
-    .image
-      width: 100%
+    //.image
+      //width: 100%
       .big-images img
         width: auto
         height: auto
@@ -2603,6 +2634,32 @@ body.client-moz
     .container
       margin: 30px auto
 
+
+  .list_product_home .products .product
+    a
+      font-size: 18px
+      .price
+        font-size: 18px
+
+  .list_product_home h3
+    font-size: 24px
+
+
+@media screen and (max-width: 440px)
+  .productfull
+    margin: 30px auto
+    .img-slider
+      width: 100%
+      height: auto
+
+    .image
+      width: 280px
+      height: 360px
+      .big-images img
+        width: auto
+        height: auto
+      .thumbs .owl-item
+        height: auto
 
 @media screen and (max-width: 320px)
 

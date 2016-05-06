@@ -261,10 +261,22 @@ jQuery(document).ready(function() {
     jQuery(".navbar-toggle").on("click", function(){
         jQuery(".mobile-navbar-holder").slideToggle();
         jQuery(this).toggleClass("active");
-        jQuery(".mobile-navbar").toggleClass("active")
+        jQuery(".mobile-navbar").toggleClass("active");
     });
 
 
+
+    jQuery(".filter .title").on("click", function(){
+        if (jQuery(window).width() < 960) {
+            jQuery(this).next().slideToggle();
+
+
+        } else{
+            jQuery(this).next().slideDown();
+        }
+
+
+    });
 
 
 
