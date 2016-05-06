@@ -8,61 +8,149 @@ html(lang="ru")
             include ./header.jade
 
             div.container
+                .img_home(style='background: url("../img/content/img_home.jpg") no-repeat top center #d6d6d5;')
                 .wrap
 
-                    ul.slider
-
-                        li
-                            img(src="img/content/slider.jpg")
-                        //li
-                            img(src="img/content/slider.jpg")
-
-                        //li
-                            img(src="img/content/slider.jpg")
 
 
 
 
-                    .popular_product
-                        h3 Популярные товары
+                    .list_product_home.cf
+                        h3 Наша продукция
+                        form.filter
+                            .title Фільтр
+                            .list_attribute
+                                .name_attribute Категории:
+                                .attribute_holder
+                                    .attribute
+                                        input(type="checkbox" name="option1" value="Ремень" id="option1" )
+                                        label(for="option1") Ремень
+                                    .attribute
+                                        input(type="checkbox" name="option2" value="Кошелек" id="option2" )
+                                        label(for="option2") Кошелек
+                            .list_attribute
+                                .name_attribute По цене:
+                                .attribute_holder
+                                    .attribute
+                                        input(type="radio" name="attribute_price" value="От дорогих к дешевым" id="option3" checked)
+                                        label(for="option3") От дорогих к дешевым
+                                    .attribute
+                                        input(type="radio" name="attribute_price" value="От дешевых к дорогим" id="option4" )
+                                        label(for="option4") От дешевых к дорогим
+                            .list_attribute
+                                .name_attribute Сортировать по:
+                                .attribute_holder
+                                    .attribute
+                                        input(type="radio" name="attribute_order" value="Популярности" id="option5" )
+                                        label(for="option5") Популярности
+                                    .attribute
+                                        input(type="radio" name="attribute_order" value="Новизне" id="option6" )
+                                        label(for="option6") Новизне
+                            .list_attribute
+                                .name_attribute По цвету:
+                                .attribute_holder
+                                    .attribute
+                                        input(type="checkbox" name="option7" value="Черный" id="option7" )
+                                        label(for="option7") Черный
+                                    .attribute
+                                        input(type="checkbox" name="option8" value="Коричневый" id="option8" )
+                                        label(for="option8") Коричневый
+                                    .attribute
+                                        input(type="checkbox" name="option9" value="Бордовый" id="option9" )
+                                        label(for="option9") Бордовый
+                                    .attribute
+                                        input(type="checkbox" name="option10" value="Белый" id="option10" )
+                                        label(for="option10") Белый
+
+                            .list_attribute
+                                .name_attribute Размер:
+                                .attribute_holder
+                                    .attribute
+                                        input(type="checkbox" name="size_s" value="s" id="size_s" )
+                                        label(for="size_s") S
+                                    .attribute
+                                        input(type="checkbox" name="size_m" value="m" id="size_m" )
+                                        label(for="size_m") M
+                                    .attribute
+                                        input(type="checkbox" name="size_l" value="s" id="size_l" )
+                                        label(for="size_l") L
                         .products
                             .product
                                 a(href="/product.html")
-                                        .images
 
-                                            span.new_mark NEW
-                                            span.sale_mark SALE %
-                                            img(src="img/content/img1.jpg" alt="Товар 1")
-                            .product
-                                a(href="/product.html")
-                                    .images
+                                    .images.img-holder
                                         span.new_mark NEW
-                                        img(src="img/content/img2.jpg" alt="Товар 2")
+                                        span.sale_mark SALE %
+                                        img(src="img/content/img_product2.jpg" alt="Товар 2")
+                                    .product_name Ремінь шкіряний S.co - 006
+                                    .price 390,00 грн
+                                    .old_price  490,00 грн
                             .product
                                 a(href="/product.html")
-                                    .images
-                                        img(src="img/content/img3.jpg" alt="Товар 3")
+                                    .images.img-holder
+                                        span.sale_mark SALE %
+                                        img(src="img/content/img_product2.jpg" alt="Товар 3")
+                                    .product_name Ремінь шкіряний S.co - 006
+                                    .price 390,00 грн
                             .product
                                 a(href="/product.html")
-                                    .images
-                                        img(src="img/content/blog.png" alt="Товар 4")
+                                    .images.img-holder
+                                        span.new_mark NEW
+                                        img(src="img/content/img_product2.jpg" alt="Товар 4")
+                                    .product_name Ремінь шкіряний S.co - 006
+                                    .price 390,00 грн
                             .product
                                 a(href="/product.html")
-                                    .images
-                                        img(src="img/content/slider_price2.png" alt="Товар 5")
+                                    .images.img-holder
+                                        img(src="img/content/img_product2.jpg" alt="Товар 5")
+                                    .product_name Ремінь шкіряний S.co - 006
+                                    .price 390,00 грн
+                            .product
+                                a(href="/product.html")
+                                    .images.img-holder
+                                        img(src="img/content/img_product2.jpg" alt="Товар 2")
+                                    .product_name Ремінь шкіряний S.co - 006
+                                    .price 390,00 грн
+                            .product
+                                a(href="/product.html")
 
+                                    .images.img-holder
+                                        img(src="img/content/img_product2.jpg" alt="Товар 3")
+                                    .product_name Ремінь шкіряний S.co - 006
+                                    .price 390,00 грн
                             .product
                                 a(href="/product.html")
-                                    .images
-                                        img(src="img/content/slider_price2.png" alt="Товар 5")
+                                    .images.img-holder
+                                        img(src="img/content/img_product2.jpg" alt="Товар 4")
+                                    .product_name Ремінь шкіряний S.co - 006
+                                    .price 390,00 грн
+                            .product
+                                a(href="/product.html")
+                                    .images.img-holder
+                                        img(src="img/content/img_product2.jpg" alt="Товар 5")
+                                    .product_name Ремінь шкіряний S.co - 006
+                                    .price 390,00 грн
+                            .product
+                                a(href="/product.html")
+                                    .images.img-holder
+                                        img(src="img/content/img_product2.jpg" alt="Товар 4")
+                                    .product_name Ремінь шкіряний S.co - 006
+                                    .price 390,00 грн
 
+
+                        .pagination
+                            ul
+                                li.prev
+                                    a(href="#")
+                                li.next
+                                    a(href="#")
 
 
             include ./footer.jade
 
 
 
-        section#error-wrapper
+        //section#error-wrapper
             .error-message.success.open dsgfsdg
             .error-message.error.open dsgfsdg
             .error-message.warning.open dsgfsdg

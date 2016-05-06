@@ -148,6 +148,21 @@ jQuery(document).ready(function() {
 
 
         });
+
+
+
+
+        var ias = jQuery.ias({
+            container: '.list_product_home',
+            item: '.product',
+            pagination: '.pagination',
+            next: '.next a'
+        });
+        ias.extension(new IASTriggerExtension({
+            text: 'Загрузить еще' // optionally
+        }));
+
+
     });
 
     jQuery(".payment").validate({

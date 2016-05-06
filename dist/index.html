@@ -11,6 +11,7 @@
     <script src="/js/untils.js"></script>
     <script src="/js/alexValidate.js"></script>
     <script src="/js/blueimp-gallery.min.js"></script>
+    <script src="/js/jquery-ias.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="format-detection" content="telephone=no">
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
@@ -71,36 +72,134 @@
         </div>
       </header>
       <div class="container">
+        <div style="background: url(&quot;../img/content/img_home.jpg&quot;) no-repeat top center #d6d6d5;" class="img_home"></div>
         <div class="wrap">
-          <ul class="slider">
-            <li><img src="img/content/slider.jpg"></li>
-            <!--li
-            img(src="img/content/slider.jpg")
-            
-            -->
-            <!--li
-            img(src="img/content/slider.jpg")
-            
-            
-            
-            
-            -->
-          </ul>
-          <div class="popular_product">
-            <h3>Популярные товары</h3>
+          <div class="list_product_home cf">
+            <h3>Наша продукция</h3>
+            <form class="filter">
+              <div class="title">Фільтр</div>
+              <div class="list_attribute">
+                <div class="name_attribute">Категории:</div>
+                <div class="attribute_holder">
+                  <div class="attribute">
+                    <input type="checkbox" name="option1" value="Ремень" id="option1">
+                    <label for="option1">Ремень</label>
+                  </div>
+                  <div class="attribute">
+                    <input type="checkbox" name="option2" value="Кошелек" id="option2">
+                    <label for="option2">Кошелек</label>
+                  </div>
+                </div>
+              </div>
+              <div class="list_attribute">
+                <div class="name_attribute">По цене:</div>
+                <div class="attribute_holder">
+                  <div class="attribute">
+                    <input type="radio" name="attribute_price" value="От дорогих к дешевым" id="option3" checked>
+                    <label for="option3">От дорогих к дешевым</label>
+                  </div>
+                  <div class="attribute">
+                    <input type="radio" name="attribute_price" value="От дешевых к дорогим" id="option4">
+                    <label for="option4">От дешевых к дорогим</label>
+                  </div>
+                </div>
+              </div>
+              <div class="list_attribute">
+                <div class="name_attribute">Сортировать по:</div>
+                <div class="attribute_holder">
+                  <div class="attribute">
+                    <input type="radio" name="attribute_order" value="Популярности" id="option5">
+                    <label for="option5">Популярности</label>
+                  </div>
+                  <div class="attribute">
+                    <input type="radio" name="attribute_order" value="Новизне" id="option6">
+                    <label for="option6">Новизне</label>
+                  </div>
+                </div>
+              </div>
+              <div class="list_attribute">
+                <div class="name_attribute">По цвету:</div>
+                <div class="attribute_holder">
+                  <div class="attribute">
+                    <input type="checkbox" name="option7" value="Черный" id="option7">
+                    <label for="option7">Черный</label>
+                  </div>
+                  <div class="attribute">
+                    <input type="checkbox" name="option8" value="Коричневый" id="option8">
+                    <label for="option8">Коричневый</label>
+                  </div>
+                  <div class="attribute">
+                    <input type="checkbox" name="option9" value="Бордовый" id="option9">
+                    <label for="option9">Бордовый</label>
+                  </div>
+                  <div class="attribute">
+                    <input type="checkbox" name="option10" value="Белый" id="option10">
+                    <label for="option10">Белый</label>
+                  </div>
+                </div>
+              </div>
+              <div class="list_attribute">
+                <div class="name_attribute">Размер:</div>
+                <div class="attribute_holder">
+                  <div class="attribute">
+                    <input type="checkbox" name="size_s" value="s" id="size_s">
+                    <label for="size_s">S</label>
+                  </div>
+                  <div class="attribute">
+                    <input type="checkbox" name="size_m" value="m" id="size_m">
+                    <label for="size_m">M</label>
+                  </div>
+                  <div class="attribute">
+                    <input type="checkbox" name="size_l" value="s" id="size_l">
+                    <label for="size_l">L</label>
+                  </div>
+                </div>
+              </div>
+            </form>
             <div class="products">
               <div class="product"><a href="/product.html">
-                  <div class="images"><span class="new_mark">NEW</span><span class="sale_mark">SALE %</span><img src="img/content/img1.jpg" alt="Товар 1"></div></a></div>
+                  <div class="images img-holder"><span class="new_mark">NEW</span><span class="sale_mark">SALE %</span><img src="img/content/img_product2.jpg" alt="Товар 2"></div>
+                  <div class="product_name">Ремінь шкіряний S.co - 006</div>
+                  <div class="price">390,00 грн</div>
+                  <div class="old_price"> 490,00 грн</div></a></div>
               <div class="product"><a href="/product.html">
-                  <div class="images"><span class="new_mark">NEW</span><img src="img/content/img2.jpg" alt="Товар 2"></div></a></div>
+                  <div class="images img-holder"><span class="sale_mark">SALE %</span><img src="img/content/img_product2.jpg" alt="Товар 3"></div>
+                  <div class="product_name">Ремінь шкіряний S.co - 006</div>
+                  <div class="price">390,00 грн</div></a></div>
               <div class="product"><a href="/product.html">
-                  <div class="images"><img src="img/content/img3.jpg" alt="Товар 3"></div></a></div>
+                  <div class="images img-holder"><span class="new_mark">NEW</span><img src="img/content/img_product2.jpg" alt="Товар 4"></div>
+                  <div class="product_name">Ремінь шкіряний S.co - 006</div>
+                  <div class="price">390,00 грн</div></a></div>
               <div class="product"><a href="/product.html">
-                  <div class="images"><img src="img/content/blog.png" alt="Товар 4"></div></a></div>
+                  <div class="images img-holder"><img src="img/content/img_product2.jpg" alt="Товар 5"></div>
+                  <div class="product_name">Ремінь шкіряний S.co - 006</div>
+                  <div class="price">390,00 грн</div></a></div>
               <div class="product"><a href="/product.html">
-                  <div class="images"><img src="img/content/slider_price2.png" alt="Товар 5"></div></a></div>
+                  <div class="images img-holder"><img src="img/content/img_product2.jpg" alt="Товар 2"></div>
+                  <div class="product_name">Ремінь шкіряний S.co - 006</div>
+                  <div class="price">390,00 грн</div></a></div>
               <div class="product"><a href="/product.html">
-                  <div class="images"><img src="img/content/slider_price2.png" alt="Товар 5"></div></a></div>
+                  <div class="images img-holder"><img src="img/content/img_product2.jpg" alt="Товар 3"></div>
+                  <div class="product_name">Ремінь шкіряний S.co - 006</div>
+                  <div class="price">390,00 грн</div></a></div>
+              <div class="product"><a href="/product.html">
+                  <div class="images img-holder"><img src="img/content/img_product2.jpg" alt="Товар 4"></div>
+                  <div class="product_name">Ремінь шкіряний S.co - 006</div>
+                  <div class="price">390,00 грн</div></a></div>
+              <div class="product"><a href="/product.html">
+                  <div class="images img-holder"><img src="img/content/img_product2.jpg" alt="Товар 5"></div>
+                  <div class="product_name">Ремінь шкіряний S.co - 006</div>
+                  <div class="price">390,00 грн</div></a></div>
+              <div class="product"><a href="/product.html">
+                  <div class="images img-holder"><img src="img/content/img_product2.jpg" alt="Товар 4"></div>
+                  <div class="product_name">Ремінь шкіряний S.co - 006</div>
+                  <div class="price">390,00 грн</div></a></div>
+            </div>
+            <div class="pagination">
+              <ul>
+                <li class="prev"><a href="#"></a></li>
+                <li class="next"><a href="#"></a></li>
+              </ul>
             </div>
           </div>
         </div>
@@ -158,10 +257,10 @@
       </footer>
       <div id="cache"><img src="../img/icons/cart_hover.png"><img src="../img/icons/master_card_hover.png"><img src="../img/icons/email_hover.png"></div>
     </div>
-    <section id="error-wrapper">
-      <div class="error-message success open">dsgfsdg</div>
-      <div class="error-message error open">dsgfsdg</div>
-      <div class="error-message warning open">dsgfsdg</div>
-    </section>
+    <!--section#error-wrapper
+    .error-message.success.open dsgfsdg
+    .error-message.error.open dsgfsdg
+    .error-message.warning.open dsgfsdg
+    -->
   </body>
 </html>
