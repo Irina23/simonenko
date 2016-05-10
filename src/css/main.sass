@@ -557,11 +557,23 @@ footer
       height: 320px
       margin-bottom: 30px
       background: #d6d6d5
-      .titile
-        font-family: Sitka, sans-serif
 
-    //header
-      height: 600px
+      .titile
+        font-family: 'Open Sans', sans-serif
+        font-style: italic
+        font-size: 48px
+        line-height: 1.3em
+        float: left
+        padding-top: 40px
+        width: 540px
+      .img-holder
+        width: 550px
+        position: absolute
+        top: 70px
+        right: 70px
+        height: auto
+  //header
+    height: 600px
 
 
     //.container
@@ -2259,7 +2271,7 @@ body.client-moz
     z-index: 100
 
 
-  .page_wrapper.home .container,
+
   .page_wrapper.shop .container
     top: 0
     margin-bottom: 0
@@ -2290,7 +2302,24 @@ body.client-moz
     padding-top: 0
   .page_wrapper.home
     .img_home
-      display: none
+      //display: none
+      height: auto
+      .titile
+        font-size: 35px
+        text-align: center
+        margin-bottom: 30px
+        float: none
+        width: 100%
+        br
+          display: none
+      .img-holder
+        position: inherit
+        top: inherit
+        right: inherit
+        width: auto
+        margin: auto
+        text-align: center
+        padding-bottom: 30px
     form.filter
       display: block
       width: 100%
@@ -2504,7 +2533,7 @@ body.client-moz
     margin-bottom: 30px
 
 
-  .page_wrapper.home .container, .page_wrapper.shop .container
+  .page_wrapper.shop .container
     margin-top: 30px
 
   .productfull
@@ -2648,6 +2677,10 @@ body.client-moz
   .list_product_home h3
     font-size: 24px
 
+
+
+  .page_wrapper.home .img_home .titile
+    font-size: 28px
 
 @media screen and (max-width: 440px)
   .productfull
