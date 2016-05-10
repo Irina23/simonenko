@@ -436,7 +436,10 @@ footer {
     box-sizing: border-box; }
   .page_wrapper.home .img_home {
     height: 320px;
-    margin-bottom: 30px; }
+    margin-bottom: 30px;
+    background: #d6d6d5; }
+    .page_wrapper.home .img_home .titile {
+      font-family: Sitka, sans-serif; }
   .page_wrapper.shop header {
     height: 600px; }
   .page_wrapper.shop .container {
@@ -1485,7 +1488,8 @@ body.client-safari .pagination.disabled a {
           line-height: 18px;
           color: #404040;
           padding-left: 30px;
-          position: relative; }
+          position: relative;
+          cursor: pointer; }
           .list_product_home form.filter .list_attribute .attribute label:before {
             position: absolute;
             top: 50%;
