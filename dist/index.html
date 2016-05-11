@@ -274,6 +274,17 @@
       </footer>
       <div id="cache"><img src="../img/icons/cart_hover.png"><img src="../img/icons/master_card_hover.png"><img src="../img/icons/email_hover.png"></div>
     </div>
+    <script>
+      var ias = jQuery.ias({
+                 container: '.products',
+                 item: '.product',
+                 pagination: '.pagination',
+                 next: '.next a'
+             });
+             ias.extension(new IASTriggerExtension({
+                 text: 'Загрузить еще' // optionally
+             }));
+    </script>
     <!--section#error-wrapper
     .error-message.success.open dsgfsdg
     .error-message.error.open dsgfsdg

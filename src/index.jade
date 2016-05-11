@@ -154,7 +154,16 @@ html(lang="ru")
             include ./footer.jade
 
 
-
+        script.
+             var ias = jQuery.ias({
+                        container: '.products',
+                        item: '.product',
+                        pagination: '.pagination',
+                        next: '.next a'
+                    });
+                    ias.extension(new IASTriggerExtension({
+                        text: 'Загрузить еще' // optionally
+                    }));
         //section#error-wrapper
             .error-message.success.open dsgfsdg
             .error-message.error.open dsgfsdg

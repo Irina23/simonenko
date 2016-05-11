@@ -438,6 +438,8 @@ footer {
     height: 320px;
     margin-bottom: 30px;
     background: #d6d6d5; }
+    .page_wrapper.home .img_home .wrap {
+      position: relative; }
     .page_wrapper.home .img_home .titile {
       font-family: 'Open Sans', sans-serif;
       font-style: italic;
