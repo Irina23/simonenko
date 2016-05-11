@@ -332,23 +332,27 @@ jQuery(document).ready(function() {
 
 
 
-
+    
     //filter get
     function showValues() {
         var filter_data = $( ".filter" ).serialize();
-        console.log( filter_data );
+        //console.log( filter_data );
         $.ajax({
             type: "GET",
-            url: "index.html",
+            url: "/filter",
             data: filter_data,
             success: function(data){
-
+                //console.log(data);
+                jQuery(".products").html(data);
             }
         });
-    }
-    jQuery( ".filter input" ).on( "click", showValues ).on( "change", showValues );
 
-    showValues();
+    }
+    jQuery( ".filter input" ).change( function () {
+        showValues();
+    });
+
+
 
 
 
