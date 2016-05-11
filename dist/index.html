@@ -215,7 +215,7 @@
             <div class="pagination">
               <ul>
                 <li class="prev"><a href="#"></a></li>
-                <li class="next"><a href="#"></a></li>
+                <li class="next"><a href="/?start=12"></a></li>
               </ul>
             </div>
           </div>
@@ -279,11 +279,12 @@
                  container: '.products',
                  item: '.product',
                  pagination: '.pagination',
-                 next: '.next a'
+                 next: '.pagination .next a'
              });
              ias.extension(new IASTriggerExtension({
                  text: 'Загрузить еще' // optionally
              }));
+      
     </script>
     <!--section#error-wrapper
     .error-message.success.open dsgfsdg

@@ -148,7 +148,7 @@ html(lang="ru")
                                 li.prev
                                     a(href="#")
                                 li.next
-                                    a(href="#")
+                                    a(href="/?start=12")
 
 
             include ./footer.jade
@@ -159,11 +159,12 @@ html(lang="ru")
                         container: '.products',
                         item: '.product',
                         pagination: '.pagination',
-                        next: '.next a'
+                        next: '.pagination .next a'
                     });
                     ias.extension(new IASTriggerExtension({
                         text: 'Загрузить еще' // optionally
                     }));
+
         //section#error-wrapper
             .error-message.success.open dsgfsdg
             .error-message.error.open dsgfsdg

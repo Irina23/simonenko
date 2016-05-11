@@ -332,35 +332,23 @@ jQuery(document).ready(function() {
 
 
 
-    /*
-     jQuery(".delivery input[type='radio']").change(function() {
 
-     if (jQuery('#novaposhta2').prop( "checked")==true){
-     console.log("5555");
-     jQuery(".row-form.delivery_courier").hide();
-     jQuery(".row-form.delivery_courier input").attr("data-validate",true);
+    //filter get
+    function showValues() {
+        var filter_data = $( ".filter" ).serialize();
+        console.log( filter_data );
+        $.ajax({
+            type: "GET",
+            url: "index.html",
+            data: filter_data,
+            success: function(data){
 
-     } else{
-     jQuery(".row-form.delivery_courier").show();
-     jQuery(".row-form.delivery_courier input#street").attr("data-validate","name");
-     jQuery(".row-form.delivery_courier input#number").attr("data-validate","number");
-     }
+            }
+        });
+    }
+    jQuery( ".filter input" ).on( "click", showValues ).on( "change", showValues );
 
-     if (jQuery('#courier').prop( "checked")==true){
-     console.log("666");
-     jQuery(".row-form.delivery_novaposhta").hide();
-     jQuery(".row-form.delivery_novaposhta input").attr("data-validate",true);
-
-     } else{
-     jQuery(".row-form.delivery_novaposhta").show();
-     jQuery(".row-form.delivery_novaposhta input#number_np").attr("data-validate","empty");
-
-     }
-
-     });*/
-
-
-
+    showValues();
 
 
 
@@ -368,18 +356,7 @@ jQuery(document).ready(function() {
 
 
 window.onload = function(){
-    //jQuery(".productfull").each(function() {
-    /* if (document.getElementsByClassName('img-slider')) {
-     document.getElementsByClassName('img-slider').onclick = function (event) {
-     event = event || window.event;
-     var target = event.target || event.srcElement,
-     link = target.src ? target.parentNode : target,
-     options = {index: link, event: event},
-     links = this.getElementsByTagName('a');
-     blueimp.Gallery(links, options);
-     };
-     }*/
-    // });
+
 
     jQuery('.big-images').each(function () {
         this.onclick = function (event) {
