@@ -33,18 +33,18 @@ html(lang="ru")
                                         .attribute
                                             input(type="checkbox" name="option2" value="Кошелек" id="option2" )
                                             label(for="option2") Кошелек
-                                .list_attribute
-                                    .name_attribute По цене:
-                                    .radio
-                                        .attribute
-                                            input(type="radio" name="attribute_price" value="От дорогих к дешевым" id="option3" checked)
-                                            label(for="option3") От дорогих к дешевым
-                                        .attribute
-                                            input(type="radio" name="attribute_price" value="От дешевых к дорогим" id="option4" )
-                                            label(for="option4") От дешевых к дорогим
+
+
                                 .list_attribute
                                     .name_attribute Сортировать по:
                                     .radio
+                                        .attribute
+                                            input(type="radio" name="attribute_order" value="От дорогих к дешевым" id="option3" checked)
+                                            label(for="option3") От дорогих к дешевым
+                                        .attribute
+                                            input(type="radio" name="attribute_order" value="От дешевых к дорогим" id="option4" )
+                                            label(for="option4") От дешевых к дорогим
+
                                         .attribute
                                             input(type="radio" name="attribute_order" value="Популярности" id="option5" )
                                             label(for="option5") Популярности
@@ -148,26 +148,14 @@ html(lang="ru")
                                 ul
                                     li.prev
                                         a(href="#")
-                                    li.next
-                                        a(href="#")
+                                    li.next.ias-trigger
+                                        a(href="#") Завантажити ще
 
 
             include ./footer.jade
 
 
-        script.
-            $('.products').on('click', '.button', function (e) {
-                $('.products').find('.pagination .next').trigger('click');
-            });
-            //     var ias = jQuery.ias({
-            //                container: '.products',
-            //                item: '.product',
-            //                pagination: '.pagination',
-            //                next: '.pagination .next a'
-            //            });
-            //            ias.extension(new IASTriggerExtension({
-            //                text: 'Загрузить еще'
-            //            }));
+
 
         //section#error-wrapper
             .error-message.success.open dsgfsdg

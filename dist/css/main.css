@@ -434,8 +434,6 @@ footer {
   .page_wrapper header {
     background: url("../img/bg/bg_header.jpg") repeat-x;
     box-sizing: border-box; }
-  .page_wrapper.home .pagination {
-    display: none; }
   .page_wrapper.home .img_home {
     height: 320px;
     margin-bottom: 30px;
@@ -1533,6 +1531,13 @@ body.client-safari .pagination.disabled a {
   .list_product_home .pagination {
     padding-top: 50px;
     margin-bottom: 0; }
+    .list_product_home .pagination li {
+      width: auto;
+      height: auto; }
+      .list_product_home .pagination li a {
+        height: auto;
+        -webkit-filter: none;
+                filter: none; }
   .list_product_home .ias-trigger {
     text-align: center;
     margin-top: 50px; }

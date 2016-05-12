@@ -11,14 +11,13 @@
     <script src="/js/untils.js"></script>
     <script src="/js/alexValidate.js"></script>
     <script src="/js/blueimp-gallery.min.js"></script>
-    <script src="/js/jquery-ias.min.js"></script>
     <meta name="Description" content="Symonen.co">
-    <meta name="keywords" content="������, �������">
+    <meta name="keywords" content="">
     <title>Symonen.co</title>
     <meta property="og:image" content="http://symonen.co/themes/symonenco/assets/img/icons/favicon.png">
     <meta property="og:title" content="Symonen.c">
-    <meta property="og:description" content="�������� ���� ��� ���������">
-    <meta property="og:url" content="�������� ���� ��� ���������">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="">
     <meta name="robots" content="index,follow">
     <link rel="icon" type="image/png" href="http://symonen.co/themes/symonenco/assets/img/icons/favicon.png">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic" rel="stylesheet" type="text/css">
@@ -108,21 +107,16 @@
                   </div>
                 </div>
                 <div class="list_attribute">
-                  <div class="name_attribute">По цене:</div>
+                  <div class="name_attribute">Сортировать по:</div>
                   <div class="radio">
                     <div class="attribute">
-                      <input type="radio" name="attribute_price" value="От дорогих к дешевым" id="option3" checked>
+                      <input type="radio" name="attribute_order" value="От дорогих к дешевым" id="option3" checked>
                       <label for="option3">От дорогих к дешевым</label>
                     </div>
                     <div class="attribute">
-                      <input type="radio" name="attribute_price" value="От дешевых к дорогим" id="option4">
+                      <input type="radio" name="attribute_order" value="От дешевых к дорогим" id="option4">
                       <label for="option4">От дешевых к дорогим</label>
                     </div>
-                  </div>
-                </div>
-                <div class="list_attribute">
-                  <div class="name_attribute">Сортировать по:</div>
-                  <div class="radio">
                     <div class="attribute">
                       <input type="radio" name="attribute_order" value="Популярности" id="option5">
                       <label for="option5">Популярности</label>
@@ -216,7 +210,7 @@
               <div class="pagination">
                 <ul>
                   <li class="prev"><a href="#"></a></li>
-                  <li class="next"><a href="#"></a></li>
+                  <li class="next ias-trigger"><a href="#">Завантажити ще</a></li>
                 </ul>
               </div>
             </div>
@@ -276,21 +270,6 @@
       </footer>
       <div id="cache"><img src="../img/icons/cart_hover.png"><img src="../img/icons/master_card_hover.png"><img src="../img/icons/email_hover.png"></div>
     </div>
-    <script>
-      $('.products').on('click', '.button', function (e) {
-          $('.products').find('.pagination .next').trigger('click');
-      });
-      //     var ias = jQuery.ias({
-      //                container: '.products',
-      //                item: '.product',
-      //                pagination: '.pagination',
-      //                next: '.pagination .next a'
-      //            });
-      //            ias.extension(new IASTriggerExtension({
-      //                text: 'Загрузить еще'
-      //            }));
-      
-    </script>
     <!--section#error-wrapper
     .error-message.success.open dsgfsdg
     .error-message.error.open dsgfsdg

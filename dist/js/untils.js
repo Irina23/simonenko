@@ -10,7 +10,7 @@ jQuery(document).ready(function() {
      }.bind(this), 500);
      });*/
 
-    var loop = ($('.slider li img').length > 1);
+    /*var loop = ($('.slider li img').length > 1);
 
     jQuery(window).resize(function() {
         jQuery('.slider').owlCarousel({
@@ -56,7 +56,7 @@ jQuery(document).ready(function() {
                 items:1
             }
         }
-    });
+    });*/
 
 
 
@@ -332,10 +332,14 @@ jQuery(document).ready(function() {
 
 
 
-    
+
     //filter get
-    function showValues() {
-        var filter_data = $( ".filter" ).serialize();
+    function showValues(clear) {
+        var filter_data, $el;
+
+        $el = $( ".filter" );
+
+        filter_data = $el.serialize();
         //console.log( filter_data );
         $.ajax({
             type: "GET",
@@ -343,14 +347,28 @@ jQuery(document).ready(function() {
             data: filter_data,
             success: function(data){
                 //console.log(data);
-                jQuery(".products").html(data).append('<button class="button">Test</button>');
+                if (clear) {
+                    jQuery(".list_product").html(data);
+                } else {
+                    jQuery(".list_product").find('.pagination').remove();
+                    jQuery(".list_product").html(jQuery(".list_product").html() + data);
+                }
             }
         });
 
     }
-    jQuery( ".filter input" ).change( function () {
+    $('.products').on('click', '.next a, .prev a', function (e) {
+        e.preventDefault();
+        $( ".filter" ).find('[name="page"]').val($(e.target).attr('href')[$(e.target).attr('href').length - 1]);
         showValues();
     });
+    jQuery( ".filter input" ).change( function () {
+        $( ".filter" ).find('[name="page"]').val(1);
+        showValues(true);
+    });
+    showValues();
+
+
 
 
 
