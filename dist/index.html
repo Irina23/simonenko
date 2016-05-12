@@ -277,15 +277,18 @@
       <div id="cache"><img src="../img/icons/cart_hover.png"><img src="../img/icons/master_card_hover.png"><img src="../img/icons/email_hover.png"></div>
     </div>
     <script>
-      var ias = jQuery.ias({
-                 container: '.products',
-                 item: '.product',
-                 pagination: '.pagination',
-                 next: '.pagination .next a'
-             });
-             ias.extension(new IASTriggerExtension({
-                 text: 'Загрузить еще' // optionally
-             }));
+      $('.products').on('click', '.button', function (e) {
+          $('.products').find('.pagination .next').trigger('click');
+      });
+      //     var ias = jQuery.ias({
+      //                container: '.products',
+      //                item: '.product',
+      //                pagination: '.pagination',
+      //                next: '.pagination .next a'
+      //            });
+      //            ias.extension(new IASTriggerExtension({
+      //                text: 'Загрузить еще'
+      //            }));
       
     </script>
     <!--section#error-wrapper

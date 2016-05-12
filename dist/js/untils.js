@@ -343,7 +343,7 @@ jQuery(document).ready(function() {
             data: filter_data,
             success: function(data){
                 //console.log(data);
-                jQuery(".products").html(data);
+                jQuery(".products").html(data).append('<button class="button">Test</button>');
             }
         });
 

@@ -156,15 +156,18 @@ html(lang="ru")
 
 
         script.
-             var ias = jQuery.ias({
-                        container: '.products',
-                        item: '.product',
-                        pagination: '.pagination',
-                        next: '.pagination .next a'
-                    });
-                    ias.extension(new IASTriggerExtension({
-                        text: 'Загрузить еще' // optionally
-                    }));
+            $('.products').on('click', '.button', function (e) {
+                $('.products').find('.pagination .next').trigger('click');
+            });
+            //     var ias = jQuery.ias({
+            //                container: '.products',
+            //                item: '.product',
+            //                pagination: '.pagination',
+            //                next: '.pagination .next a'
+            //            });
+            //            ias.extension(new IASTriggerExtension({
+            //                text: 'Загрузить еще'
+            //            }));
 
         //section#error-wrapper
             .error-message.success.open dsgfsdg
