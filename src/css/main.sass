@@ -553,6 +553,8 @@ footer
     -moz-box-sizing: border-box
     box-sizing: border-box
   &.home
+    .pagination
+      display: none
     .img_home
       height: 320px
       margin-bottom: 30px
@@ -1823,9 +1825,11 @@ body.client-safari
           display: none
           &:checked
             + label
-              &:before
+              &:after
                  opacity: 1
                  transition: opacity 0.35s
+
+
         label
           font-size: 16px
           line-height: 18px
@@ -1833,7 +1837,7 @@ body.client-safari
           padding-left: 30px
           position: relative
           cursor: pointer
-          &:before
+          &:after
             position: absolute
             top: 50%
             left: 0
@@ -1845,7 +1849,8 @@ body.client-safari
             opacity: 0
             transition: opacity 0.35s
             z-index: 2
-          &:after
+
+          &:before
             position: absolute
             top: 50%
             left: 0
@@ -1855,6 +1860,7 @@ body.client-safari
             height: 18px
             margin-top: -9px
             z-index: 1
+            border: 0
 
   .pagination
     padding-top: 50px
